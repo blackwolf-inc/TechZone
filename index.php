@@ -16,7 +16,7 @@
       }
 
        #navbarToggleExternalContent .bg {
-          background-color: orange;
+          background-image: url("assets/img/wall/1.jpg");
       }
       .dropdown-menu.show {
         left: auto;
@@ -154,7 +154,7 @@
   <div id="navbarToggleExternalContent">
     <div class="bg p-4 pt-5 pb-5">
       <div class="row" style="display: block;">
-        <div class="col"><h4 class="text-center text-white">THE VERGE</h4></div>
+        <div class="col"><h4 class="text-center text-white">ZONE TECH</h4></div>
         <div class="col"><h7 class="text-center text-white" style="display: block;">Friday, March 27, 2020 | THE MAC FOR MOST</h7></div>
       </div>
     </div>
@@ -163,7 +163,7 @@
   <nav class="navbar navbar-dark mb-3 p-0" style="display: block; background-color: black; border-bottom: 3px white;">
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">TECH</a>
+        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">NEW NEWS</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
@@ -171,7 +171,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">REVIEWS</a>
+        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">FUTURE</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
@@ -179,37 +179,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">SCIENCE</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CREATORS</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ENTERTAIMENT</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">VIDEO</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">PODCAST</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MORE</a>
+        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">SEE ALL NEWS</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
