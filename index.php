@@ -117,31 +117,21 @@
         #navbarToggleExternalContent {
           display: none;
         }
-
-        .container {
-          width: 100%;
-        }
-
+        
       }
 
-      // Small devices (landscape phones, less than 768px)
       @media (max-width: 767px) {
         .jumbotron {
         background-color: white;
         background-image: none;
         }
 
-        .container {
-          width: 100%;
-        }
       }
 
-      // Medium devices (tablets, less than 992px)
-      @media (max-width: 991px) {
-         
+      @media (max-width: 992px) {
+
       }
 
-      // Large devices (desktops, less than 1200px)
       @media (max-width: 1199px) {
 
       }
@@ -160,34 +150,35 @@
     </div>
   </div>
   <!-- Nav -->
-  <nav class="navbar navbar-dark mb-3 p-0" style="display: block; background-color: black; border-bottom: 3px white;">
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">NEW NEWS</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">ZONE TECH</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav nav-justified w-50 m-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">FUTURE</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+        <a class="nav-link" href="#">Features</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">SEE ALL NEWS</a>
-        <div class="dropdown-menu">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
     </ul>
-  </nav>
+  </div>
+</nav>
   <!-- end Nav -->
 </div>
 <!-- end JumbNavbar -->
@@ -347,11 +338,13 @@
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
 <script>
-  $('.carousel').carousel({
-  interval: 3000
-})
-
-
+$(window).resize(function() {
+if ($(this).width() > 992) {
+    $(".navbar-brand").hide();
+} else {
+  $(".navbar-brand").show();
+}
+});
 </script>
 <!-- end -->
 </html>
