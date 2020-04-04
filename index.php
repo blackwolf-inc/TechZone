@@ -117,6 +117,18 @@
         #navbarToggleExternalContent {
           display: none;
         }
+
+        /* footer */
+
+        #footerkiri > h1 {
+          font-size: 20px;
+        }
+
+        #footertengah > ul.list-inline > li.list-inline-item > a {
+          font-size: 12px;
+        }
+
+        /* end footer */
         
       }
 
@@ -144,7 +156,7 @@
   <div id="navbarToggleExternalContent">
     <div class="bg p-4 pt-5 pb-5">
       <div class="row" style="display: block;">
-        <div class="col"><h4 class="text-center text-white">ZONE TECH</h4></div>
+        <div class="col"><h4 class="text-center text-white" style="display: none;">ZONE TECH</h4></div>
         <div class="col"><h7 class="text-center text-white" style="display: block;">Friday, March 27, 2020 | THE MAC FOR MOST</h7></div>
       </div>
     </div>
@@ -318,6 +330,32 @@
   </div>
 </div>
 <!-- end Content -->
+
+<!-- Footer -->
+<div class="row p-lg-5 p-md-5 p-sm-5 pt-3">
+  <div class="col-lg-3 col-sm-12" id="footerkiri">
+    <h1 class="text-white text-center font-weight-bold"><i>TECHZONE</i></h1>
+  </div>
+  <div class="col-lg-7 col-sm-12" id="footertengah">     
+    <ul class="list-inline text-center">
+      <li class="list-inline-item"><a href="#">Therm of Use</a></li>
+      <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
+      <li class="list-inline-item"><a href="#">Cookie Policy</li>
+      <li class="list-inline-item"><a href="">Do not Sell my info</a></li>
+      <li class="list-inline-item"><a href="">Coomunication Preferences</a></li>
+      <li class="list-inline-item"><a href="">Licensing FAQ</a></li>
+      <li class="list-inline-item"><a href="">Accessbility</a></li>
+      <li class="list-inline-item"><a href="">Platform Status</a></li>
+      <li class="list-inline-item"><a href="">Contact</a></li>
+      <li class="list-inline-item"><a href="">Tip US</a></li>
+    </ul>
+  </div>
+  <div class="col-lg-2 col-sm-12" id="footerkanan">
+    
+  </div>
+</div>
+<!-- End Footer -->
+
 
 </div>
 <!-- end Container -->
