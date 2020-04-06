@@ -21,7 +21,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 
 <?php
-  include 'upload.php';  
+  // include 'upload.php';  
 ?>
 
 
@@ -150,7 +150,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <form action="content.php" method="post">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
             <div class="card">
               <div class="card-header">
                 <h5 class="card-title">Support Dasboard</h5>
@@ -180,8 +180,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                  <div class="col-md-6"> 
                     <div class="card">
                        <div class="custom-file">
-                      <input type="file" class="custom-file-input" name="customFile" id="customFile">
-                      <label class="custom-file-label" for="customFile">Choose files</label>
+                      <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload">
+                      <label class="custom-file-label" for="fileToUpload">Choose files</label>
                     </div>
                      </div>
                  </div>
