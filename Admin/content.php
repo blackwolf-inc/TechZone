@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?
+
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
@@ -86,7 +86,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Yulian</a>
+          <a href="#" class="d-block">Alexander Pierce</a>
         </div>
       </div>
 
@@ -172,7 +172,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
              <div class="col-sm-12">
                 
                 <label style="text-align: center;">Title Content</label>
-                  <input type="text" class="form-control" name="title" id="title">
+                  <input type="text" class="form-control" name="title" id="title" required>
                
               </div><br>
               <!-- end div titel content -->
@@ -200,11 +200,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <div class="form-group">
                         <label>Select Admin</label>
                         <select class="form-control" name="ddAdmin" id="ddAdmin">
-                          <option value="1">option 1</option>
-                          <option value="2">option 2</option>
-                          <option value="3">option 3</option>
-                          <option value="4">option 4</option>
-                          <option value="5">option 5</option>
+                          <option value="admin1">admin 1</option>
+                          <option value="admin2">admin 2</option>
+                          <option value="admin3">admin 3</option>
+                          <option value="admin4">admin 4</option>
+                          <option value="admin5">admin 5</option>
                         </select>
                       </div>
                     </div>
@@ -212,11 +212,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <div class="form-group">
                         <label>Select category</label>
                         <select class="form-control" name="ddCategory" id="ddCategory">
-                          <option value="1">option 1</option>
-                          <option value="2">option 2</option>
-                          <option value="3">option 3</option>
-                          <option value="4">option 4</option>
-                          <option value="5">option 5</option>
+                          <option value="1">Tech</option>
+                          <option value="2">Science</option>
+                          <option value="3">Entertaiment</option>
+                          <option value="4">Economy</option>
+                          <option value="5">Health</option>
                         </select>
                       </div>
                     </div>
