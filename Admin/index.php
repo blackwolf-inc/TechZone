@@ -291,67 +291,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <th>ID Post</th>
                       <th>Admin Name</th>
                       <th>Date</th>
-                      <th>Status</th>
-                      <th>Link</th>
+                      <th>Title</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>219</td>
-                      <td>Alexander Pierce</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-warning">Pending</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>657</td>
-                      <td>Bob Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-primary">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>175</td>
-                      <td>Mike Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-danger">Denied</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>134</td>
-                      <td>Jim Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>494</td>
-                      <td>Victoria Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-warning">Pending</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>832</td>
-                      <td>Michael Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-primary">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>982</td>
-                      <td>Rocky Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-danger">Denied</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
+                    <?php
+                      include '../koneksi.php';
+
+                      $query = mysqli_query($conn, "SELECT id_post, id_admin, tgl_post, id_tumbinal FROM utama");
+                      if($query->num_rows > 0){
+                        while ($row = $query->fetch_array()) {
+                          echo "
+                          <tr>
+                            <td>".$row[0]."</td>
+                            <td>".$row[1]."</td>
+                            <td>".$row[2]."</td>
+                            <td>".$row[3]."</td>
+                            <td><div class='row'>
+                              <div class='col-sm-3'>
+                                <form action='#' method='post'><button class='btn btn-sm btn-warning'>Edit</button>
+                                <input type='hidden' name='btnEdit' value='".$row[0]."'>
+                              </form></div>
+                              <div class='col-sm-3'>
+                                <form action='#' method='post'><button class='btn btn-sm btn-danger'>Delte</button>
+                                <input type='hidden' name='btnDelete' value='".$row[0]."'>
+                              </form></div></div>
+                            </td>
+                          </tr>
+                          ";
+                        }
+                      }
+                    ?>
                   </tbody>
                 </table>
               </div>
