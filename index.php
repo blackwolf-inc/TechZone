@@ -18,6 +18,8 @@
        #navbarToggleExternalContent .bg {
           background-image: url("assets/img/wall/1.jpg");
       }
+
+
       .dropdown-menu.show {
         left: auto;
       }
@@ -90,6 +92,13 @@
       .content a {
         color: #ff3399;
       }
+      
+      /* kolom post */
+      div.row.bigpost > div.col-lg-12.bigposttitle {
+        background-color: black;
+      }
+      /* end kolom post */
+
 
       @media (max-width: 575px) {
 
@@ -140,12 +149,11 @@
 
       }
 
-      @media (max-width: 992px) {
-
-      }
-
-      @media (max-width: 1199px) {
-
+      @media (min-width: 992px and max-width: 1200px) {
+        .jumbotron {
+        background-color: white;
+        background-image: none;
+        }
       }
 
     </style>
@@ -156,7 +164,7 @@
   <div id="navbarToggleExternalContent">
     <div class="bg p-4 pt-5 pb-5">
       <div class="row" style="display: block;">
-        <div class="col"><h4 class="text-center text-white" style="display: none;">ZONE TECH</h4></div>
+        <div class="col"><h4 class="text-center text-white"><i>TECHZONE</i></h4></div>
         <div class="col"><h7 class="text-center text-white" style="display: block;">Friday, March 27, 2020 | THE MAC FOR MOST</h7></div>
       </div>
     </div>
@@ -191,10 +199,10 @@
     <!-- kolom 1 -->
     <div class="col-lg-8 col-md-8 col-sm-12" style="border: solid 1px #ff9900;">
       <div class="row">
-        <div class="col p-0">
-          <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid">
+        <div class="col p-0" id="kolomcarousel1">
+          <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid h-100">
         </div>
-        <div class="col mt-2">
+        <div class="col mt-2 p-lg-4 pl-lg-4">
           <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h1>
         </div>
       </div>
@@ -207,7 +215,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
           <img src="assets/img/TopPost/2.jpg" alt="" class="img-fluid">
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col">
+        <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
           <h4 class="font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
         </div>
       </div>
@@ -220,7 +228,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
           <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid">
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col">
+        <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
           <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
         </div>
       </div>
@@ -230,10 +238,10 @@
     <!-- kolom 4 -->
     <div class="col-md-8 col-lg-8" style="border: solid 1px #ff9900;">
       <div class="row">
-        <div class="col p-0">
-          <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid">
+        <div class="col p-0" id="kolomcarousel2">
+          <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid h-100">
         </div>
-        <div class="col">
+        <div class="col p-lg-4 pl-lg-4">
           <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h1>
         </div>
       </div>
@@ -245,9 +253,9 @@
     <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 1px #ff9900;">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="assets/img/TopPost/5.jpg" alt="" class="img-fluid">
+          <img src="assets/img/TopPost/5.jpg" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col">
+        <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
         </div>
       </div>
@@ -255,9 +263,9 @@
     <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 1px #ff9900;">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="assets/img/TopPost/6.jpg" alt="" class="img-fluid">
+          <img src="assets/img/TopPost/6.jpg" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col">
+        <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
         </div>
       </div>
@@ -265,9 +273,9 @@
     <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 1px #ff9900;">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="assets/img/TopPost/7.jpg" alt="" class="img-fluid">
+          <img src="assets/img/TopPost/7.jpg" alt="" class="img-fluid w-100" style="width: 100%; max-height: 400px;">
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col">
+        <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
         </div>
       </div>
@@ -297,8 +305,8 @@
 
 <!-- Content -->
 <div class="row content" style="background-color: white;">
-  <div class="col-lg-7 col-md-8 col-sm-12 ml-lg-5">
 
+  <div class="col-lg-7 col-md-8 col-sm-12 ml-lg-5">
   <?php for ($i = 0; $i<5; $i++) { ?>
     <div class="row mt-3 mb-2">
       <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
@@ -306,14 +314,25 @@
       </div>
       <div class="col-8" style="border-top: solid 1px #e6e6e6;">
         <h5 class="font-weight-bold mt-2 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-        <h7 style="font-size: 11px;">BY <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
+        <h7 style="font-size: 11px;">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
         </h5> 
       </div>
     </div>
-<?php } ?>
-     
+  <?php } ?>
+
+  <div class="row bigpost ml-lg-0 mr-lg-0 mb-lg-2">
+    <div class="col-lg-12 bigposttitle p-lg-4 p-md-4 p-sm-4 p-4">
+      <h5 class="text-uppercase text-white font-weight-bold">Lorem ipsum dolor sit amet, consectetur</h5>
+      <h7 class="text-white"> Lorem ipsum dolor sit amet, consectetur adipisicing. </h7> <br>
+      <h7 style="font-size: 11px;" class="text-white">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
+    </div>
+     <div class="col-lg-12 pl-lg-0 pl-md-0 pr-sm-0 pr-lg-0 pr-md-0 pr-sm-0 p-0" id="kolom2">
+       <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid w-100">
+     </div> 
+  </div>
 
   </div>
+
   <div class="col-lg-4 col-md-4 mt-3 pr-lg-5">
     <div class="col pl-lg-0" style="color: #ff3399;">
     <h5 class="text-center mb-2 font-weight-bold" style="color: #ff3399;">FEATURED VIDEO</h5>
@@ -328,6 +347,7 @@
     </div>
     <h6 class="text-right mt-lg-3 pr-lg-4 font-weight-bold pt-lg-2 pb-lg-1 pl-lg-0 ml-lg-5 mr-lg-3" style="color: #ff3399; border-bottom: solid 2px #6600ff;"><a href="">MORE IN FEATURED VIDEO</a></h6>
   </div>
+
 </div>
 <!-- end Content -->
 
@@ -365,12 +385,28 @@
 <script src="assets/js/popper.js"></script> 
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
+
+<!-- javascript menyembunyikan navbar brand -->
 <script>
+$(document).ready(function(){
+  $(".navbar-brand").hide();
+  $("#kolomcarousel1").css("margin-bottom","-80px");
+  $("#kolomcarousel2").css("margin-bottom","-100px");
+});
+
+
 $(window).resize(function() {
 if ($(this).width() > 992) {
     $(".navbar-brand").hide();
+
+    $("#kolomcarousel1").css("margin-bottom","-80px");
+    $("#kolomcarousel2").css("margin-bottom","-100px");
 } else {
   $(".navbar-brand").show();
+
+  $("#kolomcarousel1").css("margin-bottom","0px");
+  $("#kolomcarousel2").css("margin-bottom","0px");
+
 }
 });
 </script>
