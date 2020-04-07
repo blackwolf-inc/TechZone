@@ -195,7 +195,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                  <div class="col-md-6"> 
                     <div class="card">
                        <div class="custom-file">
-                      <input type="file" class="custom-file-input" accept=".png, .jpg, .bmp, .jpeg" name="fileToUpload" id="fileToUpload">
+                      <input type="file" class="custom-file-input" accept=".png, .jpg, .gif, .bmp, .jpeg" name="fileToUpload" id="fileToUpload">
                       <label class="custom-file-label" for="fileToUpload">Choose file</label>                      
                     </div>
                      </div>
