@@ -103,6 +103,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
+                <a href="vidio.php" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Conten Vidio</p>
+                </a>
+              </li>
+              <li class="nav-item">
                   <a href="komen.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Daftar Coment</p>
@@ -289,9 +295,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <thead>
                     <tr>
                       <th>ID Post</th>
-                      <th>Admin Name</th>
-                      <th>Date</th>
                       <th>Title</th>
+                      <th>Date</th>
+                      <th>Admin Name</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -299,7 +305,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <?php
                       include '../koneksi.php';
 
-                      $query = mysqli_query($conn, "SELECT id_post, id_admin, tgl_post, id_tumbinal FROM utama");
+                      $query = mysqli_query($conn, "SELECT id_post, titel_post, tgl_post, id_admin FROM utama");
                       if($query->num_rows > 0){
                         while ($row = $query->fetch_array()) {
                           echo "

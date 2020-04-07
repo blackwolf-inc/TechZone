@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Apr 2020 pada 05.26
+-- Waktu pembuatan: 07 Apr 2020 pada 07.02
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.3
 
@@ -59,6 +59,13 @@ CREATE TABLE `coment` (
   `id_user` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `coment`
+--
+
+INSERT INTO `coment` (`id_coment`, `id_post`, `nama_komen`, `isi_comen`, `id_user`) VALUES
+(1, '13', 'bag1as', 'coba 1f1itru comen', '1223');
+
 -- --------------------------------------------------------
 
 --
@@ -99,7 +106,8 @@ CREATE TABLE `utama` (
 
 INSERT INTO `utama` (`id_post`, `tgl_post`, `jenis_post`, `titel_post`, `isi_post`, `id_komen`, `id_admin`, `jmlh_comen`, `id_gambar`, `link_post`) VALUES
 (26, 'Mon Apr 2020', 2, '', 'tes', '', 'admin1', '', '../data_gambar/3x4.jpg', 'tes'),
-(27, 'Tue Apr 2020', 1, '', 'asdasd', '', 'admin1', '', '../data_gambar/222.png', 'asdasd');
+(27, 'Tue Apr 2020', 1, '', 'asdasd', '', 'admin1', '', '../data_gambar/222.png', 'asdasd'),
+(28, 'Tue Apr 2020', 3, 'coba', 'qweqwewqrt', '', 'admin3', '', '../data_gambar/222.png', 'link');
 
 -- --------------------------------------------------------
 
@@ -109,11 +117,25 @@ INSERT INTO `utama` (`id_post`, `tgl_post`, `jenis_post`, `titel_post`, `isi_pos
 
 CREATE TABLE `vidio` (
   `id_vidio` int(100) NOT NULL,
+  `id_admin` varchar(10) NOT NULL,
+  `tgl` varchar(21) NOT NULL,
   `titel_vidio` varchar(300) NOT NULL,
+  `category` varchar(15) NOT NULL,
   `link_vidio` varchar(500) NOT NULL,
   `isi_vidio` varchar(10000) NOT NULL,
   `id_komen_vidio` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `vidio`
+--
+
+INSERT INTO `vidio` (`id_vidio`, `id_admin`, `tgl`, `titel_vidio`, `category`, `link_vidio`, `isi_vidio`, `id_komen_vidio`) VALUES
+(1, 'admin3', 'Tue Apr 2020', 'coba isi', '4', 'qqq', 'qweqrwertr', ''),
+(2, 'admin4', 'Tue Apr 2020', '12342535', '4', 'ini link ', 'qweqrweteryter', ''),
+(3, 'admin4', 'Tue Apr 2020', '12342535', '4', 'ini link ', 'qweqrweteryter', ''),
+(4, 'admin4', 'Tue Apr 2020', '12342535', '4', 'ini link ', 'qweqrweteryter', ''),
+(5, 'admin1', 'Tue Apr 2020', 'tteryey', '1', 'qweqwe', 'gsddfg', '');
 
 --
 -- Indexes for dumped tables
@@ -163,7 +185,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `coment`
 --
 ALTER TABLE `coment`
-  MODIFY `id_coment` int(30) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_coment` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
@@ -175,13 +197,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `utama`
 --
 ALTER TABLE `utama`
-  MODIFY `id_post` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_post` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT untuk tabel `vidio`
 --
 ALTER TABLE `vidio`
-  MODIFY `id_vidio` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_vidio` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

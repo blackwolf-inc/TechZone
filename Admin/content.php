@@ -111,6 +111,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
+                <a href="vidio.php" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Conten Vidio</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="komen.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Daftar Coment</p>

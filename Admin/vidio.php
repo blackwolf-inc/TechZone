@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<?php session_start(); ?>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
@@ -18,6 +19,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+
+
+
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
@@ -50,7 +54,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-         
+          <i class="far fa-comments"></i>
           
         </a>
        
@@ -102,15 +106,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Conten</p>
                 </a>
-              </li>
-               <li class="nav-item">
-                <a href="vidio.php" class="nav-link ">
+                <li class="nav-item">
+                <a href="vidio.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Conten Vidio</p>
                 </a>
               </li>
+              </li>
               <li class="nav-item">
-                <a href="komen.php" class="nav-link active">
+                <a href="komen.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Daftar Coment</p>
                 </a>
@@ -132,7 +136,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Comment User</h1>
+            <h1 class="m-0 text-dark">Update Content</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -141,88 +145,109 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">New Post</h3>
-
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 720px;">
-                <table class="table table-head-fixed">
-                  <thead>
-                    <tr>
-                      <th>ID comment</th>
-                      <th>ID post</th>
-                      <th>ID User</th>
-                      <th>user</th>
-                      <th>Comment</th>
-                    
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php
-                      include '../koneksi.php';
-
-                      $query = mysqli_query($conn, "SELECT id_coment, id_post, nama_komen, isi_comen, id_user FROM coment");
-                      if($query->num_rows > 0){
-                        while ($row = $query->fetch_array()) {
-                          echo "
-                          <tr>
-                            <td>".$row[0]."</td>
-                            <td>".$row[1]."</td>
-                            <td>".$row[4]."</td>
-                            <td>".$row[2]."</td>
-                            <td>".$row[3]."</td>
-                            <td><div class='row'>
-                              <div class='col-sm-3'>
-                                <form action='#' method='post'><button class='btn btn-sm btn-warning'>Edit</button>
-                                <input type='hidden' name='btnEdit' value='".$row[0]."'>
-                              </form></div>
-                              <div class='col-sm-3'>
-                                <form action='#' method='post'><button class='btn btn-sm btn-danger'>Delte</button>
-                                <input type='hidden' name='btnDelete' value='".$row[0]."'>
-                              </form></div></div>
-                            </td>
-                          </tr>
-                          ";
-                        }
-                      }
-                    ?>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-        </div>
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
 
-    <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          
-      <!-- /.row tabel -->
+          <div class="col-md-12">
+            <form action="savefile.php" method="post" enctype="multipart/form-data">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Support Dasboard</h5>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div><br>
+              <div class="col-sm-12">
+              <br>
+                <div class="col-md-12">
+                <label style="text-align: center;">Link Video</label>
+                  <input type="text" class="form-control" name="link_post" placeholder="Bijaklah dalam memposting sesuatu. Usahakan selalu menyertakan link" id="link_post" >
+              </div>
+              <br>
+              </div><br>
+            </div>
+             <div class="col-sm-12">
+                
+                <label style="text-align: center;">Title Content</label>
+                  <input type="text" class="form-control" name="title" id="title" required>
+               
+              </div><br>
+              <!-- end div titel content -->
+     
+                 <!-- div 211 -->
+        
+              <!-- end row -->
+<div class="row col-md-12">
+                    <div class="col-sm-6">
+                      <!-- select -->
+                      <div class="form-group">
+                        <label>Select Admin</label>
+                        <select class="form-control" name="ddAdmin" id="ddAdmin">
+                          <option value="admin1">admin 1</option>
+                          <option value="admin2">admin 2</option>
+                          <option value="admin3">admin 3</option>
+                          <option value="admin4">admin 4</option>
+                          <option value="admin5">admin 5</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Select category</label>
+                        <select class="form-control" name="ddCategory" id="ddCategory">
+                          <option value="1">Tech</option>
+                          <option value="2">Science</option>
+                          <option value="3">Entertaiment</option>
+                          <option value="4">Economy</option>
+                          <option value="5">Health</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+        <div class="row col-md-12">
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-header">
+                  <label style="align-self: center;">Isi Content</label>
+                </div>
+                 <div class="card-body pad">
+              <div class="mb-3">
+                <textarea class="textarea" name="isiText" id="isiText" placeholder="Place some text here"
+                          style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              </div>
+              </div><button class="btn btn-primary" name="upload" id="upload">Upload</button>
+            </div>
+            <div class="col-md-12">
+            
+            </div><br>
+            <!-- col -->
+        </div>
+          <!-- ./col -->
+        </div>
+   
+
+       
       </div><!-- /.container-fluid -->
+      </form>
+
+
     </div>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
+</div>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -248,10 +273,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
+
+</body>
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
-</body>
-</html>
+<script src="/plugins/summernote/summernote-bs4.min.js"></script>
+
+<script>
+// Add the following code if you want the name of the file appear on select
+
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+
