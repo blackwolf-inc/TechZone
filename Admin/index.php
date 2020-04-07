@@ -316,11 +316,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <td>".$row[3]."</td>
                             <td><div class='row'>
                               <div class='col-sm-3'>
-                                <form action='#' method='post'><button class='btn btn-sm btn-warning'>Edit</button>
+                                <form action='edit.php' method='post'><button class='btn btn-sm btn-warning'>Edit</button>
                                 <input type='hidden' name='btnEdit' value='".$row[0]."'>
                               </form></div>
                               <div class='col-sm-3'>
-                                <form action='#' method='post'><button class='btn btn-sm btn-danger'>Delte</button>
+                                <form action='delete.php' method='post'><button class='btn btn-sm btn-danger'>Delete</button>
                                 <input type='hidden' name='btnDelete' value='".$row[0]."'>
                               </form></div></div>
                             </td>

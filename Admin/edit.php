@@ -21,7 +21,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 
 <?php
-  // include 'upload.php';  
+  include '../koneksi.php'; 
+  $id_post = $_POST['btnEdit'];
+
+  $s = mysqli_query($conn, "(SELECT * FROM utama WHERE id_post='$id_post')");
+  $result = mysqli_fetch_array($s);
+  $title = $result[3];
+  $ctgr = $result[2];
+  $admin = $result[6];
+  $isi = $result[4];
+  $gmbr = $result[8]; 
+
+  switch ($ctgr) {
+    case 1:
+      $ctgrName = "Tech";
+      break;
+    case 2:
+      $ctgrName = "Science";
+      break;
+    case 3:
+      $ctgrName = "Entertaiment";
+      break;
+    case 4:
+      $ctgrName = "Economy";
+      break;
+    default:
+      $ctgrName = "Health";
+      break;
+  }
 ?>
 
 
@@ -156,35 +183,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="card-title">Support Dasboard</h5>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  
-                  <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
-                </div>
-              </div><br>
-              <div class="col-sm-12">
-              <br>
-                <div class="col-md-12">
-                <label style="text-align: center;">Link Sumber</label>
-                  <input type="text" class="form-control" name="link_post" placeholder="Bijaklah dalam memposting sesuatu. Usahakan selalu menyertakan link" id="link_post" >
-              </div>
-              <br>
-              </div><br>
-            </div>
+            <form action="update.php" method="post" enctype="multipart/form-data">
              <div class="col-sm-12">
                 
                 <label style="text-align: center;">Title Content</label>
-                  <input type="text" class="form-control" name="title" id="title" required>
-               
+                  <input type="text" class="form-control" name="newtitle" id="newtitle" value="<?php echo $title ;?>" required>
+                  <input type="hidden" name="idp" value="<?php echo $id_post;?>">
               </div><br>
               <!-- end div titel content -->
         <div class="row col-md-12">
@@ -192,13 +196,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="card">
                        <div class="custom-file">
                       <input type="file" class="custom-file-input" accept=".png, .jpg, .bmp, .jpeg" name="fileToUpload" id="fileToUpload">
-                      <label class="custom-file-label" for="fileToUpload">Choose file</label>                     
+                      <label class="custom-file-label" for="fileToUpload">Choose file</label>                      
                     </div>
                      </div>
                  </div>
                  <!-- div 1 -->
-                 <div class=" col-md-6">
-                   </div>
+                 <div class=" col-md-6">    
+                    </div>
                  </div>
                  <!-- div 211 -->
         
@@ -209,6 +213,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <div class="form-group">
                         <label>Select Admin</label>
                         <select class="form-control" name="ddAdmin" id="ddAdmin">
+                          <option value="<?php echo $admin ;?>"><?php echo $admin ;?></option>
                           <option value="admin1">admin 1</option>
                           <option value="admin2">admin 2</option>
                           <option value="admin3">admin 3</option>
@@ -221,6 +226,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <div class="form-group">
                         <label>Select category</label>
                         <select class="form-control" name="ddCategory" id="ddCategory">
+                          <option value="<?php echo $ctgr ;?>"><?php echo $ctgrName ;?></option>
                           <option value="1">Tech</option>
                           <option value="2">Science</option>
                           <option value="3">Entertaiment</option>
@@ -239,10 +245,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                  <div class="card-body pad">
               <div class="mb-3">
-                <textarea class="textarea" name="isiText" id="isiText" placeholder="Place some text here"
-                          style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                <textarea class="textarea" name="isiText" id="isiText"
+                          style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $isi ;?></textarea>
               </div>
-              </div><button class="btn btn-primary" name="upload" id="upload">Upload</button>
+              </div><button class="btn btn-primary" name="update" id="update">Update</button>
             </div>
             <div class="col-md-12">
             
