@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Mar 2020 pada 05.54
+-- Waktu pembuatan: 07 Apr 2020 pada 05.26
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.3
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `zonetech`
+-- Database: `db_techzone`
 --
 
 -- --------------------------------------------------------
@@ -30,12 +30,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id_admin` int(30) NOT NULL,
+  `username_admin` varchar(200) NOT NULL,
   `pass_admin` varchar(30) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `job` int(10) NOT NULL,
   `kode` int(40) NOT NULL,
   `jumlah_post` int(110) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `username_admin`, `pass_admin`, `nama`, `job`, `kode`, `jumlah_post`) VALUES
+(112, '', 'admin', 'admin', 1, 112, 1);
 
 -- --------------------------------------------------------
 
@@ -76,12 +84,35 @@ CREATE TABLE `utama` (
   `id_post` int(30) NOT NULL,
   `tgl_post` varchar(100) NOT NULL,
   `jenis_post` int(10) NOT NULL,
+  `titel_post` varchar(300) NOT NULL,
   `isi_post` varchar(10000) NOT NULL,
   `id_komen` varchar(20) NOT NULL,
   `id_admin` varchar(30) NOT NULL,
   `jmlh_comen` varchar(1000) NOT NULL,
   `id_gambar` varchar(1000) NOT NULL,
-  `id_tumbinal` varchar(1000) NOT NULL
+  `link_post` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `utama`
+--
+
+INSERT INTO `utama` (`id_post`, `tgl_post`, `jenis_post`, `titel_post`, `isi_post`, `id_komen`, `id_admin`, `jmlh_comen`, `id_gambar`, `link_post`) VALUES
+(26, 'Mon Apr 2020', 2, '', 'tes', '', 'admin1', '', '../data_gambar/3x4.jpg', 'tes'),
+(27, 'Tue Apr 2020', 1, '', 'asdasd', '', 'admin1', '', '../data_gambar/222.png', 'asdasd');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `vidio`
+--
+
+CREATE TABLE `vidio` (
+  `id_vidio` int(100) NOT NULL,
+  `titel_vidio` varchar(300) NOT NULL,
+  `link_vidio` varchar(500) NOT NULL,
+  `isi_vidio` varchar(10000) NOT NULL,
+  `id_komen_vidio` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -113,6 +144,12 @@ ALTER TABLE `utama`
   ADD PRIMARY KEY (`id_post`);
 
 --
+-- Indeks untuk tabel `vidio`
+--
+ALTER TABLE `vidio`
+  ADD PRIMARY KEY (`id_vidio`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -120,7 +157,7 @@ ALTER TABLE `utama`
 -- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(30) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_admin` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT untuk tabel `coment`
@@ -138,7 +175,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `utama`
 --
 ALTER TABLE `utama`
-  MODIFY `id_post` int(30) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_post` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT untuk tabel `vidio`
+--
+ALTER TABLE `vidio`
+  MODIFY `id_vidio` int(100) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

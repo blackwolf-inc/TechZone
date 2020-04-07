@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php session_start(); ?>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
@@ -166,8 +166,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
               </div><br>
               <div class="col-sm-12">
-                <label>Bijaklah dalam memposting sesuatu. Usahakan selalu menyertakan link</label>
+              <br>
+                <div class="col-md-12">
+                <label style="text-align: center;">Link Sumber</label>
+                  <input type="text" class="form-control" name="link_post" placeholder="Bijaklah dalam memposting sesuatu. Usahakan selalu menyertakan link" id="link_post" >
               </div>
+              <br>
+              </div><br>
             </div>
              <div class="col-sm-12">
                 
@@ -179,16 +184,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="row col-md-12">
                  <div class="col-md-6"> 
                     <div class="card">
+
+
+
+
+
+
                        <div class="custom-file">
-                      <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload">
-                      <label class="custom-file-label" for="fileToUpload">Choose files</label>
+                      <input type="file" class="custom-file-input"  name="fileToUpload" id="fileToUpload">
+                      <label class="custom-file-label" for="fileToUpload">Choose file</label>
+                      
+
+
+
+                      
                     </div>
                      </div>
                  </div>
                  <!-- div 1 -->
                  <div class=" col-md-6">
+         
+
                
-                       <label>File name  </label>
+                       
                     </div>
                  </div>
                  <!-- div 211 -->
@@ -247,6 +265,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
        
       </div><!-- /.container-fluid -->
       </form>
+
+
     </div>
     <!-- /.content -->
   </div>
@@ -277,11 +297,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
+
+</body>
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <script src="/plugins/summernote/summernote-bs4.min.js"></script>
-</body>
+
+<script>
+// Add the following code if you want the name of the file appear on select
+
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
 </html>

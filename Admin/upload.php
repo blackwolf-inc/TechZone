@@ -19,8 +19,9 @@ if(isset($_POST["upload"])) {
     $category = $_POST["ddCategory"];
     $isi = $_POST["isiText"];
     $tgl = date('D M Y');
+    $link = $_POST["link_post"];
 
-    $query = mysqli_query($conn, "INSERT INTO utama(id_tumbinal, id_admin, tgl_post, jenis_post, isi_post, id_gambar) VALUES ('$title', '$admin','$tgl','$category','$isi','$target_file')");
+    $query = mysqli_query($conn, "INSERT INTO utama(titel_post, id_admin, tgl_post, jenis_post, isi_post, id_gambar, link_post) VALUES ('$title', '$admin','$tgl','$category','$isi','$target_file','$link')");
 
 
     // end save fariabel
