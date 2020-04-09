@@ -142,6 +142,82 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div><!-- /.col -->
         </div><!-- /.row -->
         <div class="row">
+          <!-- card 1 -->
+    <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">New Post</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0" style="height: 360;">
+                <table class="table table-head-fixed">
+                  <thead>
+                    <tr>
+                      <th>ID post</th>
+                      <th>jumlah coment</th>
+                      
+                    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php       $count=0; ?>
+                    <?php
+                      include '../koneksi.php';
+
+                      $query = mysqli_query($conn, "SELECT id_post, count(*)  from coment group by id_post order by count(*) desc   ");   
+                    
+                      // if pembatsasan
+               
+                        # code...
+                     
+                        for ($i=5; $query->num_rows == $i  ; ) {  
+                        while ($row = $query->fetch_array()) {
+                               if ( $count < 7) {                 
+
+                     $count++;
+
+                          echo "
+                          <tr>
+                            <td>".$row[0]."</td>
+                            <td>".$row[1]."</td>
+                            
+
+                            <td><div class='row'>
+                              <div class='col-sm-12'>
+                                <form action='post_up.php' name='btnEdit21' method='post'><button class='btn btn-sm btn-warning'>Top News Update </button>
+                                <input type='hidden' name='btnEdit21' value='".$row[0]."'>
+                              </form></div>
+                            </td>
+                          </tr>
+                          ";
+                        }
+                        $i++;
+                      }
+                      // pembatas
+                       }
+                      // pembatsasan 5
+                    ?>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- card 1 end -->
+
+
+          <!-- card 2  -->
           <div class="col-12">
             <div class="card">
               <div class="card-header">
@@ -185,14 +261,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <td>".$row[2]."</td>
                             <td>".$row[3]."</td>
                             <td><div class='row'>
-                              <div class='col-sm-3'>
-                                <form action='#' method='post'><button class='btn btn-sm btn-warning'>Edit</button>
-                                <input type='hidden' name='btnEdit' value='".$row[0]."'>
-                              </form></div>
-                              <div class='col-sm-3'>
-                                <form action='#' method='post'><button class='btn btn-sm btn-danger'>Delte</button>
-                                <input type='hidden' name='btnDelete' value='".$row[0]."'>
-                              </form></div></div>
+                            
                             </td>
                           </tr>
                           ";
@@ -201,7 +270,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     ?>
                   </tbody>
                 </table>
-              </div>
+                <!-- script jaadi top news  -->
+            
+
+
+
+                <!-- end script -->
+              </div>  
               <!-- /.card-body -->
             </div>
             <!-- /.card -->

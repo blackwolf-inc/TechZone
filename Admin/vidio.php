@@ -172,7 +172,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <br>
                 <div class="col-md-12">
                 <label style="text-align: center;">Link Video</label>
-                  <input type="text" class="form-control" name="link_post" placeholder="Bijaklah dalam memposting sesuatu. Usahakan selalu menyertakan link" id="link_post" >
+                  <input type="text" class="form-control" name="link_post" placeholder="Bijaklah dalam memposting sesuatu. Usahakan selalu menyertakan link" id="link_post" required>
               </div>
               <br>
               </div><br>
