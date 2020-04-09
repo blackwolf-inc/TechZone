@@ -3,20 +3,13 @@
 
 include '../koneksi.php';
 
-// Funsi save file start
-
-
 print_r($_FILES["fileToUpload"]);
-
-$target_dir = "../data_gambar/";
-$target_dir2 = "../croped/";
-$target_file2 = $target_dir2 . basename($_FILES["fileToUpload"]["name"]);
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
+// Funsi save file start
+$target_file2 = "../croped/" . basename($_FILES["fileToUpload"]["name"]);
+$target_file = "../data_gambar/". date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if image file is a actual image or fake image
 if(isset($_POST["upload"])) {
-
 
 
   // safe varibel to  sql
@@ -27,52 +20,42 @@ if(isset($_POST["upload"])) {
     $tgl = date('D M Y');
     $link = $_POST["link_post"];
 
-    $query = mysqli_query($conn, "INSERT INTO utama(titel_post, id_admin, tgl_post, jenis_post, isi_post, id_gambar, link_post) VALUES ('$title', '$admin','$tgl','$category','$isi','$target_file','$link')");
-
-
     // end save fariabel
 
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
-}
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-}
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 5000000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-}
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        copy($target_file, $target_file2);
+    if($_FILES["fileToUpload"]["name"]!=""){
+        $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+        if($check = false) {
+            echo "<script>alert('File is not an image.');
+            window.location.replace('index.php');</script>";
+        } 
+    // Allow certain file formats
+        else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "bmp" ) {
+            echo "<script>alert('Sorry, only JPG, JPEG, BMP, PNG & GIF files are allowed.');
+            window.location.replace('index.php');</script>";
+        }
+        else if ($_FILES["fileToUpload"]["size"] > 500000) {
+            echo "<script>alert('Sorry, your file is too large.');
+            window.location.replace('index.php');</script>";
+        }
+        else if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {  
+            copy($target_file, $target_file2);
+        }
+            
         
-      echo "<script>
-                alert('berhasil Input Data');
-                window.location.replace('content.php');
-            </script>";
-    } else {
-        echo "Sorry, there was an error uploading your file.";
+        else{
+            echo "<script>alert('Sorry, there was an error while uploadin your file.');
+            window.location.replace('index.php');</script>";
+        }
     }
+
+
+    $query = mysqli_query($conn, "INSERT INTO utama(titel_post, id_admin, tgl_post, jenis_post, isi_post, id_gambar, link_post) VALUES ('$title', '$admin','$tgl','$category','$isi','$target_file','$link')");
+    echo "<script>
+            alert('Berhasil Input Data');
+            window.location.replace('content.php');
+    </script>";
 }
+
+
 // End fungsi safe file 
 ?>
