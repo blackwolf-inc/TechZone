@@ -2,6 +2,11 @@
 include "../koneksi.php";
 session_start();
 $id_post = $_POST['btnDelete'];
+$idgmbr = $_POST['idgmbr'];
+
+if($idgmbr !=""){
+	unlink($idgmbr);
+}
 
 $del = mysqli_query($conn, "DELETE FROM utama WHERE id_post = '$id_post'");
 if($del)
