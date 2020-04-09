@@ -47,7 +47,7 @@ if(isset($_POST["upload"])) {
             window.location.replace('index.php');</script>";
         }
     }
-
+ copy($target_file, $target_file2);
 
     $query = mysqli_query($conn, "INSERT INTO utama(titel_post, id_admin, tgl_post, jenis_post, isi_post, id_gambar, link_post) VALUES ('$title', '$admin','$tgl','$category','$isi','$target_file','$link')");
     echo "<script>

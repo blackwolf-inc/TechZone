@@ -59,7 +59,7 @@ while ( $row = $query->fetch_array()) {
 // print_r($row);
 
 
-  $y1=20;
+  $y1=0;
   $x1=110;
   $w=267;
   $h=378;
