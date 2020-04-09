@@ -3,7 +3,7 @@
 
 include '../koneksi.php';
 
-print_r($_FILES["fileToUpload"]);
+//print_r($_FILES["fileToUpload"]);
 // Funsi save file start
 $target_file2 = "../croped/" . basename($_FILES["fileToUpload"]["name"]);
 $target_file = "../data_gambar/". date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
