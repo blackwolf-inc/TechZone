@@ -5,7 +5,7 @@ include '../koneksi.php';
 
 //print_r($_FILES["fileToUpload"]);
 // Funsi save file start
-$target_file2 = "../croped/" . basename($_FILES["fileToUpload"]["name"]);
+$target_file2 = "../croped/" .  date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $target_file = "../data_gambar/". date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if image file is a actual image or fake image
