@@ -8,7 +8,7 @@
     <!--Import CSS-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!--End-->
-
+  
     <style>
       #navbarToggleExternalContent h4 {
           font-size: 80px;
@@ -216,6 +216,7 @@
 
     </style>
 </head>
+
 <body>
 <!-- JumbNavbar -->
 <div class="pos-f-t">
@@ -398,12 +399,41 @@
     <h5 class="text-center mb-2 font-weight-bold" style="color: #ff3399;">FEATURED VIDEO</h5>
     </div>
     <div class="row mr-3 ml-0 pt-3" style="border-top: solid 2px #6600ff; border-right: solid 2px #6600ff;" id="boxvideoscontent">
-    <?php for ($i = 0; $i < 3; $i++) {?>
+
+
+      <!-- loping vidio  -->
+<?php 
+include 'koneksi.php'; 
+$query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");
+if ($query3->num_rows > 0) {
+
+
+ while ($row = $query3->fetch_array()) {
+?>
+
+
       <div class="col-6 col-lg-12 col-md-6 col-sm-6 mb-2">
-        <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid">
-          <h7>Lorem ipsum dolor sit amet, consectetur adipisicing.</h7>
+        <iframe width="269" height="197"
+        <?php $vidio = substr($row[3],32); ?>
+src='https://www.youtube.com/embed/<?php echo $vidio ; ?>'>
+</iframe> 
+<h4> <?php echo$row[2] ; ?> </h4>
+<h5><?php echo $row[1]; ?> <?php echo $row[0] ; ?></h5>
+<h5></h5>
+                          
+          
       </div>
         <?php } ?>
+<?php 
+  
+  // end1 if
+}
+
+// end while
+ ?>
+<!-- loping vidio end  -->
+
+
     </div>
     <h6 class="text-right mt-lg-3 pr-lg-4 font-weight-bold pt-lg-2 pb-lg-1 pl-lg-0 ml-lg-5 mr-lg-3" id="titlemorevideous" style="color: #ff3399; border-bottom: solid 2px #6600ff;"><a href="">MORE IN FEATURED VIDEO</a></h6>
   </div>
