@@ -90,14 +90,48 @@
       }
 
       .content a {
-        color: #ff3399;
+        color: color: #ff3399;
+      }
+
+      /* Navbar */
+      nav.navbar > a.navbar-brand:hover {
+        color: black;
+        font-weight: bolder;
+        text-shadow: 2px 2px #ff3399;
       }
       
-      /* kolom post */
+      ul.navbar-nav > li.nav-item > a.nav-link:hover {
+        color: #ff3399;
+      }
+
+      /* end Navbar */
+      
+      /* kolom content */
       div.row.bigpost > div.col-lg-12.bigposttitle {
         background-color: black;
       }
-      /* end kolom post */
+
+      div.row.newpostcolumn > div.col-8 > h5 > h7 > a {
+        color: #ff3399;
+      }
+
+      div.row.newpostcolumn > div.col-8 > h5 > h7 > a:hover {
+        color: #cc0099;
+      }
+      /* end kolom content */
+
+
+      /* footer */
+
+      #footertengah > ul.list-inline > li.list-inline-item > a {
+          color: #ff3399;
+      }
+      
+      #footertengah > ul.list-inline > li.list-inline-item > a:hover {
+          color: #ff0066 ;
+      }
+
+      /* end footer*/
 
 
       @media (max-width: 575px) {
@@ -127,13 +161,37 @@
           display: none;
         }
 
-        /* footer */
-
-        #footerkiri > h1 {
-          font-size: 20px;
+        /* carousel column*/
+        .carouselbox {
+          margin-left: 0px;
+          margin-right: 0px;
         }
 
-        #footertengah > ul.list-inline > li.list-inline-item > a {
+        hr {
+          display: none;
+        }
+        /* end carousel */
+
+        /* featured videos column */
+          #boxvideoscontent h7 {
+          font-size: 12px;
+        }
+
+        /* end featured*/
+
+        /* more stories column*/
+        button {
+          font-size: 11px;
+        }
+        /* end stories */
+
+        /* footer */
+
+          #footerkiri > h1 {
+          font-size: 40px;
+        }
+
+          #footertengah > ul.list-inline > li.list-inline-item > a {
           font-size: 12px;
         }
 
@@ -171,7 +229,7 @@
   </div>
   <!-- Nav -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="#">ZONE TECH</a>
+  <a class="navbar-brand font-weight-bold" href="#" style="display: none;"><i>TECHZONE</i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -195,22 +253,23 @@
 <!-- Container -->
 <div class="container">
   <!-- Carousel 1 -->
-  <div class="row mt-3">
+  <div class="row mt-3 carouselbox">
     <!-- kolom 1 -->
-    <div class="col-lg-8 col-md-8 col-sm-12" style="border: solid 1px #ff9900;">
+    <div class="col-lg-8 col-md-8 col-sm-12" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
       <div class="row">
         <div class="col p-0" id="kolomcarousel1">
           <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid h-100">
         </div>
         <div class="col mt-2 p-lg-4 pl-lg-4">
-          <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h1>
+          <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white" style="display: inline-block;">BY <a href="" style="color: #ff3399;">Lorem ipsum dolor.</a></h5></h1>
+          <hr style="border: 1px solid #ff3399; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
     </div>
     <!-- end kolom 1 -->
 
     <!-- kolom 2 -->
-    <div class="col-lg-4 col-md-4 col-sm-6" style="border: solid 1px #ff9900;">
+    <div class="col-lg-4 col-md-4 col-sm-6" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
           <img src="assets/img/TopPost/2.jpg" alt="" class="img-fluid">
@@ -223,7 +282,7 @@
     <!-- end kolom 2 -->
 
     <!-- kolom 3 -->
-    <div class="col-md-4 col-sm-6 col-lg-4" style="border: solid 1px #ff9900;">
+    <div class="col-md-4 col-sm-6 col-lg-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
           <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid">
@@ -236,21 +295,22 @@
     <!-- end kolom 3 -->
 
     <!-- kolom 4 -->
-    <div class="col-md-8 col-lg-8" style="border: solid 1px #ff9900;">
+    <div class="col-md-8 col-lg-8" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
       <div class="row">
         <div class="col p-0" id="kolomcarousel2">
           <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid h-100">
         </div>
         <div class="col p-lg-4 pl-lg-4">
           <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h1>
+          <hr style="border: 1px solid #ff3399; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
     </div>
     <!-- end kolom 4 -->
   </div>
-  <div class="row mt-0">
+  <div class="row mt-0 carouselbox">
     <!-- kolom 5 -->
-    <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 1px #ff9900;">
+    <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
           <img src="assets/img/TopPost/5.jpg" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
@@ -260,7 +320,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 1px #ff9900;">
+    <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
           <img src="assets/img/TopPost/6.jpg" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
@@ -270,7 +330,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 1px #ff9900;">
+    <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
           <img src="assets/img/TopPost/7.jpg" alt="" class="img-fluid w-100" style="width: 100%; max-height: 400px;">
@@ -290,8 +350,8 @@
           <div class="jumbotron jumbotron-fluid mb-0">
             <div class="container">
               <div class="row">
-                <div class="col-6 mt-xs-5 mt-sm-5 mt-md-5 mt-lg-5 mt-4 pr-0">
-                  <h5 class="font-weight-bold"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, esse!</a><br><h7 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h7></h5>
+                <div class="col-6 mt-xs-5 mt-sm-5 mt-md-5 mt-lg-5 mt-4 pr-0 pr-5">
+                  <h5 class="font-weight-bold text-right"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, esse!</a><br><h7 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h7></h5>
                 </div>
                 <div class="col-6 pl-1">
                   <h1 class="text-uppercase font-weight-bold font-italic"><a href="">"Lorem ipsum dolor sit amet, consectetur adipisicing elit"</a></h1>
@@ -306,9 +366,9 @@
 <!-- Content -->
 <div class="row content" style="background-color: white;">
 
-  <div class="col-lg-7 col-md-8 col-sm-12 ml-lg-5">
+  <div class="col-lg-8 col-md-12 col-sm-12">
   <?php for ($i = 0; $i<5; $i++) { ?>
-    <div class="row mt-3 mb-2">
+    <div class="row mt-3 mb-2 newpostcolumn">
       <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
         <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid">
       </div>
@@ -333,23 +393,31 @@
 
   </div>
 
-  <div class="col-lg-4 col-md-4 mt-3 pr-lg-5">
+  <div class="col-lg-4 col-md-12 mt-3 pl-lg-5">
     <div class="col pl-lg-0" style="color: #ff3399;">
     <h5 class="text-center mb-2 font-weight-bold" style="color: #ff3399;">FEATURED VIDEO</h5>
     </div>
-    <div class="row mr-3 ml-0 pt-3" style="border-top: solid 2px #6600ff; border-right: solid 2px #6600ff;">
+    <div class="row mr-3 ml-0 pt-3" style="border-top: solid 2px #6600ff; border-right: solid 2px #6600ff;" id="boxvideoscontent">
     <?php for ($i = 0; $i < 3; $i++) {?>
-      <div class="col-12 mb-2">
+      <div class="col-6 col-lg-12 col-md-6 col-sm-6 mb-2">
         <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid">
-        Lorem ipsum dolor sit amet, consectetur adipisicing.
+          <h7>Lorem ipsum dolor sit amet, consectetur adipisicing.</h7>
       </div>
         <?php } ?>
     </div>
-    <h6 class="text-right mt-lg-3 pr-lg-4 font-weight-bold pt-lg-2 pb-lg-1 pl-lg-0 ml-lg-5 mr-lg-3" style="color: #ff3399; border-bottom: solid 2px #6600ff;"><a href="">MORE IN FEATURED VIDEO</a></h6>
+    <h6 class="text-right mt-lg-3 pr-lg-4 font-weight-bold pt-lg-2 pb-lg-1 pl-lg-0 ml-lg-5 mr-lg-3" id="titlemorevideous" style="color: #ff3399; border-bottom: solid 2px #6600ff;"><a href="">MORE IN FEATURED VIDEO</a></h6>
   </div>
+
+  <!-- More Stories -->
+    <div class="col pt-sm-3 pl-sm-0 pr-sm-0 pl-lg-3 pr-lg-3">
+        <button class="btn btn-block p-lg-3 p-sm-3" style="background-color: #ff3399; border-radius: 0; color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
+    </div>
+  <!-- End -->
 
 </div>
 <!-- end Content -->
+
+
 
 <!-- Footer -->
 <div class="row p-lg-5 p-md-5 p-sm-5 pt-3">
@@ -388,25 +456,38 @@
 
 <!-- javascript menyembunyikan navbar brand -->
 <script>
-$(document).ready(function(){
-  $(".navbar-brand").hide();
-  $("#kolomcarousel1").css("margin-bottom","-80px");
-  $("#kolomcarousel2").css("margin-bottom","-100px");
-});
-
-
 $(window).resize(function() {
-if ($(this).width() > 992) {
+
+if ($(this).width() < 575) {
+    $(".navbar-brand").show();
+    $("#titlemorevideous").hide();
+    $("#boxvideoscontent").css("border","none");
+
+    $("#kolomcarousel1").css("margin-bottom","0");
+    $("#kolomcarousel2").css("margin-bottom","0");
+    
+} else if ($(this).width() < 767) {
+    $(".navbar-brand").show();
+    $("#navbarToggleExternalContent").hide();
+
+} else if ($(this).width() < 992) {
     $(".navbar-brand").hide();
+    $("#navbarToggleExternalContent").show();
 
     $("#kolomcarousel1").css("margin-bottom","-80px");
     $("#kolomcarousel2").css("margin-bottom","-100px");
-} else {
-  $(".navbar-brand").show();
 
-  $("#kolomcarousel1").css("margin-bottom","0px");
-  $("#kolomcarousel2").css("margin-bottom","0px");
+    $("#titlemorevideous").show();
+    $("#boxvideoscontent").css("border-top","solid 2px #6600ff");
+    $("#boxvideoscontent").css("border-right","solid 2px #6600ff");
 
+
+} else if ($(this).width() < 1200) {
+    $(".navbar-brand").hide();
+    $("#navbarToggleExternalContent").show();
+
+    $("#kolomcarousel1").css("margin-bottom","-80px");
+    $("#kolomcarousel2").css("margin-bottom","-100px");
 }
 });
 </script>
