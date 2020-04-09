@@ -20,10 +20,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<?php
-  // include 'upload.php';  
-?>
-
 
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -139,7 +135,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Update Content</h1>
+            <h1 class="m-0 text-dark">Upload Content</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -170,14 +166,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <i class="fas fa-times"></i>
                   </button>
                 </div>
-              </div><br>
-              <div class="col-sm-12">
-              <br>
+              </div>
+              <div class="card-body">
+              
                 <div class="col-md-12">
                 <label style="text-align: center;">Link Sumber</label>
                   <input type="text" class="form-control" name="link_post" placeholder="Bijaklah dalam memposting sesuatu. Usahakan selalu menyertakan link" id="link_post" >
               </div>
-              <br>
+              
               </div><br>
             </div>
              <div class="col-sm-12">

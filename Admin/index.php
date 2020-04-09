@@ -313,7 +313,7 @@ $totaluser=$query4->num_rows;
                     <?php
                       include '../koneksi.php';
 
-                      $query = mysqli_query($conn, "SELECT id_post, titel_post, tgl_post, id_admin FROM utama");
+                      $query = mysqli_query($conn, "SELECT id_post, titel_post, tgl_post, id_admin, id_gambar FROM utama");
                       if($query->num_rows > 0){
                         while ($row = $query->fetch_array()) {
                           echo "
@@ -330,6 +330,7 @@ $totaluser=$query4->num_rows;
                               <div class='col-sm-3'>
                                 <form action='delete.php' method='post'><button class='btn btn-sm btn-danger'>Delete</button>
                                 <input type='hidden' name='btnDelete' value='".$row[0]."'>
+                                <input type='hidden' name='idgmbr' value='".$row[4]."'>
                               </form></div></div>
                             </td>
                           </tr>

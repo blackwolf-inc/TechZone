@@ -205,6 +205,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="card">
                        <div class="custom-file">
                       <input type="file" class="custom-file-input" accept=".png, .jpg, .gif, .bmp, .jpeg" name="fileToUpload" id="fileToUpload">
+                      <input type="hidden" name="gmbrLama" value="<?php echo $gmbr; ?>">
                       <label class="custom-file-label" for="fileToUpload">Choose file</label>                      
                     </div>
                      </div>
