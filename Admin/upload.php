@@ -33,7 +33,7 @@ if(isset($_POST["upload"])) {
             echo "<script>alert('Sorry, only JPG, JPEG, BMP, PNG & GIF files are allowed.');
             window.location.replace('index.php');</script>";
         }
-        else if ($_FILES["fileToUpload"]["size"] > 500000) {
+        else if ($_FILES["fileToUpload"]["size"] > 5000000) {
             echo "<script>alert('Sorry, your file is too large.');
             window.location.replace('index.php');</script>";
         }
