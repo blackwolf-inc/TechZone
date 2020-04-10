@@ -292,6 +292,12 @@
       <li class="nav-item">
         <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="see_all.php">TWITTER</a>
+      </li>
+       <li class="nav-item ">
+        <a class="nav-link " href="https://www.instagram.com/techzone_05/">INSTAGRAM</a>
+      </li>
     </ul>
   </div>
 </nav>
