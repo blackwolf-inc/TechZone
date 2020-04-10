@@ -268,7 +268,7 @@
     <div class="bg p-4 pt-5 pb-5">
       <div class="row" style="display: block;">
         <div class="col"><h4 class="text-center text-white"><i>TECHZONE</i></h4></div>
-        <div class="col"><h7 class="text-center text-white" style="display: block;">Friday, March 27, 2020 | THE MAC FOR MOST</h7></div>
+        <div class="col"><h7 class="text-center text-white" style="display: block;">Friday, March 27, 2020  <?php include 'jam.php'; ?> | THE MAC FOR MOST</h7></div>
       </div>
     </div>
   </div>
@@ -280,6 +280,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav nav-justified w-50 m-auto">
+
       <li class="nav-item ">
         <a class="nav-link active" href="index.php">HOME <span class="sr-only">(current)</span></a>
       </li>
@@ -287,7 +288,7 @@
         <a class="nav-link" href="new_news.php">NEW NEWS <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="future.php">FREE GAMES</a>
+        <a class="nav-link" href="future.php">FREE GAME</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
@@ -390,7 +391,8 @@
           <img src="assets/img/TopPost/7.jpg" alt="" class="img-fluid w-100" style="width: 100%; max-height: 400px;">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
-           <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
+           <h4 class="text-white font-weight-bold text-lowercase"><a href="">
+           Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
         </div>
       </div>
     </div>
@@ -406,6 +408,8 @@
               <div class="row">
                 <div class="col-6 mt-xs-5 mt-sm-5 mt-md-5 mt-lg-5 mt-4 pr-0 pr-5">
                   <h5 class="font-weight-bold text-right"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, esse!</a><br><h7 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h7></h5>
+
+
                 </div>
                 <div class="col-6 pl-1">
                   <h1 class="text-uppercase font-weight-bold font-italic"><a href="">"Lorem ipsum dolor sit amet, consectetur adipisicing elit"</a></h1>
@@ -448,7 +452,7 @@
       <h7 style="font-size: 11px;" class="text-white">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
     </div>
      <div class="col-lg-12 pl-lg-0 pl-md-0 pr-sm-0 pr-lg-0 pr-md-0 pr-sm-0 p-0" id="kolom2">
-   <iframe src="https://www.games.co.id/?utm_source=spildomains&utm_medium=redirect&utm_campaign=game.co.id"></iframe>-->
+   
      </div> 
   </div>
 

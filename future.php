@@ -279,9 +279,8 @@
 <!-- End Jumbotron -->
 
 
-<div class="embed-responsive embed-responsive-16by9">
-<iframe  class="" src="https://www.games.co.id/?utm_source=spildomains&utm_medium=redirect&utm_campaign=game.co.id"></iframe>
-</div>
+<div class="embed-responsive embed-responsive-4by3">
+<iframe src="https://www.gamearter.com/game/pizza-ninja-mania/" width="100%" height="100%" allow="fullscreen"></iframe> </div>
 <!-- Content -->
 <div class="row content" style="background-color: white;">
 
