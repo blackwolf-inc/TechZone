@@ -293,7 +293,7 @@
         <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="see_all.php">TWITTER</a>
+        <a class="nav-link" href="https://twitter.com/techzone_05">TWITTER</a>
       </li>
        <li class="nav-item ">
         <a class="nav-link " href="https://www.instagram.com/techzone_05/">INSTAGRAM</a>
