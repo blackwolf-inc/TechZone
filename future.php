@@ -236,7 +236,7 @@
         <a class="nav-link " href="new_news.php">NEW NEWS <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link active" href="future.php">FUTURE</a>
+        <a class="nav-link active" href="future.php">FREE GAME</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
@@ -250,7 +250,7 @@
 <!-- Container -->
 <div class="container">
   <!-- Carousel 1 -->
-  <div class="row mt-3 carouselbox">
+  <div class="row mt-3 carouselbox ">
     <!-- kolom 1 -->
     <div class="col-lg-8 col-md-8 col-sm-12" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
   
@@ -278,82 +278,17 @@
 
 <!-- End Jumbotron -->
 
+
+<div class="embed-responsive embed-responsive-16by9">
+<iframe  class="" src="https://www.games.co.id/?utm_source=spildomains&utm_medium=redirect&utm_campaign=game.co.id"></iframe>
+</div>
 <!-- Content -->
 <div class="row content" style="background-color: white;">
 
-  <div class="col-lg-8 col-md-12 col-sm-12">
-  <?php for ($i = 0; $i<5; $i++) { ?>
-    <div class="row mt-3 mb-2 newpostcolumn">
-      <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-        <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid">
-      </div>
-      <div class="col-8" style="border-top: solid 1px #e6e6e6;">
-        <h5 class="font-weight-bold mt-2 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-        <h7 style="font-size: 11px;">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
-        </h5> 
-      </div>
-    </div>
-  <?php } ?>
-
-  <div class="row bigpost ml-lg-0 mr-lg-0 mb-lg-2">
-    <div class="col-lg-12 bigposttitle p-lg-4 p-md-4 p-sm-4 p-4">
-      <h5 class="text-uppercase text-white font-weight-bold">Lorem ipsum dolor sit amet, consectetur</h5>
-      <h7 class="text-white"> Lorem ipsum dolor sit amet, consectetur adipisicing. </h7> <br>
-      <h7 style="font-size: 11px;" class="text-white">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
-    </div>
-     <div class="col-lg-12 pl-lg-0 pl-md-0 pr-sm-0 pr-lg-0 pr-md-0 pr-sm-0 p-0" id="kolom2">
-       <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid w-100">
-     </div> 
-  </div>
-
-  </div>
-
-      <div class="col-lg-4 col-md-12 mt-3 pl-lg-5 mb-0">
-    <div class="col pl-lg-0 pt-0" style="color: #ff3399;">
-    <h6 class="text-left font-weight-bold pr-5 pl-1 pb-2 mr-3 ml-3 mt-0 pt-0 pl-3 d-inline-block mr-3 mb-0" style="color: #ff3399; border-bottom: solid 2px #6600ff; border-left: solid 2px #6600ff;">FEATURED VIDEO</h6>
-    </div>
-    <div class="row mr-3 ml-0 pt-3 mt-0" id="boxvideoscontent">
-
-
-      <!-- loping vidio  -->
- <?php 
-      include 'koneksi.php'; 
-      $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");
-      if ($query3->num_rows > 0) {
-
-      while ($row = $query3->fetch_array()) {
-      ?>
-
-      <div class="col-12 col-lg-12 col-md-6 col-sm-6 mb-2">
-      <iframe
-      <?php $vidio = substr($row[3],32);?>
-      src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' style="width: 100%;">
-      </iframe> 
-
-      <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
-      <h7><?php echo $row[1]; ?> BY <a href=""><?php echo $row[0] ; ?> </a></h7>
-      </div>
-        <?php } ?>
-
-
-<?php 
   
-  // end1 if
-}
-
-// end while
- ?>
-<!-- loping vidio end  -->
-
-
-  </div>
-      <h6 class="text-right pr-lg-2 font-weight-bold pt-lg-2 pb-lg-2 pl-lg-2 ml-lg-3 mr-lg-3 float-right pull-right" id="titlemorevideous" style="color: #ff3399; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href="">MORE VIDEO</a></h6>
-  </div>
 
   <!-- More Stories -->
-    <div class="col pt-sm-3 pl-sm-0 pr-sm-0 pl-lg-3 pr-lg-3">
-        <button class="btn btn-block p-lg-3 p-sm-3" style="background-color: #ff3399; border-radius: 0; color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
-    </div>
+    
   <!-- End -->
 
 </div>

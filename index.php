@@ -287,7 +287,7 @@
         <a class="nav-link" href="new_news.php">NEW NEWS <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="future.php">FUTURE</a>
+        <a class="nav-link" href="future.php">FREE GAMES</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
@@ -448,7 +448,7 @@
       <h7 style="font-size: 11px;" class="text-white">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
     </div>
      <div class="col-lg-12 pl-lg-0 pl-md-0 pr-sm-0 pr-lg-0 pr-md-0 pr-sm-0 p-0" id="kolom2">
-       <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid w-100">
+   <iframe src="https://www.games.co.id/?utm_source=spildomains&utm_medium=redirect&utm_campaign=game.co.id"></iframe>-->
      </div> 
   </div>
 
