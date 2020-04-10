@@ -416,7 +416,7 @@
 
   <div class="col-lg-8 col-md-12 col-sm-12">
   <?php include 'koneksi.php'; 
-    $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama ORDER BY id_post DESC");
+    $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama ORDER BY id_post DESC LIMIT 7");
       if ($query->num_rows > 0) {
 
       while ($row = $query->fetch_array()) {
