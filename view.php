@@ -139,6 +139,34 @@
 		color: purple;
 	}
 
+	/* Comment Box*/
+
+	div.row.image > div.col-lg-9 > div.col-lg-12 > h5 {
+		color: #ff3399;
+	}
+
+	div.row.image > div.col-lg-9 > div.col-lg-12 > h6 {
+		font-size: 13px;
+	}
+
+	div.row.image > div.col-lg-9 > div.col-lg-12 > h6 > a.font-weight-bold {
+		color: #ff3399;
+	}
+
+	div.row.image > div.col-lg-9 > div.col-lg-12 > h6 > a.font-weight-bold:hover {
+		color: purple;
+		text-decoration: none;
+	}
+
+	div.row.image > div.col-lg-9 > div#commentbox {
+		background-color: #EEEEEE;
+		padding: 20px;
+	}
+	
+	div.row.image > div.col-lg-9 > div#commentbox > form > button.btn.btn-primary {
+		background-color: #ff3399;
+		border: none;
+	}
 	</style>
 
 	<!-- End Style CSS -->
@@ -206,6 +234,37 @@
 				</h5>
 
 				<button class="mt-lg-3">NEXT ARTICLE</button>
+
+
+				<h4 class="mt-lg-5 mb-lg-2">THERE ARE <span>1</span> COMMENTS.</h4>
+				
+				<?php for ($i = 0; $i < 3; $i++) { ?>
+				<div class="col-lg-12 p-lg-3 mt-lg-3" style="border: 1px solid #EEEEEE; border-left: 5px solid #EEEEEE;">
+					<h5>Fate</h5>
+					<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ut sed harum consequuntur dolor doloribus corrupti a debitis aliquam dolores.</h6>
+					<h6>Posted On <a href="" class="font-weight-bold">Apr 10, 2020</a> |<a> 8:25 AM</a></h6>
+				</div>
+				<?php } ?>
+
+				<div class="col-lg-12 mt-lg-4" id="commentbox">
+					<form>
+					 <div class="form-group">
+					    <label for="exampleFormControlInput1">Username</label>
+					    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="username">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleFormControlInput1">Email address</label>
+					    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleFormControlTextarea1">Comment</label>
+					    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+					  </div>
+
+					  <button type="submit" class="btn btn-primary">Confirm To Bacot</button>
+					</form>
+				</div>
+
 			</div>
 
 			<div class="col-lg-3">
@@ -228,6 +287,9 @@
 				
 				</div>
 			</div>
+
+
+
 
 	</div>
 
