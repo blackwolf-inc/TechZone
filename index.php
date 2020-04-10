@@ -413,17 +413,18 @@ if ($query3->num_rows > 0) {
 
 
       <div class="col-6 col-lg-12 col-md-6 col-sm-6 mb-2">
-        <iframe width="269" height="197"
-        <?php $vidio = substr($row[3],32); ?>
-src='https://www.youtube.com/embed/<?php echo $vidio ; ?>'>
-</iframe> 
-<h4> <?php echo$row[2] ; ?> </h4>
-<h5><?php echo $row[1]; ?> <?php echo $row[0] ; ?></h5>
-<h5></h5>
+          <iframe width="269" height="197"
+                <?php $vidio = substr($row[3],32); ?>
+                 src='https://www.youtube.com/embed/<?php echo $vidio ; ?>'>
+          </iframe> 
+                    <h4> <?php echo$row[2] ; ?> </h4>
+                    <h7><?php echo $row[1]; ?> <?php echo $row[0] ; ?></h7>
+
                           
-          
       </div>
         <?php } ?>
+
+
 <?php 
   
   // end1 if
