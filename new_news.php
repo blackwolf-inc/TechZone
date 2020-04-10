@@ -345,56 +345,88 @@
   <?php } ?>
 
   <div class="row bigpost ml-lg-0 mr-lg-0 mb-lg-2">
-    <div class="col-lg-12 bigposttitle p-lg-4 p-md-4 p-sm-4 p-4">
-      <h5 class="text-uppercase text-white font-weight-bold">Lorem ipsum dolor sit amet, consectetur</h5>
-      <h7 class="text-white"> Lorem ipsum dolor sit amet, consectetur adipisicing. </h7> <br>
-      <h7 style="font-size: 11px;" class="text-white">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
-    </div>
-     <div class="col-lg-12 pl-lg-0 pl-md-0 pr-sm-0 pr-lg-0 pr-md-0 pr-sm-0 p-0" id="kolom2">
-       <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid w-100">
-     </div> 
+  <div class="card-body table-responsive p-0" style="height: 720px;">
+                <table class="table table-head-fixed">
+                  <thead>
+                    <tr>
+                      <th>ID Post</th>
+                      <th>Title</th>
+                      <th>Date</th>
+                      <th>Admin Name</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                      include 'koneksi.php';
+
+                      $query = mysqli_query($conn, "SELECT id_post, titel_post, tgl_post, id_admin, id_gambar ,jenis_post FROM utama where jenis_post =2 " );
+                      if($query->num_rows > 0){
+                        while ($row = $query->fetch_array()) {
+                          echo "
+                          <tr>
+                            <td>".$row[0]."</td>
+                            <td>".$row[1]."</td>
+                            <td>".$row[2]."</td>
+                            <td>".$row[3]."</td>
+                            <td><div class='row'>
+                              <div class='col-sm-6'>
+                                <form action='edit.php' method='post'><button class='btn btn-sm btn-warning'>Open</button>
+                                <input type='hidden' name='btnEdit' value='".$row[0]."'>
+                              </form></div>
+                              </div>
+                            </td>
+                          </tr>
+                          ";
+                        }
+                      }
+                    ?>
+                  </tbody>
+                </table>
+              </div> 
   </div>
 
   </div>
-
-  <div class="col-lg-4 col-md-12 mt-3 pl-lg-5">
-    <div class="col pl-lg-0" style="color: #ff3399;">
-    <h5 class="text-center mb-2 font-weight-bold" style="color: #ff3399;">FEATURED VIDEO</h5>
+    <div class="col-lg-4 col-md-12 mt-3 pl-lg-5 mb-0">
+    <div class="col pl-lg-0 pt-0" style="color: #ff3399;">
+    <h6 class="text-left font-weight-bold pr-5 pl-1 pb-2 mr-3 ml-3 mt-0 pt-0 pl-3 d-inline-block mr-3 mb-0" style="color: #ff3399; border-bottom: solid 2px #6600ff; border-left: solid 2px #6600ff;">FEATURED VIDEO</h6>
     </div>
-    <div class="row mr-3 ml-0 pt-3" style="border-top: solid 2px #6600ff; border-right: solid 2px #6600ff;" id="boxvideoscontent">
+    <div class="row mr-3 ml-0 pt-3 mt-0" id="boxvideoscontent">
 
 
       <!-- loping vidio  -->
-<?php 
-include 'koneksi.php'; 
-$query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");     
-  $count=0;
-if ($query3->num_rows > 0) {
+ <?php 
+      include 'koneksi.php'; 
+      $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");
+      if ($query3->num_rows > 0) {
 
+      while ($row = $query3->fetch_array()) {
+      ?>
 
- while ($row = $query3->fetch_array()) {
-?>
-<?php if ($count < 5) { $count++ ?>
+      <div class="col-12 col-lg-12 col-md-6 col-sm-6 mb-2">
+      <iframe
+      <?php $vidio = substr($row[3],32);?>
+      src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' style="width: 100%;">
+      </iframe> 
 
-   <div class="col-6 col-lg-12 col-md-6 col-sm-6 mb-2">
-          <iframe width="269" height="197"
-                <?php $vidio = substr($row[3],32); ?>
-                 src='https://www.youtube.com/embed/<?php echo $vidio ; ?>'>
-          </iframe> 
-                    <h4> <?php echo$row[2] ; ?> </h4>
-                    <h7><?php echo $row[1]; ?> <?php echo $row[0] ; ?></h7>
-
-                          
+      <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
+      <h7><?php echo $row[1]; ?> BY <a href=""><?php echo $row[0] ; ?> </a></h7>
       </div>
- 
-            <?php  } ?>
-         <?php } ?>
-      <?php }?>
+        <?php } ?>
+
+
+<?php 
+  
+  // end1 if
+}
+
+// end while
+ ?>
 <!-- loping vidio end  -->
 
 
-    </div>
-    <h6 class="text-right mt-lg-3 pr-lg-4 font-weight-bold pt-lg-2 pb-lg-1 pl-lg-0 ml-lg-5 mr-lg-3" id="titlemorevideous" style="color: #ff3399; border-bottom: solid 2px #6600ff;"><a href="">MORE IN FEATURED VIDEO</a></h6>
+  </div>
+      <h6 class="text-right pr-lg-2 font-weight-bold pt-lg-2 pb-lg-2 pl-lg-2 ml-lg-3 mr-lg-3 float-right pull-right" id="titlemorevideous" style="color: #ff3399; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href="">MORE VIDEO</a></h6>
   </div>
 
   <!-- More Stories -->
