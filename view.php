@@ -5,9 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="assets/css/font-awesome.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 	<!-- Style CSS -->
@@ -96,6 +98,22 @@
 		color: #830e60;
 	}
 
+	div.row.image > div.col-lg-9 > button.mt-lg-3 {
+		padding: 10px;
+		background-color: white;
+		font-weight: bolder;
+		box-shadow: none;
+		border-left: 2px solid purple;
+		border-bottom: 2px solid purple;
+		border-top: none;
+		border-right: none;
+		padding-right: 50px;
+		padding-left: 15px;
+		color: purple;
+		letter-spacing: 8px;
+	}
+
+
 	</style>
 
 	<!-- End Style CSS -->
@@ -145,18 +163,19 @@
 				<h2 class="text-uppercase">Lorem ipsum dolor sit amet, consectetur</h1>
 				<h4><i>Lorem ipsum dolor sit amet, consectetur.</i></h4>
 				<h6>By <a href="">Sam</a> | <a href="">ford@345triangle</a> | Apr 8, 2020 | 10:45 pm </h6>
-				<i class="fa fa-facebook-official"></i>
+				<a href=""><i class="fa fa-facebook-f mr-lg-3"></i></a>
+				<a href=""><i class="fa fa-twitter mr-lg-3"></i></a>
 				<h7><a href=""><i class="fas fa-share mr-2"></i>share </a> </h7>
 			</div>
 		</div>
 
 		<div class="row image">
 			<div class="col-lg-9">
-				<img src="assets/img/TopPost/2.jpg" alt="" class="img-fluid" width="100%">
+				<img src="assets/img/TopPost/2.jpg" alt="" class="img-fluid mt-lg-3 mb-lg-3" width="100%">
 
 				<h5 class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit veniam nemo doloribus adipisci esse sit, hic omnis quasi culpa voluptate laudantium dignissimos cum, ducimus perspiciatis. Omnis corporis minus veniam, natus in voluptatem explicabo odio. Totam culpa, esse aliquid voluptate suscipit rem at eligendi dicta dolores repudiandae, error ducimus architecto <p></p>doloribus ab recusandae tenetur iusto quia numquam iste sunt necessitatibus incidunt beatae! Assumenda nam nesciunt error quia aliquid odio quo, hic, magnam eius totam laborum quibusdam doloribus dolore labore facere voluptatem, esse. Iusto voluptatibus quis sapiente cum sunt placeat commodi architecto aut sequi consequatur veniam ipsum magnam magni veritatis, assumenda earum molestiae fugiatnesciunt sit. Repellat ipsa dignissimos dicta voluptatibus sit mollitia dolorem illum <p></p>error totam. Nobis voluptate porro consequatur aperiam commodi, amet ex ipsa minus praesentium nulla harum accusantium itaque voluptates veniam id illum, iusto ad assumenda dicta! Explicabo aperiam, unde, obcaecati tempore pariatur aliquam architecto consequatur vero quos consequuntur ut ducimus eligendi nulla sed amet possimus vel excepturi assumenda ex! Pariatur placeat assumenda ut, quam enim labore rem reprehenderit dolorum sit? Suscipit iusto reiciendis modi, <p></p>incidunt atque assumenda, voluptates nesciunt officiis accusantium vero obcaecati quas, praesentium consequatur, rerum laborum quia harum enim vel soluta vitae esse placeat! Ea, commodi!</h>
 
-				<img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid" width="100%">
+				<img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid mt-lg-3 mb-lg-3" width="100%">
 				<h5 class="text-justify">
 					error totam. Nobis voluptate porro consequatur aperiam commodi, amet ex ipsa minus praesentium nulla harum accusantium itaque voluptates veniam id illum, iusto ad assumenda dicta! Explicabo aperiam, unde, obcaecati tempore pariatur aliquam architecto consequatur vero quos consequuntur ut ducimus eligendi nulla sed amet possimus vel excepturi assumenda ex! Pariatur placeat assumenda ut, quam enim labore rem reprehenderit dolorum sit? Suscipit iusto reiciendis modi, <p></p>incidunt atque assumenda, voluptates nesciunt officiis accusantium vero obcaecati quas, praesentium consequatur, rerum laborum quia harum enim vel soluta vitae esse placeat! Ea, commodi!
 				</h5>
