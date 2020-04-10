@@ -89,6 +89,10 @@
 		color: grey;
 	}
 
+	div.row.title > div.col-lg-12 > h6 {
+		font-size: 15px;
+	}
+
 	div.row.title > div.col-lg-12 > h6 > a {
 		color: #ff3399;
 	}
@@ -100,6 +104,7 @@
 
 	div.row.title > div.col-lg-12 > a > i {
 		color: purple;
+		font-size: 24px;
 	}
 
 	div.row.title > div.col-lg-12 > a > i:hover {
@@ -108,6 +113,8 @@
 
 	div.row.title > div.col-lg-12 > h7 > a > i {
 		color: purple;
+		font-size: 24px;
+		padding-top: 10px;
 	}
 
 	div.row.title > div.col-lg-12 > h7 > a > i:hover {
@@ -187,12 +194,20 @@
 	div.row.image > div.col-lg-9 > div#commentbox {
 		background-color: #EEEEEE;
 		padding: 20px;
+		border: dashed 2px purple;
+		margin-bottom: 20px;
 	}
 	
 	div.row.image > div.col-lg-9 > div#commentbox > form > button.btn.btn-primary {
 		background-color: #ff3399;
 		border: none;
 	}
+	
+	div.row.image > div.col-lg-9 > h4 > span {
+		color: purple;
+		font-weight: bolder;
+	}
+
 	</style>
 
 	<!-- End Style CSS -->
