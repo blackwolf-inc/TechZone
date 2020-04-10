@@ -434,7 +434,7 @@
       <div class="col-8" style="border-top: solid 1px #e6e6e6;">
         <h5 class="font-weight-bold mt-2 "><?php echo $row[2];?><br>
         <h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
-        <h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="#"> Lanjut baca</a></h7> 
+        <h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="view.php?id_post=<?php echo $row[1]?>"> Lanjut baca</a></h7> 
         </h5>
         
       </div>
