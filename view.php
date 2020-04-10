@@ -212,6 +212,23 @@
 
 	<!-- End Style CSS -->
 </head>
+<?php
+  include 'koneksi.php';
+  if (isset($_GET['id_post'])) {
+  	$id_post = $_GET['id_post']; 
+  	$query = mysqli_query($conn, "SELECT * FROM utama WHERE id_post=$id_post");
+  	$result = mysqli_fetch_array($query);
+  	$tgl = $result[1];
+  	$ktgr = $result[2];
+  	$judul = $result[3];
+  	$isi = $result[4];
+  	$admin = $result[6];
+  	$jmlComent = $result[7];
+  	$gmbr = $result[8];
+  	$link = $result[9];
+  }
+?>
+
 <body>
 	<!-- Navbar -->
 
@@ -254,9 +271,9 @@
 
 		<div class="row title">
 			<div class="col-lg-12">
-				<h2 class="text-uppercase">Lorem ipsum dolor sit amet, consectetur</h1>
+				<h2 class="text-uppercase"><?php echo $judul; ?></h1>
 				<h4><i>Lorem ipsum dolor sit amet, consectetur.</i></h4>
-				<h6>By <a href="">Sam</a> | <a href="">ford@345triangle</a> | Apr 8, 2020 | 10:45 pm </h6>
+				<h6>By <a href=""><?php echo $admin; ?></a> | <a href="">ford@345triangle</a> | <?php echo $tgl ?></h6>
 				<a href=""><i class="fa fa-facebook-f mr-lg-3"></i></a>
 				<a href=""><i class="fa fa-twitter mr-lg-3"></i></a>
 				<h7><a href=""><i class="fas fa-share mr-2"></i>share</a> </h7>
@@ -265,19 +282,14 @@
 
 		<div class="row image">
 			<div class="col-lg-9">
-				<img src="assets/img/TopPost/9.jpg" alt="" class="img-fluid mt-lg-3 mb-lg-3" width="100%">
+				<img src="<?php echo substr($gmbr, 3) ;?>" alt="" class="img-fluid mt-lg-3 mb-lg-3" width="100%">
 
-				<h5 class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit veniam nemo doloribus adipisci esse sit, hic omnis quasi culpa voluptate laudantium dignissimos cum, ducimus perspiciatis. Omnis corporis minus veniam, natus in voluptatem explicabo odio. Totam culpa, esse aliquid voluptate suscipit rem at eligendi dicta dolores repudiandae, error ducimus architecto <p></p>doloribus ab recusandae tenetur iusto quia numquam iste sunt necessitatibus incidunt beatae! Assumenda nam nesciunt error quia aliquid odio quo, hic, magnam eius totam laborum quibusdam doloribus dolore labore facere voluptatem, esse. Iusto voluptatibus quis sapiente cum sunt placeat commodi architecto aut sequi consequatur veniam ipsum magnam magni veritatis, assumenda earum molestiae fugiatnesciunt sit. Repellat ipsa dignissimos dicta voluptatibus sit mollitia dolorem illum <p></p>error totam. Nobis voluptate porro consequatur aperiam commodi, amet ex ipsa minus praesentium nulla harum accusantium itaque voluptates veniam id illum, iusto ad assumenda dicta! Explicabo aperiam, unde, obcaecati tempore pariatur aliquam architecto consequatur vero quos consequuntur ut ducimus eligendi nulla sed amet possimus vel excepturi assumenda ex! Pariatur placeat assumenda ut, quam enim labore rem reprehenderit dolorum sit? Suscipit iusto reiciendis modi, <p></p>incidunt atque assumenda, voluptates nesciunt officiis accusantium vero obcaecati quas, praesentium consequatur, rerum laborum quia harum enim vel soluta vitae esse placeat! Ea, commodi!</h>
-
-				<img src="assets/img/TopPost/7.jpg" alt="" class="img-fluid mt-lg-3 mb-lg-3" width="100%">
-				<h5 class="text-justify">
-					error totam. Nobis voluptate porro consequatur aperiam commodi, amet ex ipsa minus praesentium nulla harum accusantium itaque voluptates veniam id illum, iusto ad assumenda dicta! Explicabo aperiam, unde, obcaecati tempore pariatur aliquam architecto consequatur vero quos consequuntur ut ducimus eligendi nulla sed amet possimus vel excepturi assumenda ex! Pariatur placeat assumenda ut, quam enim labore rem reprehenderit dolorum sit? Suscipit iusto reiciendis modi, <p></p>incidunt atque assumenda, voluptates nesciunt officiis accusantium vero obcaecati quas, praesentium consequatur, rerum laborum quia harum enim vel soluta vitae esse placeat! Ea, commodi!
-				</h5>
+				<h5 class="text-justify"><?php echo $isi; ?></h5>
 
 				<button class="mt-lg-3">NEXT ARTICLE</button>
 
 
-				<h4 class="mt-lg-5 mb-lg-2">THERE ARE <span>3</span> COMMENTS.</h4>
+				<h4 class="mt-lg-5 mb-lg-2">THERE ARE <span><?php echo $jmlComent ?></span> COMMENTS.</h4>
 				
 				<?php for ($i = 0; $i < 3; $i++) { ?>
 				<div class="col-lg-12 p-lg-3 mt-lg-3" style="border: 1px solid #EEEEEE; border-left: 5px solid #EEEEEE;">
