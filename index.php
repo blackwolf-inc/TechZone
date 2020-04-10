@@ -397,7 +397,6 @@
 
   </div>
 
-<<<<<<< HEAD
   <div class="col-lg-4 col-md-12 mt-3 pl-lg-5">
     <div class="col pl-lg-0" style="color: #ff3399;">
     <h5 class="text-center mb-2 font-weight-bold" style="color: #ff3399;">FEATURED VIDEO</h5>
@@ -410,47 +409,11 @@
 include 'koneksi.php'; 
 $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");
 if ($query3->num_rows > 0) {
-=======
-  <!-- videos content -->
-
-  <div class="col-lg-4 col-md-12 mt-3 pl-lg-5 mb-0">
-    <div class="col pl-lg-0 pt-0" style="color: #ff3399;">
-    <h5 class="text-left font-weight-bold pr-1 pl-1 pb-2 mr-3 ml-3 mt-0 pt-0 pl-3 d-inline mr-3" style="color: #ff3399; border-bottom: solid 2px #6600ff; border-left: solid 2px #6600ff;">FEATURED VIDEO</h5>
-    </div>
-    <div class="row mr-3 ml-0 pt-3 mt-2" id="boxvideoscontent">
-      <!-- loping vidio  -->
-      <?php 
-      include 'koneksi.php'; 
-      $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");
-      if ($query3->num_rows > 0) {
-
-      while ($row = $query3->fetch_array()) {
-      ?>
-
-      <div class="col-12 col-lg-12 col-md-6 col-sm-6 mb-2">
-      <iframe
-      <?php $vidio = substr($row[3],32);?>
-      src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' style="width: 100%;">
-      </iframe> 
-
-      <h4> <?php echo$row[2] ; ?> </h4>
-      <h5><?php echo $row[1]; ?> <?php echo $row[0] ; ?></h5>
-      <h5></h5>
-      </div>
-      <?php } ?>
->>>>>>> parent of 5a67904... Update index.php
 
 
  while ($row = $query3->fetch_array()) {
 ?>
 
-<<<<<<< HEAD
-=======
-    <h6 class="text-right pr-lg-2 font-weight-bold pt-lg-2 pb-lg-2 pl-lg-2 ml-lg-3 mr-lg-3" id="titlemorevideous" style="color: #ff3399; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href="">MORE VIDEO</a></h6>
-  </div>
-    
-  </div>
->>>>>>> parent of 5a67904... Update index.php
 
       <div class="col-6 col-lg-12 col-md-6 col-sm-6 mb-2">
           <iframe width="269" height="197"
