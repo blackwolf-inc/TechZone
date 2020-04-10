@@ -112,7 +112,32 @@
 		color: purple;
 		letter-spacing: 8px;
 	}
+	
+	div.row.image > div.col-lg-3 > .row > .col-lg-12 > h4.text-uppercase.font-weight-bold {
+		letter-spacing: 4px;
+		font-size: 18px;
+		text-align: center;
+		border-right: 2px solid purple;
+		color: #ff3399;
+	}
 
+	div.row.image > div.col-lg-3 > .row > .col-lg-12 > h6.text-uppercase.font-weight-bold {
+		letter-spacing: 4px;
+		font-size: 12px;
+		text-align: right;
+		border-right: 2px solid purple;
+		color: #ff3399;
+		padding-right: 20px;
+	}
+
+	div.row.image > div.col-lg-3 > .row > .col-lg-12 > h6.text-uppercase.font-weight-bold  > a {
+		color: #ff3399;
+		text-decoration: none;
+	}
+
+	div.row.image > div.col-lg-3 > .row > .col-lg-12 > h6.text-uppercase.font-weight-bold  > a:hover {
+		color: purple;
+	}
 
 	</style>
 
@@ -184,9 +209,25 @@
 			</div>
 
 			<div class="col-lg-3">
+				<div class="row">
+					<div class="col-lg-12">
+						<h4 class="text-uppercase font-weight-bold">Other Article</h4>
+					</div>
+					<!-- Looping Post -->
+					<?php for ($i = 0; $i < 3; $i++) { ?>
+					<div class="col-lg-12 mt-lg-3">
+						<img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid mt-lg-0">
+
+						<h6 class="text-justify mt-lg-1 mb-lg-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum.</h6>
+					</div>
+					<?php } ?>
+
+					<div class="col-lg-12">
+						<h6 class="text-uppercase font-weight-bold mt-lg-3"><a href="">More Article</a></h6>
+					</div>
 				
+				</div>
 			</div>
-		</div>
 
 	</div>
 
