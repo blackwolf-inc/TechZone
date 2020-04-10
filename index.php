@@ -404,15 +404,16 @@
       <!-- loping vidio  -->
 <?php 
 include 'koneksi.php'; 
-$query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");
+$query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");     
+  $count=0;
 if ($query3->num_rows > 0) {
 
 
  while ($row = $query3->fetch_array()) {
 ?>
+<?php if ($count < 5) { $count++ ?>
 
-
-      <div class="col-6 col-lg-12 col-md-6 col-sm-6 mb-2">
+   <div class="col-6 col-lg-12 col-md-6 col-sm-6 mb-2">
           <iframe width="269" height="197"
                 <?php $vidio = substr($row[3],32); ?>
                  src='https://www.youtube.com/embed/<?php echo $vidio ; ?>'>
@@ -422,16 +423,10 @@ if ($query3->num_rows > 0) {
 
                           
       </div>
-        <?php } ?>
-
-
-<?php 
-  
-  // end1 if
-}
-
-// end while
- ?>
+ 
+            <?php  } ?>
+         <?php } ?>
+      <?php }?>
 <!-- loping vidio end  -->
 
 
