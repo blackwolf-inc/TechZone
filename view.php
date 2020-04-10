@@ -207,7 +207,7 @@
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarNav">
-		    <ul class="navbar-nav">
+		    <ul class="navbar-nav ml-auto">
 		      <li class="nav-item active pl-lg-4">
 		        <a class="nav-link" href="#">New News <span class="sr-only">(current)</span></a>
 		      </li>
@@ -262,7 +262,7 @@
 				<button class="mt-lg-3">NEXT ARTICLE</button>
 
 
-				<h4 class="mt-lg-5 mb-lg-2">THERE ARE <span>1</span> COMMENTS.</h4>
+				<h4 class="mt-lg-5 mb-lg-2">THERE ARE <span>3</span> COMMENTS.</h4>
 				
 				<?php for ($i = 0; $i < 3; $i++) { ?>
 				<div class="col-lg-12 p-lg-3 mt-lg-3" style="border: 1px solid #EEEEEE; border-left: 5px solid #EEEEEE;">
