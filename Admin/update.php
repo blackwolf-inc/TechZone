@@ -3,6 +3,7 @@
 include '../koneksi.php';
 
 // Funsi save file start
+$target_file2 = "../croped/" .  date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $target_file = "../data_gambar/". date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if image file is a actual image or fake image
@@ -17,6 +18,7 @@ if(isset($_POST["update"])) {
     $isi = $_POST["isiText"];
     $tgl = date('D M Y');
     $imgLamaType = strtolower(pathinfo($imgLama,PATHINFO_EXTENSION));
+    $cropLama = "../croped/".substr($imgLama, 15);
 
     if($_FILES["fileToUpload"]["name"]==""){
         $target_file= $imgLama;
@@ -38,8 +40,11 @@ if(isset($_POST["update"])) {
         }
         else if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {  
             if($imgLamaType == "jpg" && $imgLamaType == "png" && $imgLamaType == "jpeg" && $imgLamaType == "gif" && $imgLamaType == "bmp" ){
+                unlink($cropLama);
                 unlink($imgLama);
+
             }
+            copy($target_file, $target_file2);
             
         }
         else{
