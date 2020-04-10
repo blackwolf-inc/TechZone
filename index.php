@@ -420,31 +420,30 @@
 
   </div>
 
-  <div class="col-lg-4 col-md-12 mt-3 pl-lg-5">
-    <div class="col pl-lg-0" style="color: #ff3399;">
+    <div class="col-lg-4 col-md-12 mt-3 pl-lg-5 mb-0">
+    <div class="col pl-lg-0 pt-0" style="color: #ff3399;">
     <h6 class="text-left font-weight-bold pr-5 pl-1 pb-2 mr-3 ml-3 mt-0 pt-0 pl-3 d-inline-block mr-3 mb-0" style="color: #ff3399; border-bottom: solid 2px #6600ff; border-left: solid 2px #6600ff;">FEATURED VIDEO</h6>
     </div>
     <div class="row mr-3 ml-0 pt-3 mt-0" id="boxvideoscontent">
 
 
       <!-- loping vidio  -->
-<?php 
-include 'koneksi.php'; 
-$query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");
-if ($query3->num_rows > 0) {
+ <?php 
+      include 'koneksi.php'; 
+      $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");
+      if ($query3->num_rows > 0) {
 
+      while ($row = $query3->fetch_array()) {
+      ?>
 
- while ($row = $query3->fetch_array()) {
-?>
+      <div class="col-12 col-lg-12 col-md-6 col-sm-6 mb-2">
+      <iframe
+      <?php $vidio = substr($row[3],32);?>
+      src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' style="width: 100%;">
+      </iframe> 
 
-
-      <div class="col-6 col-lg-12 col-md-6 col-sm-6 mb-2">
-          <iframe width="269" height="197"
-                <?php $vidio = substr($row[3],32); ?>
-                 src='https://www.youtube.com/embed/<?php echo $vidio ; ?>'>
-          </iframe> 
       <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
-      <h7><?php echo $row[1]; ?> BY <a href=""><?php echo $row[0] ; ?> </a></h7>   
+      <h7><?php echo $row[1]; ?> BY <a href=""><?php echo $row[0] ; ?> </a></h7>
       </div>
         <?php } ?>
 
@@ -459,8 +458,8 @@ if ($query3->num_rows > 0) {
 <!-- loping vidio end  -->
 
 
-    </div>
-    <h6 class="text-right pr-lg-2 font-weight-bold pt-lg-2 pb-lg-2 pl-lg-2 ml-lg-3 mr-lg-3 float-right pull-right" id="titlemorevideous" style="color: #ff3399; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href="">MORE VIDEO</a></h6>
+  </div>
+      <h6 class="text-right pr-lg-2 font-weight-bold pt-lg-2 pb-lg-2 pl-lg-2 ml-lg-3 mr-lg-3 float-right pull-right" id="titlemorevideous" style="color: #ff3399; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href="">MORE VIDEO</a></h6>
   </div>
 
   <!-- More Stories -->
@@ -532,8 +531,6 @@ if ($(this).width() < 575) {
     $("#kolomcarousel2").css("margin-bottom","-100px");
 
     $("#titlemorevideous").show();
-    $("#boxvideoscontent").css("border-top","solid 2px #6600ff");
-    $("#boxvideoscontent").css("border-right","solid 2px #6600ff");
 
 
 } else if ($(this).width() < 1200) {
