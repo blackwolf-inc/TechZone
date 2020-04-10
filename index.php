@@ -415,18 +415,25 @@
 <div class="row content" style="background-color: white;">
 
   <div class="col-lg-8 col-md-12 col-sm-12">
-  <?php for ($i = 0; $i<5; $i++) { ?>
+  <?php include 'koneksi.php'; 
+    $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama ORDER BY id_post DESC");
+      if ($query->num_rows > 0) {
+
+      while ($row = $query->fetch_array()) {
+      ?>
     <div class="row mt-3 mb-2 newpostcolumn">
       <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-        <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid">
+        <img src="<?php echo 'croped'.substr($row[1], 14) ;?>" alt="" class="img-fluid">
       </div>
       <div class="col-8" style="border-top: solid 1px #e6e6e6;">
-        <h5 class="font-weight-bold mt-2 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-        <h7 style="font-size: 11px;">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
-        </h5> 
+        <h5 class="font-weight-bold mt-2 "><?php echo $row[2];?><br>
+        <h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
+        <h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="#"> Lanjut baca</a></h7> 
+        </h5>
+        
       </div>
     </div>
-  <?php } ?>
+  <?php }} ?>
 
   <div class="row bigpost ml-lg-0 mr-lg-0 mb-lg-2">
     <div class="col-lg-12 bigposttitle p-lg-4 p-md-4 p-sm-4 p-4">
