@@ -239,7 +239,7 @@
         <a class="nav-link active" href="future.php">FUTURE</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">SEE ALL NEWS</a>
+        <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
       </li>
     </ul>
   </div>

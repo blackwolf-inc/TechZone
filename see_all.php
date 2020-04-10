@@ -232,14 +232,14 @@
        <li class="nav-item ">
         <a class="nav-link " href="index.php">HOME <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item ">
+        <a class="nav-link " href="new_news.php">NEW NEWS <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link " href="future.php">FUTURE</a>
+      </li>
       <li class="nav-item active">
-        <a class="nav-link active" href="new_news.php">NEW NEWS <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="future.php">FUTURE</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
+        <a class="nav-link active" href="see_all.php">SEE ALL NEWS</a>
       </li>
     </ul>
   </div>
@@ -274,133 +274,74 @@
   </div>
 <!-- end Carousel 1 -->
 
-<!-- crousel  -->
-<div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 pl-0 pr-0">
-         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <!-- isi crousel  -->
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="..." alt="First slide">
-       </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
-       </div>
-        <div class="carousel-item">
-             <img class="d-block w-100" src="..." alt="Third slide">
-       </div>
-  </div>
-  <!-- item crousel end -->
-  <!-- crousel button -->
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!-- crousel buto end -->
-</div>
-      </div>
-    </div>
-    <div style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
-      <!-- button  -->
-<div class="btn-group col-md-12" role="group" aria-label="Basic example">
-  <button type="button" class="btn  " style="color:white">Tech</button>
-  <button type="button" class="btn " style="color:white">Science</button>
-  <button type="button" class="btn " style="color:white">Entertaiment</button>
-  <button type="button" class="btn " style="color:white">Economy</button>
-  <button type="button" class="btn " style="color:white">Health</button>
-</div>
-      <!-- button  -->
+<!-- Jumbotron  -->
 
-
-
-  
-
-    </div><br><br>
-<!-- End crousel -->
+<!-- End Jumbotron -->
 
 <!-- Content -->
+<div class="">
+<div class="carouselbox col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">New Post search</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right dropdown-toggle" placeholder="Search">
+
+                  </div>
+                </div>
+              </div>
 <div class="row content" style="background-color: white;">
+   <div class="card-body table-responsive p-0" style="height: 720px;">
+                <table class="table table-head-fixed">
+                  <thead>
+                    <tr>
+                      <th>ID Post</th>
+                      <th>Title</th>
+                      <th>Date</th>
+                      <th>Admin Name</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                      include 'koneksi.php';
 
-  <div class="col-lg-8 col-md-12 col-sm-12">
-  <?php for ($i = 0; $i<5; $i++) { ?>
-    <div class="row mt-3 mb-2 newpostcolumn">
-      <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-        <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid">
-      </div>
-      <div class="col-8" style="border-top: solid 1px #e6e6e6;">
-        <h5 class="font-weight-bold mt-2 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-        <h7 style="font-size: 11px;">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
-        </h5> 
-      </div>
-    </div>
-  <?php } ?>
-
-  <div class="row bigpost ml-lg-0 mr-lg-0 mb-lg-2">
-    <div class="col-lg-12 bigposttitle p-lg-4 p-md-4 p-sm-4 p-4">
-      <h5 class="text-uppercase text-white font-weight-bold">Lorem ipsum dolor sit amet, consectetur</h5>
-      <h7 class="text-white"> Lorem ipsum dolor sit amet, consectetur adipisicing. </h7> <br>
-      <h7 style="font-size: 11px;" class="text-white">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
-    </div>
-     <div class="col-lg-12 pl-lg-0 pl-md-0 pr-sm-0 pr-lg-0 pr-md-0 pr-sm-0 p-0" id="kolom2">
-       <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid w-100">
-     </div> 
-  </div>
-
-  </div>
-
-  <div class="col-lg-4 col-md-12 mt-3 pl-lg-5">
-    <div class="col pl-lg-0" style="color: #ff3399;">
-    <h5 class="text-center mb-2 font-weight-bold" style="color: #ff3399;">FEATURED VIDEO</h5>
-    </div>
-    <div class="row mr-3 ml-0 pt-3" style="border-top: solid 2px #6600ff; border-right: solid 2px #6600ff;" id="boxvideoscontent">
-
-
-      <!-- loping vidio  -->
-<?php 
-include 'koneksi.php'; 
-$query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");     
-  $count=0;
-if ($query3->num_rows > 0) {
-
-
- while ($row = $query3->fetch_array()) {
-?>
-<?php if ($count < 5) { $count++ ?>
-
-   <div class="col-6 col-lg-12 col-md-6 col-sm-6 mb-2">
-          <iframe width="269" height="197"
-                <?php $vidio = substr($row[3],32); ?>
-                 src='https://www.youtube.com/embed/<?php echo $vidio ; ?>'>
-          </iframe> 
-                    <h4> <?php echo$row[2] ; ?> </h4>
-                    <h7><?php echo $row[1]; ?> <?php echo $row[0] ; ?></h7>
-
-                          
-      </div>
- 
-            <?php  } ?>
-         <?php } ?>
-      <?php }?>
+                      $query = mysqli_query($conn, "SELECT id_post, titel_post, tgl_post, id_admin, id_gambar FROM utama GROUP BY id_post DESC" );
+                      if($query->num_rows > 0){
+                        while ($row = $query->fetch_array()) {
+                          echo "
+                          <tr>
+                            <td>".$row[0]."</td>
+                            <td>".$row[1]."</td>
+                            <td>".$row[2]."</td>
+                            <td>".$row[3]."</td>
+                            <td><div class='row'>
+                              <div class='col-sm-6'>
+                                <form action='edit.php' method='post'><button class='btn btn-sm btn-warning'>Open</button>
+                                <input type='hidden' name='btnEdit' value='".$row[0]."'>
+                              </form></div>
+                              </div>
+                            </td>
+                          </tr>
+                          ";
+                        }
+                      }
+                    ?>
+                  </tbody>
+                </table>
+              </div>
+              </div>
 <!-- loping vidio end  -->
 
 
     </div>
-    <h6 class="text-right mt-lg-3 pr-lg-4 font-weight-bold pt-lg-2 pb-lg-1 pl-lg-0 ml-lg-5 mr-lg-3" id="titlemorevideous" style="color: #ff3399; border-bottom: solid 2px #6600ff;"><a href="">MORE IN FEATURED VIDEO</a></h6>
+    <h6 class="text-right mt-lg-3 pr-lg-4 font-weight-bold pt-lg-2 pb-lg-1 pl-lg-0 ml-lg-5 mr-lg-3" id="titlemorevideous" style="color: #ff3399; border-bottom: solid 2px #6600ff;"><a href=""></a></h6>
   </div>
 
   <!-- More Stories -->
-    <div class="col pt-sm-3 pl-sm-0 pr-sm-0 pl-lg-3 pr-lg-3">
-        <button class="btn btn-block p-lg-3 p-sm-3" style="background-color: #ff3399; border-radius: 0; color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
-    </div>
+   
   <!-- End -->
 
 </div>
