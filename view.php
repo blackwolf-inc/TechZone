@@ -98,6 +98,32 @@
 		color: #830e60;
 	}
 
+	div.row.title > div.col-lg-12 > a > i {
+		color: purple;
+	}
+
+	div.row.title > div.col-lg-12 > a > i:hover {
+		color: #f9db24;
+	}
+
+	div.row.title > div.col-lg-12 > h7 > a > i {
+		color: purple;
+	}
+
+	div.row.title > div.col-lg-12 > h7 > a > i:hover {
+		color: #f9db24;
+	}
+
+	div.row.title > div.col-lg-12 > h7 > a {
+		color: purple;
+		text-decoration: none;
+	}
+
+	div.row.title > div.col-lg-12 > h7 > a:hover {
+		color: #f9db24;
+		text-decoration: none;
+	}
+
 	div.row.image > div.col-lg-9 > button.mt-lg-3 {
 		padding: 10px;
 		background-color: white;
@@ -218,7 +244,7 @@
 				<h6>By <a href="">Sam</a> | <a href="">ford@345triangle</a> | Apr 8, 2020 | 10:45 pm </h6>
 				<a href=""><i class="fa fa-facebook-f mr-lg-3"></i></a>
 				<a href=""><i class="fa fa-twitter mr-lg-3"></i></a>
-				<h7><a href=""><i class="fas fa-share mr-2"></i>share </a> </h7>
+				<h7><a href=""><i class="fas fa-share mr-2"></i>share</a> </h7>
 			</div>
 		</div>
 
