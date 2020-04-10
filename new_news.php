@@ -217,6 +217,20 @@
     </style>
 </head>
 
+<?php
+  include 'koneksi.php';
+  $ctrg=1;
+
+  if (isset($_POST['btnCtgr'])) {
+    $btnValue = $_POST['btnCtgr'];
+    if($btnValue==2){$ctrg=2;}
+    else if($btnValue==3){$ctrg=3;}
+    else if($btnValue==4){$ctrg=4;}
+    else if($btnValue==5){$ctrg=5;}
+  }
+  $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE jenis_post=$ctrg ORDER BY id_post DESC ");
+?>
+
 <body>
 <!-- JumbNavbar -->
 <div class="pos-f-t">
@@ -311,14 +325,15 @@
     </div>
     <div style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
       <!-- button  -->
+<form action="new_news.php" method="post">
 <div class="btn-group col-md-12" role="group" aria-label="Basic example">
-  <button type="button" class="btn  " style="color:white">Tech</button>
-  <button type="button" class="btn " style="color:white">Science</button>
-  <button type="button" class="btn " style="color:white">Entertaiment</button>
-  <button type="button" class="btn " style="color:white">Economy</button>
-  <button type="button" class="btn " style="color:white">Health</button>
+  <button name="btnCtgr" class="btn  " style="color:white" value="1">Tech</button>
+  <button name="btnCtgr" class="btn " style="color:white" value="2">Science</button>
+  <button name="btnCtgr" class="btn " style="color:white" value="3">Entertaiment</button>
+  <button name="btnCtgr" class="btn " style="color:white" value="4">Economy</button>
+  <button name="btnCtgr" class="btn " style="color:white" value="5">Health</button>
 </div>
-      <!-- button  -->
+</form>     <!-- button  -->
 
 
 
@@ -331,18 +346,25 @@
 <div class="row content" style="background-color: white;">
 
   <div class="col-lg-8 col-md-12 col-sm-12">
-  <?php for ($i = 0; $i<5; $i++) { ?>
+  <?php include 'koneksi.php'; 
+    $query2 = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE jenis_post=$ctrg ORDER BY id_post DESC LIMIT 7");
+      if ($query2->num_rows > 0) {
+
+      while ($row = $query2->fetch_array()) {
+      ?>
     <div class="row mt-3 mb-2 newpostcolumn">
       <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-        <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid">
+        <img src="<?php echo 'croped'.substr($row[1], 14) ;?>" alt="" class="img-fluid">
       </div>
       <div class="col-8" style="border-top: solid 1px #e6e6e6;">
-        <h5 class="font-weight-bold mt-2 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-        <h7 style="font-size: 11px;">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
-        </h5> 
+        <h5 class="font-weight-bold mt-2 "><?php echo $row[2];?><br>
+        <h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
+        <h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="view.php?id_post=<?php echo $row[1]?>"> Lanjut baca</a></h7> 
+        </h5>
+        
       </div>
     </div>
-  <?php } ?>
+  <?php }} ?>
 
   <div class="row bigpost ml-lg-0 mr-lg-0 mb-lg-2">
   <div class="card-body table-responsive p-0" style="height: 720px;">
@@ -358,17 +380,15 @@
                   </thead>
                   <tbody>
                     <?php
-                      include 'koneksi.php';
-
-                      $query = mysqli_query($conn, "SELECT id_post, titel_post, tgl_post, id_admin, id_gambar ,jenis_post FROM utama where jenis_post =2 " );
+                      
                       if($query->num_rows > 0){
                         while ($row = $query->fetch_array()) {
                           echo "
                           <tr>
                             <td>".$row[0]."</td>
-                            <td>".$row[1]."</td>
                             <td>".$row[2]."</td>
                             <td>".$row[3]."</td>
+                            <td>".$row[4]."</td>
                             <td><div class='row'>
                               <div class='col-sm-6'>
                                 <form action='edit.php' method='post'><button class='btn btn-sm btn-warning'>Open</button>
