@@ -443,7 +443,7 @@
 
     <div class="col-lg-4 col-md-12 mt-3 pl-lg-5 mb-0">
     <div class="col pl-lg-0 pl-0 pt-0 d-flex justify-content-lg-start justify-content-center" style="color: #ff3399;" id="titlekolfeaturedvideo">
-    <h6 class="font-weight-bold pr-5 pl-1 pb-2 mr-3 ml-3 mt-0 pt-0 pl-3 d-inline-block mr-3 mb-0" id="titlefeaturedvideo">FEATURED VIDEO</h6>
+    <h6 class="font-weight-bold pr-5 pl-1 pb-2 mr-3 ml-5 ml-lg-3 mt-0 pt-0 pl-3 d-inline-block mr-3 mb-0" id="titlefeaturedvideo">FEATURED VIDEO</h6>
     </div>
     <div class="row mr-3 ml-0 pt-3 mt-0" id="boxvideoscontent">
 
