@@ -236,7 +236,7 @@
         <a class="nav-link " href="new_news.php">NEW NEWS <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link " href="future.php">FUTURE</a>
+        <a class="nav-link " href="future.php">FREE GAME</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link active" href="see_all.php">SEE ALL NEWS</a>
