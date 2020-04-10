@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start() ?>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -226,6 +227,7 @@
   	$jmlComent = $result[7];
   	$gmbr = $result[8];
   	$link = $result[9];
+  	$_SESSION["id_post"]=$id_post;
   }
 ?>
 
@@ -300,21 +302,21 @@
 				<?php } ?>
 
 				<div class="col-lg-12 mt-lg-4" id="commentbox">
-					<form>
+					<form method="POST">
 					 <div class="form-group">
-					    <label for="exampleFormControlInput1">Username</label>
-					    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="username">
+					    <label for="insertbacotusername">Username</label>
+					    <input type="text" class="form-control" id="insertbacotusername" placeholder="username">
 					  </div>
 					  <div class="form-group">
-					    <label for="exampleFormControlInput1">Email address</label>
-					    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+					    <label for="insertbacotemail">Email address</label>
+					    <input type="email" class="form-control" id="insertbacotemail" placeholder="name@example.com">
 					  </div>
 					  <div class="form-group">
-					    <label for="exampleFormControlTextarea1">Comment</label>
-					    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+					    <label for="insertbacotisi">Comment</label>
+					    <textarea class="form-control" id="insertbacotisi" rows="3"></textarea>
 					  </div>
 
-					  <button type="submit" class="btn btn-primary">Confirm To Bacot</button>
+					  <button type="submit" class="btn btn-primary" id="bacot">Confirm To Bacot</button>
 					</form>
 				</div>
 
