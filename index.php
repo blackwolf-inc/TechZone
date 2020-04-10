@@ -134,11 +134,11 @@
         color: #cc0099;
       }
 
-      div#boxvideoscontent > h6#titlemorevideous > a {
+      h6#titlemorevideous > a {
         color: #ff3399;
       }
 
-      div#boxvideoscontent > h6#titlemorevideous > a:hover {
+      h6#titlemorevideous > a:hover {
         color: #cc0099;
       }
       /* end Box Videos*/
