@@ -550,7 +550,7 @@
       ?>
       <div class="row">
         <div class="col p-0" id="kolomcarousel1">
-          <img src="<?php echo 'croped'.substr($data[2], 14) ;?>" alt="" class="img-fluid h-100">
+          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid h-100">
         </div>
         <div class="col mt-2 p-lg-4 pl-lg-4">
           <h1 class="text-white font-weight-bold text-uppercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white" style="display: inline-block;">BY <a href=""><?php echo $data[1]?></a></h5></h1>
@@ -568,7 +568,7 @@
       ?>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="<?php echo 'croped'.substr($data[2], 14) ;?>" alt="" class="img-fluid">
+          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
           <h4 class="font-weight-bold text-lowercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h4>
@@ -585,7 +585,7 @@
       ?>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="<?php echo 'croped'.substr($data[2], 14) ;?>" alt="" class="img-fluid">
+          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
           <h4 class="text-white font-weight-bold text-lowercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href="" ><?php echo $data[1]?></a></h5></h4>
@@ -602,7 +602,7 @@
       ?>
       <div class="row">
         <div class="col p-0" id="kolomcarousel2">
-          <img src="<?php echo 'croped'.substr($data[2], 14) ;?>" alt="" class="img-fluid h-100">
+          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid h-100">
         </div>
         <div class="col p-lg-4 pl-lg-4">
           <h1 class="text-white font-weight-bold text-uppercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h1>
@@ -621,7 +621,7 @@
       ?>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="<?php echo 'croped'.substr($data[2], 14) ;?>" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
+          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href="" ><?php echo $data[1]?></a></h5></h4>
@@ -635,7 +635,7 @@
       ?>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="<?php echo 'croped'.substr($data[2], 14) ;?>" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
+          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href="" ><?php echo $data[1]?></a></h5></h4>
@@ -649,7 +649,7 @@
       ?>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="<?php echo 'croped'.substr($data[2], 14) ;?>" alt="" class="img-fluid w-100" style="width: 100%; max-height: 400px;">
+          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid w-100" style="width: 100%; max-height: 400px;">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href="">
