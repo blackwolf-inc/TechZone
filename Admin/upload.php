@@ -5,6 +5,7 @@ include '../koneksi.php';
 
 //print_r($_FILES["fileToUpload"]);
 // Funsi save file start
+$target_file3 = "../tumb/" .  date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $target_file2 = "../croped/" .  date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $target_file = "../data_gambar/". date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -19,6 +20,7 @@ if(isset($_POST["upload"])) {
     $isi = $_POST["isiText"];
     $tgl = date('D M Y');
     $link = $_POST["link_post"];
+
 
     // end save fariabel
 
@@ -48,6 +50,21 @@ if(isset($_POST["upload"])) {
         }
     }
  copy($target_file, $target_file2);
+ copy($target_file, $target_file3);
+// auto widht
+
+$im_src = imagecreatefromjpeg($target_file3);
+   $src_width = imageSX($im_src);
+   $src_height = imageSY($im_src);
+
+    $dst_width =$src_width ;
+    $dst_height = $src_width * 75 /100;
+
+     $im = imagecreatetruecolor($dst_width,$dst_height);
+        imagecopyresampled($im, $im_src, 0, 0, 0, 0, $dst_width, $dst_height, $src_width, $src_height);
+
+    imagejpeg($im,$target_file3 ,100);
+// end
 
     $query = mysqli_query($conn, "INSERT INTO utama(titel_post, id_admin, tgl_post, jenis_post, isi_post, id_gambar, link_post) VALUES ('$title', '$admin','$tgl','$category','$isi','$target_file','$link')");
     echo "<script>
