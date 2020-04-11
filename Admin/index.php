@@ -33,6 +33,9 @@ $totalcoment=$query2->num_rows;
 $newsvidio=$query3->num_rows;
 $totaluser=$query4->num_rows;
 
+if (isset($_POST["carousel"])) {
+  
+}
 
    ?>
 <!-- fitur count end -->
@@ -336,15 +339,22 @@ $totaluser=$query4->num_rows;
                               </div>
                             </td>
                             <td>
-                                  <select class='form-control' id='exampleFormControlSelect1'>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                  </select></td>
+                              <form class='form-inline' action='carousel.php' method='post'>
+                                  <select class='form-control' name='ddCarousel'>
+                                    <option disabled selected >-Select-</option>
+                                    <option value='1'>1</option>
+                                    <option value='2'>2</option>
+                                    <option value='3'>3</option>
+                                    <option value='4'>4</option>
+                                    <option value='5'>5</option>
+                                    <option value='6'>6</option>
+                                    <option value='7'>7</option>
+                                  </select>
+                                  <button class='btn btn-sm btn-primary' name='submit'>Submit</button>
+                                  <input type='hidden' name='forCarousel' value='".$row[0]."'>
+                              </form>
+                                </td>
+                              
                           </tr>
                           ";
                         }
