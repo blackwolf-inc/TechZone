@@ -243,13 +243,13 @@
 		  <div class="collapse navbar-collapse" id="navbarNav">
 		    <ul class="navbar-nav ml-auto">
 		      <li class="nav-item active pl-lg-4">
-		        <a class="nav-link" href="#">New News <span class="sr-only">(current)</span></a>
+		        <a class="nav-link" href="new_news.php">New News <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item pl-lg-4">
-		        <a class="nav-link" href="#">Future</a>
+		        <a class="nav-link" href="future.php">Future</a>
 		      </li>
 		      <li class="nav-item pl-lg-4">
-		        <a class="nav-link" href="#">See All News</a>
+		        <a class="nav-link" href="see_all.php">See All News</a>
 		      </li>
 		    </ul>
 		  </div>
@@ -319,6 +319,8 @@
 					  <button type="submit" class="btn btn-primary" name="bacot">Confirm To Bacot</button>
 					</form>
 				</div>
+
+				<!-- looping coment -->
 				<div class="col-md-12">
 					<?php
 						$query3 = mysqli_query($conn, "SELECT * FROM coment WHERE id_post=$id_post ORDER BY id_coment DESC");
@@ -331,7 +333,7 @@
 						else echo "<p>Belum ada komentar.</p>";
 					?>
 				</div>
-
+<!-- end loping coment  -->
 			</div>
 
 			<div class="col-lg-3">
@@ -340,13 +342,30 @@
 						<h4 class="text-uppercase font-weight-bold">Other Article</h4>
 					</div>
 					<!-- Looping Post -->
-					<?php for ($i = 0; $i < 3; $i++) { ?>
-					<div class="col-lg-12 mt-lg-3">
-						<img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid mt-lg-0">
 
-						<h6 class="text-justify mt-lg-1 mb-lg-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum.</h6>
-					</div>
-					<?php } ?>
+
+	<div class="col-lg-12 mt-lg-3">
+		  <?php include 'koneksi.php'; 
+		   	 $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama ORDER BY id_post DESC LIMIT 7");
+		      			if ($query->num_rows > 0) {
+
+		      			while ($row = $query->fetch_array()) {
+		     ?>
+		    				<div class="row mt-3 mb-2 newpostcolumn">
+		   					  <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
+		        					<img src="<?php echo 'croped'.substr($row[1], 14) ;?>" alt="" class="img-fluid mt-lg-0">
+		      				</div>
+		     			 <div class="col-8" style="border-top: solid 1px #e6e6e6;">
+		        				<h5 class="text-justify mt-lg-1 mb-lg-0 "><?php echo $row[2];?><br>
+		        				<h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
+		        				<h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="view.php?id=<?php echo $row[0]?>"> Lanjut baca</a></h7> 
+		        				</h5>
+		        
+		      </div>
+	 </div>
+		  <?php }} ?>
+					<!-- end -->
+				
 
 					<div class="col-lg-12">
 						<h6 class="text-uppercase font-weight-bold mt-lg-3"><a href="">More Article</a></h6>
