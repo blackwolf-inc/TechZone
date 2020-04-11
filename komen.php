@@ -5,7 +5,7 @@ include 'koneksi.php';
 
 
 if(isset($_POST["bacot"])) {
-print_r($_GET['id_post']);
+//print_r($_GET['id_post']);
 $id_post = 160;
 $username = $_POST["insertbacotusername"];
 $email = $_POST["insertbacotemail"];

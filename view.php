@@ -302,21 +302,21 @@
 				<?php } ?>
 
 				<div class="col-lg-12 mt-lg-4" id="commentbox">
-					<form method="POST">
+					<form action="komen.php" method="POST">
 					 <div class="form-group">
 					    <label for="insertbacotusername">Username</label>
-					    <input type="text" class="form-control" id="insertbacotusername" placeholder="username">
+					    <input type="text" class="form-control" name="insertbacotusername" placeholder="username">
 					  </div>
 					  <div class="form-group">
 					    <label for="insertbacotemail">Email address</label>
-					    <input type="email" class="form-control" id="insertbacotemail" placeholder="name@example.com">
+					    <input type="email" class="form-control" name="insertbacotemail" placeholder="name@example.com">
 					  </div>
 					  <div class="form-group">
 					    <label for="insertbacotisi">Comment</label>
-					    <textarea class="form-control" id="insertbacotisi" rows="3"></textarea>
+					    <textarea class="form-control" name="insertbacotisi" rows="3"></textarea>
 					  </div>
 
-					  <button type="submit" class="btn btn-primary" id="bacot">Confirm To Bacot</button>
+					  <button type="submit" class="btn btn-primary" name="bacot">Confirm To Bacot</button>
 					</form>
 				</div>
 
