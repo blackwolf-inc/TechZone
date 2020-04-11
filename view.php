@@ -219,6 +219,18 @@
   	$id_post = $_GET['id']; 
   	$query = mysqli_query($conn, "SELECT * FROM utama WHERE id_post=$id_post");
   	$result = mysqli_fetch_array($query);
+  	$i=1;
+  	if (is_null($result)) {
+  		
+  		$id_post=$id_post+$i;
+  		echo "<script>location='view.php?id=$id_post' </script>";
+  		
+  		if ($i==100) {
+  			echo "<script>
+  			alert('Sorry, there was no artikel yet .'); 
+  			location='index.php' </script>";
+  		}
+  	}
   	$tgl = $result[1];
   	$ktgr = $result[2];
   	$judul = $result[3];
@@ -277,7 +289,6 @@
 				<h2 class="text-uppercase"><?php echo $judul; ?></h1>
 				<h4><i>This Day : <?php echo date("l M Y"); ?> <?php include 'jam.php'; ?></i></h4>
 				<h6>By <a href=""><?php echo $admin; ?></a> | <a href="">ford@345triangle</a> | <?php echo $tgl ?></h6>
-				<a href=""><i class="fa fa-facebook-f mr-lg-3"></i></a>
 				<a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a>
 				<h7><a href=""><i class="fas fa-share mr-2"></i>share</a> </h7>
 			</div>
@@ -289,24 +300,31 @@
 
 				<h5 class="text-justify"><?php echo $isi; ?></h5>
 
-				<button class="mt-lg-3" id="next">NEXT ARTICLE</button>
+				<button class="mt-lg-3" id="next"><a href="view.php?id=<?php echo $id_post+1?>">NEXT POST</a></button>
 								
 
 				<h4 class="mt-lg-5 mb-lg-2">THERE ARE <span><?php echo $jmlComent ?></span> COMMENTS.</h4>
 				<!-- awal -->
 				
 			<!-- looping coment -->
-				<?php
-					$query3 = mysqli_query($conn, "SELECT * FROM coment WHERE id_post=$id_post ORDER BY id_coment DESC");
-					if (mysqli_num_rows($query3) > 0){
-					  while ($data = mysqli_fetch_array($query3)){ ?>
-						<div class="col-lg-12 p-lg-3 mt-lg-3" style="border: 1px solid #EEEEEE; border-left: 5px solid #EEEEEE;">
-						  <h5><?php echo $data[2]; ?></h5>
-						  <h6><?php echo $data[3]; ?></h6>
-						</div>
-				<?php }
-					} else echo "<h5>Belum ada komentar.</h5>";
-				 ?>
+				<div class="col-md-12">
+					<?php
+						$query3 = mysqli_query($conn, "SELECT * FROM coment WHERE id_post=$id_post ORDER BY id_coment DESC");
+						if (mysqli_num_rows($query3) > 0){
+						   while ($data = mysqli_fetch_array($query3)){
+						   		?>
+
+								<div class="col-lg-12 p-lg-3 mt-lg-3" style="border: 1px solid #	EEEEEE; border-left: 5px solid #EEEEEE;">
+						   		<?php 
+						   		echo "<p><small>Dikirim oleh: $data[2]</small></p>
+						   		<p>$data[3]</p><hr>";
+									?>
+								</div>
+							<?php 						   }
+						}
+						else echo "<p>Belum ada komentar.</p>";
+					?>
+				</div>
 
 				
 		
@@ -345,7 +363,7 @@
 		  <?php include 'koneksi.php'; 
 		  $adm=$_SESSION['adm'];
 	
-		   	 $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE id_admin = '$adm' ORDER BY id_post DESC LIMIT 3 ");
+		   	 $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE id_admin = '$adm' ORDER BY id_post DESC LIMIT 7 ");
 		      			if ($query->num_rows > 0) {
 
 		      			while ($row = $query->fetch_array()) {
@@ -357,7 +375,7 @@
 		     			 <div class="col-8" style="border-top: solid 1px #e6e6e6;">
 		        				<h5 class="text-justify mt-lg-1 mb-lg-0 "><?php echo $row[2];?><br>
 		        				<h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
-		        				<h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 20) ?><a href="view.php?id=<?php echo $row[0]?>"> Lanjut baca</a></h7> 
+		        				<h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="view.php?id=<?php echo $row[0]?>"> Lanjut baca</a></h7> 
 		        				</h5>
 		        
 		      </div>
