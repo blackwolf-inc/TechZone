@@ -61,6 +61,24 @@
         color: #ff1ea7;
       }
 
+      div.row.mt-3.carouselbox > div.col-md-4 > div.row > div.col-lg-12 > h5.text-white > a {
+        color: #ffa500;
+      }
+
+      div.row.mt-3.carouselbox > div.col-md-8 > div.row > div.col > h5.text-white > a {
+        color: #ffa500;
+        text-transform: lowercase;
+      }
+
+      div.row.mt-0.carouselbox > div.col-lg-4 > div.row > div.col-lg-12 > h5.text-white > a {
+        color: #ffa500;
+        text-transform: lowercase;
+      }
+
+       div.row.mt-0.carouselbox > div.col-lg-4 > div.row > div.col-lg-12 > h5.text-white > a:hover {
+        color: #ff1ea7;
+      }
+
       /* Post Content */
       
       div.row.newpostcolumn > div.col-4 > img.img-fluid {
@@ -174,7 +192,7 @@
       }
       /* end kolom content */
 
-            /* Box Videos*/
+      /* Box Videos*/
 
       div#boxvideoscontent > div.col-12 > h7 {
         font-size: 12px;
@@ -397,7 +415,7 @@
           <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
-          <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
+          <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" >ANONIM</a></h5></h4>
         </div>
       </div>
     </div>
@@ -410,7 +428,7 @@
           <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid h-100">
         </div>
         <div class="col p-lg-4 pl-lg-4">
-          <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h1>
+          <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white">BY <a href="">ANONIM</a></h5></h1>
           <hr style="border: 1px solid #ff3399; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
@@ -425,7 +443,7 @@
           <img src="assets/img/TopPost/5.jpg" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
-           <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
+           <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" >ANONIM</a></h5></h4>
         </div>
       </div>
     </div>
@@ -435,7 +453,7 @@
           <img src="assets/img/TopPost/6.jpg" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
-           <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
+           <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" >ANONIM</a></h5></h4>
         </div>
       </div>
     </div>
@@ -446,7 +464,7 @@
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href="">
-           Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
+           Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" >ANONIM</a></h5></h4>
         </div>
       </div>
     </div>
