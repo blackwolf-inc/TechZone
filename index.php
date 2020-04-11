@@ -142,17 +142,33 @@
 
       div#footertengah > h1 {
         font-size: 20px;
-        padding-bottom: 8px;
       }
 
       div#footertengah > ul {
         font-size: 20px;
-        padding-top: 10px;
         font-weight: 100;
       }
 
       div#footertengah > ul > li > a {
         font-size: 16px;
+      }
+
+      div#footerkanan > a > i {
+        font-size: 25px;
+        color: #ff3399;
+      }
+
+      div#footerkanan > a > i:hover {
+        font-size: 25px;
+        color: #F8D200;
+      }
+
+      #footertengah > ul.list-inline > li.list-inline-item > a {
+          color: #e6e6e6;
+      }
+      
+      #footertengah > ul.list-inline > li.list-inline-item > a:hover {
+          color: #ff3399 ;
       }
 
       #navbarToggleExternalContent h4 {
@@ -288,19 +304,6 @@
       /* end Box Videos*/
 
 
-      /* footer */
-
-      #footertengah > ul.list-inline > li.list-inline-item > a {
-          color: #ff3399;
-      }
-      
-      #footertengah > ul.list-inline > li.list-inline-item > a:hover {
-          color: #ff0066 ;
-      }
-
-      /* end footer*/
-
-
       @media (max-width: 575px) {
 
         div.col-lg-4 > div#titlekolfeaturedvideo > h6#titlefeaturedvideo {
@@ -366,6 +369,25 @@
           font-size: 12px;
         }
 
+        div#footertengah > h1 {
+            display: none;
+        }
+
+        div#footerkiri > h6 {
+            display: none;
+        }
+
+        div#footerkiri > h1 {
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            text-shadow: 2px 2px #FC00FF;
+        }
+
+        div#footerkanan > a > i {
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
         /* end footer */
         
       }
@@ -671,9 +693,10 @@
       <li class="list-inline-item"><a href="">Tip US</a></li>
     </ul>
   </div>
-  <div class="col-lg-2 col-sm-12" id="footerkanan">
-    <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a>
-        <h7><a href=""><i class="fas fa-share mr-2"></i>share</a> </h7>
+  <div class="col-lg-2 col-sm-12 d-flex justify-content-center" id="footerkanan">
+    <a href=""><i class="fa fa-facebook-f mr-lg-3 mr-md-3 mr-sm-3"></i></a>
+    <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3 mr-md-3 mr-sm-3"></i></a>
+    <a href=""><i class="fa fa-instagram mr-lg-3 mr-md-3 mr-sm-3"></i></a>
   </div>
 </div>
 <!-- End Footer -->
