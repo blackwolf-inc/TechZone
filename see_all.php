@@ -280,21 +280,27 @@
 
 <!-- Content -->
 <div class="">
+  <!-- script search -->
+
+  <!-- end script -->
 <div class="carouselbox col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">New Post Search</h3>
+                <h3 class="card-title">New Post Search By ID Post</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right dropdown-toggle" placeholder="Search">
+                    <input type="text" id="table_search" name="table_search" onkeyup="myFunction()" class="form-control float-right dropdown-toggle" placeholder="Search">
 
                   </div>
                 </div>
               </div>
+
+
+
 <div class="row content" style="background-color: white;">
    <div class="card-body table-responsive p-0" style="height: 720px;">
-                <table class="table table-head-fixed">
+                <table class="table table-head-fixed" id="myTable">
                   <thead>
                     <tr>
                       <th>ID Post</th>
@@ -386,6 +392,27 @@
 
 <!-- javascript menyembunyikan navbar brand -->
 <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("table_search");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+<script>
+
 $(window).resize(function() {
 
 if ($(this).width() < 575) {
