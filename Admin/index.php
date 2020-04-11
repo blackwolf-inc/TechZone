@@ -307,6 +307,7 @@ $totaluser=$query4->num_rows;
                       <th>Date</th>
                       <th>Admin Name</th>
                       <th>Action</th>
+                      <th>Set To carousel</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -331,8 +332,19 @@ $totaluser=$query4->num_rows;
                                 <form action='delete.php' method='post'><button class='btn btn-sm btn-danger'>Delete</button>
                                 <input type='hidden' name='btnDelete' value='".$row[0]."'>
                                 <input type='hidden' name='idgmbr' value='".$row[4]."'>
-                              </form></div></div>
+                              </form></div>
+                              </div>
                             </td>
+                            <td>
+                                  <select class='form-control' id='exampleFormControlSelect1'>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                  </select></td>
                           </tr>
                           ";
                         }
