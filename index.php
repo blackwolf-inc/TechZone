@@ -594,12 +594,12 @@
             <div class="container">
               <div class="row">
                 <div class="col-6 mt-xs-5 mt-sm-5 mt-md-5 mt-lg-5 mt-4 pr-0 pr-5">
-                  <h5 class="font-weight-bold text-right"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, esse!</a><br><h7 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h7></h5>
+                  <h5 class="font-weight-bold text-right"><a href=""><img src="admin/aset_gambar/zonetech2.PNG"1></a><br><h7 class="text-white"></h7></h5>
 
 
                 </div>
                 <div class="col-6 pl-1">
-                  <h1 class="text-uppercase font-weight-bold font-italic"><a href="">"Lorem ipsum dolor sit amet, consectetur adipisicing elit"</a></h1>
+                  <h1 class="text-uppercase font-weight-bold font-italic"><a href="">"information is everyone's property , is no longer a secret"</a></h1>
                 </div>
               </div>
             </div>
@@ -632,16 +632,7 @@
     </div>
   <?php }} ?>
 
-  <div class="row bigpost ml-lg-0 mr-lg-0 mb-lg-2">
-    <div class="col-lg-12 bigposttitle p-lg-4 p-md-4 p-sm-4 p-4">
-      <h5 class="text-uppercase text-white font-weight-bold">Lorem ipsum dolor sit amet, consectetur</h5>
-      <h7 class="text-white"> Lorem ipsum dolor sit amet, consectetur adipisicing. </h7> <br>
-      <h7 style="font-size: 11px;" class="text-white">By <a href="">ANONIMOUS</a> | 8 Minutes Ago | 2 Comments</h5> 
-    </div>
-     <div class="col-lg-12 pl-lg-0 pl-md-0 pr-sm-0 pr-lg-0 pr-md-0 pr-sm-0 p-0" id="kolom2">
-   
-     </div> 
-  </div>
+ 
 
   </div>
 
@@ -688,11 +679,77 @@
 
 
   <!-- More Stories -->
+  <div class="col-md-12">
     <div class="col pt-sm-3 pl-sm-0 pr-sm-0 pl-lg-3 pr-lg-3">
-        <button class="btn btn-block p-lg-3 p-sm-3" style="border-radius: 0; color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
+        <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 pl-0 pr-0">
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <!-- isi crousel  -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="admin/aset_gambar/zonetech11.jpg" alt="First slide">
+       </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="admin/aset_gambar/zonetech22.jpg" alt="Second slide">
+       </div>
+        <div class="carousel-item">
+             <img class="d-block w-100" src="admin/aset_gambar/zonetech33.jpg" alt="Third slide">
+       </div>
+  </div>
+  <!-- item crousel end -->
+  <!-- crousel button -->
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <!-- crousel buto end -->
+</div>
+      </div>
+    </div>
+    </div>
     </div>
   <!-- End -->
+  
 
+    <!-- button  -->
+ <!-- loping vidio  -->
+ <?php 
+      include 'koneksi.php'; 
+      $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio ASC");
+      if ($query3->num_rows > 0) {
+
+      while ($row = $query3->fetch_array()) {
+      ?>
+
+      <div class="col-12 col-lg-12 col-md-6 col-sm-6 mb-2">
+      <iframe
+      <?php $vidio = substr($row[3],32);?>
+      src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' style="width: 100%;">
+      </iframe> 
+
+      <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
+      <h7><?php echo $row[1]; ?> BY <a href=""><?php echo $row[0] ; ?> </a></h7>
+      </div>
+        <?php } ?>
+
+
+<?php 
+  
+  // end1 if
+}
+
+// end while
+ ?>
+<!-- loping vidio end  -->
 </div>
 <!-- end Content -->
 
@@ -721,9 +778,9 @@
     </ul>
   </div>
   <div class="col-lg-2 col-sm-12 d-flex justify-content-center" id="footerkanan">
-    <a href=""><i class="fa fa-facebook-f mr-lg-3 mr-md-3 mr-sm-3"></i></a>
+    
     <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3 mr-md-3 mr-sm-3"></i></a>
-    <a href=""><i class="fa fa-instagram mr-lg-3 mr-md-3 mr-sm-3"></i></a>
+    <a href="https://www.instagram.com/techzone_05/"><i class="fa fa-instagram mr-lg-3 mr-md-3 mr-sm-3"></i></a>
   </div>
 </div>
 <!-- End Footer -->
