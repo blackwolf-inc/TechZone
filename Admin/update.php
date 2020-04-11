@@ -3,6 +3,7 @@
 include '../koneksi.php';
 
 // Funsi save file start
+$target_file3 = "../tumb/" .  date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $target_file2 = "../croped/" .  date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $target_file = "../data_gambar/". date('dmyis').str_replace("", "", basename($_FILES["fileToUpload"]["name"]));
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -19,6 +20,7 @@ if(isset($_POST["update"])) {
     $tgl = date('D M Y');
     $imgLamaType = strtolower(pathinfo($imgLama,PATHINFO_EXTENSION));
     $cropLama = "../croped/".substr($imgLama, 15);
+    $tumbLama = "../tumb/".substr($imgLama, 15);
 
     if($_FILES["fileToUpload"]["name"]==""){
         $target_file= $imgLama;
@@ -42,9 +44,22 @@ if(isset($_POST["update"])) {
             if($imgLamaType == "jpg" && $imgLamaType == "png" && $imgLamaType == "jpeg" && $imgLamaType == "gif" && $imgLamaType == "bmp" ){
                 unlink($cropLama);
                 unlink($imgLama);
+                unlink($tumbLama);
 
             }
             copy($target_file, $target_file2);
+            copy($target_file, $target_file3);
+            $im_src = imagecreatefromjpeg($target_file3);
+            $src_width = imageSX($im_src);
+            $src_height = imageSY($im_src);
+
+            $dst_width =$src_width ;
+            $dst_height = $src_width * 75 /100;
+
+            $im = imagecreatetruecolor($dst_width,$dst_height);
+            imagecopyresampled($im, $im_src, 0, 0, 0, 0, $dst_width, $dst_height, $src_width, $src_height);
+
+            imagejpeg($im,$target_file3 ,100);
             
         }
         else{
