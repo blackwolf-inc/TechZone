@@ -31,7 +31,7 @@
 	}
 
 	ul.navbar-nav > li.nav-item > a.nav-link {
-		/*color: #ff3399;*/
+		color: #ff3399;
 	}
 
 	ul.navbar-nav > li.nav-item > a.nav-link:hover {
@@ -132,7 +132,7 @@
 		text-decoration: none;
 	}
 
-	div.row.image > div.col-lg-9 > button.mt-lg-3 {
+	div.row.image > div.col-lg-9 > button#next.mt-lg-3 {
 		padding: 10px;
 		background-color: white;
 		font-weight: bolder;
@@ -143,8 +143,20 @@
 		border-right: none;
 		padding-right: 50px;
 		padding-left: 15px;
-		color: purple;
+	}
+
+	div.row.image > div.col-lg-9 > button#next.mt-lg-3 > a {
+		background-color: white;
+		font-weight: bolder;
+		box-shadow: none;
+		border-right: none;
 		letter-spacing: 8px;
+		text-decoration: none;
+		color: #ff3399;
+	}
+
+	div.row.image > div.col-lg-9 > button#next.mt-lg-3 > a:hover {
+		color: purple;
 	}
 	
 	div.row.image > div.col-lg-3 > .row > .col-lg-12 > h4.text-uppercase.font-weight-bold {
@@ -155,7 +167,7 @@
 		color: #ff3399;
 	}
 
-	div.row.image > div.col-lg-3 > .row > .col-lg-12 > h6.text-uppercase.font-weight-bold {
+	div.row.image > div.col-lg-3 > .row > .col-lg-12 > .col-lg-12  > h6.text-uppercase.font-weight-bold {
 		letter-spacing: 4px;
 		font-size: 12px;
 		text-align: right;
@@ -164,12 +176,12 @@
 		padding-right: 20px;
 	}
 
-	div.row.image > div.col-lg-3 > .row > .col-lg-12 > h6.text-uppercase.font-weight-bold  > a {
+	div.row.image > div.col-lg-3 > .row > .col-lg-12 > .col-lg-12 > h6.text-uppercase.font-weight-bold  > a {
 		color: #ff3399;
 		text-decoration: none;
 	}
 
-	div.row.image > div.col-lg-3 > .row > .col-lg-12 > h6.text-uppercase.font-weight-bold  > a:hover {
+	div.row.image > div.col-lg-3 > .row > .col-lg-12 > .col-lg-12 > h6.text-uppercase.font-weight-bold  > a:hover {
 		color: purple;
 	}
 
@@ -249,7 +261,7 @@
 
 		<nav class="navbar navbar-expand-lg navbar navbar-dark">
 		 <div class="container">
-		  <a class="navbar-brand font-weight-bold mr-5" href="index.php"><img src="admin/aset_gambar/zonetech.PNG"></a>
+		  <a class="navbar-brand font-weight-bold mr-5" href="index.php">ZONETECH</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -370,12 +382,12 @@
 		     ?>
 		    				<div class="row mt-3 mb-2 newpostcolumn">
 		   					  <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-		        					<img src="<?php echo 'croped'.substr($row[1], 14) ;?>" alt="" class="img-fluid mt-lg-0">
+		        					<a href="view.php?id=<?php echo $row[0]?>"><img src="<?php echo 'croped'.substr($row[1], 14) ;?>" alt="" class="img-fluid mt-lg-0"></a>
 		      				</div>
 		     			 <div class="col-8" style="border-top: solid 1px #e6e6e6;">
 		        				<h5 class="text-justify mt-lg-1 mb-lg-0 "><?php echo $row[2];?><br>
-		        				<h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
-		        				<h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="view.php?id=<?php echo $row[0]?>"> Lanjut baca</a></h7> 
+		        				<h7 style="font-size: 14px" class="d-block mt-lg-2"><?php echo substr($row[5], 0, 250) ?></h7>
+		        				<h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a></h7>
 		        				</h5>
 		        
 		      </div>
@@ -384,7 +396,7 @@
 					<!-- end -->
 				
 
-					<div class="col-lg-12">
+					<div class="col-lg-12 d-flex justify-content-end pr-lg-0">
 						<h6 class="text-uppercase font-weight-bold mt-lg-3"><a href="">More Article</a></h6>
 					</div>
 				
