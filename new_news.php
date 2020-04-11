@@ -300,13 +300,13 @@
   <!-- isi crousel  -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="..." alt="First slide">
+            <img class="d-block w-100" src="admin/aset_gambar/zonetech1.jpg" alt="First slide">
        </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
+            <img class="d-block w-100" src="admin/aset_gambar/zonetech2.jpg" alt="Second slide">
        </div>
         <div class="carousel-item">
-             <img class="d-block w-100" src="..." alt="Third slide">
+             <img class="d-block w-100" src="admin/aset_gambar/zonetech3.jpg" alt="Third slide">
        </div>
   </div>
   <!-- item crousel end -->
