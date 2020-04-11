@@ -277,6 +277,7 @@
 				<h2 class="text-uppercase"><?php echo $judul; ?></h1>
 				<h4><i>This Day : <?php echo date("l M Y"); ?> <?php include 'jam.php'; ?></i></h4>
 				<h6>By <a href=""><?php echo $admin; ?></a> | <a href="">ford@345triangle</a> | <?php echo $tgl ?></h6>
+				<a href=""><i class="fa fa-facebook-f mr-lg-3"></i></a>
 				<a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a>
 				<h7><a href=""><i class="fas fa-share mr-2"></i>share</a> </h7>
 			</div>

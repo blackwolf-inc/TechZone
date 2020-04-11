@@ -7,6 +7,10 @@
     <title>Document</title>
     <!--Import CSS-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--End-->
   
     <style>
@@ -115,6 +119,41 @@
         display: block;
       }
 
+      /* Footer */
+
+      div#footerkiri > h1 {
+        font-size: 20px;
+        text-align: left;
+      }
+
+      div#footerkiri > hr {
+        width: 75%;
+        color: white;
+        size: 10;
+        border: 0;
+      }
+
+      div#footerkiri > h6 {
+        color: #e6e6e6;
+        font-weight: 100;
+        padding-top: 10px;
+        border-top: dashed 1px #ff9900;
+      }
+
+      div#footertengah > h1 {
+        font-size: 20px;
+        padding-bottom: 8px;
+      }
+
+      div#footertengah > ul {
+        font-size: 20px;
+        padding-top: 10px;
+        font-weight: 100;
+      }
+
+      div#footertengah > ul > li > a {
+        font-size: 16px;
+      }
 
       #navbarToggleExternalContent h4 {
           font-size: 80px;
@@ -613,9 +652,12 @@
 <!-- Footer -->
 <div class="row p-lg-5 p-md-5 p-sm-5 pt-3">
   <div class="col-lg-3 col-sm-12" id="footerkiri">
-    <h1 class="text-white text-center font-weight-bold"><i>TECHZONE</i></h1>
+    <h1 class="text-white font-weight-bold"><i>TECHZONE</i></h1>
+    <hr>
+    <h6>About the company. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
   </div>
-  <div class="col-lg-7 col-sm-12" id="footertengah">     
+  <div class="col-lg-7 col-sm-12" id="footertengah">
+  <h1 class="text-white font-weight-bold text-center"><i>QUICK LINK</i></h1>     
     <ul class="list-inline text-center">
       <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
@@ -630,7 +672,8 @@
     </ul>
   </div>
   <div class="col-lg-2 col-sm-12" id="footerkanan">
-    
+    <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a>
+        <h7><a href=""><i class="fas fa-share mr-2"></i>share</a> </h7>
   </div>
 </div>
 <!-- End Footer -->
