@@ -347,14 +347,14 @@
 
   <div class="col-lg-8 col-md-12 col-sm-12">
   <?php include 'koneksi.php'; 
-    $query2 = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE jenis_post=$ctrg ORDER BY id_post DESC LIMIT 7");
+    $query2 = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE jenis_post=$ctrg ORDER BY id_post DESC LIMIT 14");
       if ($query2->num_rows > 0) {
 
       while ($row = $query2->fetch_array()) {
       ?>
     <div class="row mt-3 mb-2 newpostcolumn">
       <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-        <img src="<?php echo 'croped'.substr($row[1], 14) ;?>" alt="" class="img-fluid">
+        <img src="<?php echo 'tumb'.substr($row[1], 14) ;?>" alt="" class="img-fluid">
       </div>
       <div class="col-8" style="border-top: solid 1px #e6e6e6;">
         <h5 class="font-weight-bold mt-2 "><?php echo $row[2];?><br>
