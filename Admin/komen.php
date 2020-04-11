@@ -173,13 +173,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <?php
                       include '../koneksi.php';
 
-                      $query = mysqli_query($conn, "SELECT id_post, count(*)  from coment group by id_post order by count(*) desc   ");   
+                      $query = mysqli_query($conn, "SELECT id_coment, count(*)  from coment group by id_post order by count(*) desc   ");   
                     
                       // if pembatsasan
                
                         # code...
-                     
-                        for ($i=5; $query->num_rows == $i  ; ) {  
+                     print_r($query);
+                        for ($i=5; $query->num_rows > $i  ; ) {  
                         while ($row = $query->fetch_array()) {
                                if ( $count < 7) {                 
 

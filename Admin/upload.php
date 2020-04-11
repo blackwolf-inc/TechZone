@@ -64,6 +64,7 @@ $im_src = imagecreatefromjpeg($target_file3);
         imagecopyresampled($im, $im_src, 0, 0, 0, 0, $dst_width, $dst_height, $src_width, $src_height);
 
     imagejpeg($im,$target_file3 ,100);
+    imagejpeg($im,$target_file3 ,100);
 // end
 
     $query = mysqli_query($conn, "INSERT INTO utama(titel_post, id_admin, tgl_post, jenis_post, isi_post, id_gambar, link_post) VALUES ('$title', '$admin','$tgl','$category','$isi','$target_file','$link')");
