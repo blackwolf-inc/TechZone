@@ -94,6 +94,20 @@
         background-image: linear-gradient(-90deg, #ff9900, #ff3399);
       }
 
+      div.jumbotron > div.container > div.row > div.col-6 > h5 > a:hover {
+        color: white;
+      }
+
+      /*Content*/
+      div.row.content > div.col > button.btn.btn-block {
+       background-color: #ff1ea7;
+      }
+
+
+
+      div.row.content > div.col > button.btn.btn-block:hover {
+       background-color: #a5126c;
+      }
 
       /* Post Content */
       
@@ -587,7 +601,7 @@
 
   <!-- More Stories -->
     <div class="col pt-sm-3 pl-sm-0 pr-sm-0 pl-lg-3 pr-lg-3">
-        <button class="btn btn-block p-lg-3 p-sm-3" style="background-color: #ff3399; border-radius: 0; color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
+        <button class="btn btn-block p-lg-3 p-sm-3" style="border-radius: 0; color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
     </div>
   <!-- End -->
 
