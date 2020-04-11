@@ -543,12 +543,17 @@
   <div class="row mt-3 carouselbox">
     <!-- kolom 1 -->
     <div class="col-lg-8 col-md-8 col-sm-12" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+      <?php
+        include 'koneksi.php';
+        $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=1 ");
+        $data = mysqli_fetch_array($sql);
+      ?>
       <div class="row">
         <div class="col p-0" id="kolomcarousel1">
-          <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid h-100">
+          <img src="<?php echo 'croped'.substr($row[2], 14) ;?>" alt="" class="img-fluid h-100">
         </div>
         <div class="col mt-2 p-lg-4 pl-lg-4">
-          <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white" style="display: inline-block;">BY <a href="">Lorem ipsum dolor.</a></h5></h1>
+          <h1 class="text-white font-weight-bold text-uppercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white" style="display: inline-block;">BY <a href=""><?php echo $data[1]?></a></h5></h1>
           <hr style="border: 1px solid #ff3399; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
@@ -557,12 +562,16 @@
 
     <!-- kolom 2 -->
     <div class="col-lg-4 col-md-4 col-sm-6" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+      <?php
+        $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=2 ");
+        $data = mysqli_fetch_array($sql);
+      ?>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="assets/img/TopPost/2.jpg" alt="" class="img-fluid">
+          <img src="<?php echo 'croped'.substr($row[2], 14) ;?>" alt="" class="img-fluid">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
-          <h4 class="font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="">ANONIM</a></h5></h4>
+          <h4 class="font-weight-bold text-lowercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h4>
         </div>
       </div>
     </div>
@@ -570,12 +579,16 @@
 
     <!-- kolom 3 -->
     <div class="col-md-4 col-sm-6 col-lg-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+      <?php
+        $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=3 ");
+        $data = mysqli_fetch_array($sql);
+      ?>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid">
+          <img src="<?php echo 'croped'.substr($row[2], 14) ;?>" alt="" class="img-fluid">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
-          <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" >ANONIM</a></h5></h4>
+          <h4 class="text-white font-weight-bold text-lowercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href="" ><?php echo $data[1]?></a></h5></h4>
         </div>
       </div>
     </div>
@@ -583,12 +596,16 @@
 
     <!-- kolom 4 -->
     <div class="col-md-8 col-lg-8" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+      <?php
+        $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=4 ");
+        $data = mysqli_fetch_array($sql);
+      ?>
       <div class="row">
         <div class="col p-0" id="kolomcarousel2">
-          <img src="assets/img/TopPost/3.jpg" alt="" class="img-fluid h-100">
+          <img src="<?php echo 'croped'.substr($row[2], 14) ;?>" alt="" class="img-fluid h-100">
         </div>
         <div class="col p-lg-4 pl-lg-4">
-          <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white">BY <a href="">ANONIM</a></h5></h1>
+          <h1 class="text-white font-weight-bold text-uppercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h1>
           <hr style="border: 1px solid #ff3399; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
@@ -598,33 +615,45 @@
   <div class="row mt-0 carouselbox">
     <!-- kolom 5 -->
     <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+      <?php
+        $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=5 ");
+        $data = mysqli_fetch_array($sql);
+      ?>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="assets/img/TopPost/5.jpg" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
+          <img src="<?php echo 'croped'.substr($row[2], 14) ;?>" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
-           <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" >ANONIM</a></h5></h4>
+           <h4 class="text-white font-weight-bold text-lowercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href="" ><?php echo $data[1]?></a></h5></h4>
         </div>
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+      <?php
+        $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=6 ");
+        $data = mysqli_fetch_array($sql);
+      ?>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="assets/img/TopPost/6.jpg" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
+          <img src="<?php echo 'croped'.substr($row[2], 14) ;?>" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
-           <h4 class="text-white font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" >ANONIM</a></h5></h4>
+           <h4 class="text-white font-weight-bold text-lowercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href="" ><?php echo $data[1]?></a></h5></h4>
         </div>
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+      <?php
+        $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=7 ");
+        $data = mysqli_fetch_array($sql);
+      ?>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="assets/img/TopPost/7.jpg" alt="" class="img-fluid w-100" style="width: 100%; max-height: 400px;">
+          <img src="<?php echo 'croped'.substr($row[2], 14) ;?>" alt="" class="img-fluid w-100" style="width: 100%; max-height: 400px;">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href="">
-           Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY<a href="">ANONIM</a></h5></h4>
+           <?php echo $data[0]?></a><br><h5 class="text-white">BY<a href=""><?php echo $data[1]?></a></h5></h4>
         </div>
       </div>
     </div>
