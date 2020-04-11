@@ -228,6 +228,7 @@
   	$gmbr = $result[8];
   	$link = $result[9];
   	$_SESSION["id"]=$id_post;
+  	$_SESSION["adm"]=$result[6];
   }
 ?>
 
@@ -236,7 +237,7 @@
 
 		<nav class="navbar navbar-expand-lg navbar navbar-dark">
 		 <div class="container">
-		  <a class="navbar-brand font-weight-bold mr-5" href="index.php"><i>TECHZONE</i></a>
+		  <a class="navbar-brand font-weight-bold mr-5" href="index.php"><img src="admin/aset_gambar/zonetech.PNG"></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -265,8 +266,8 @@
 			<div class="col-lg-12 mt-lg-5 pl-0">
 				<nav class="breadcrumb">
 				  <a class="breadcrumb-item satu" href="#">Home</a>
-				  <a class="breadcrumb-item dua" href="#">Library</a>
-				  <a class="breadcrumb-item tiga" href="#">Data</a>
+				  <a class="breadcrumb-item dua" href="#">New News</a>
+				  <a class="breadcrumb-item tiga" href="#"><?php echo $_SESSION["id"]; ?></a>
 				</nav>
 			</div>
 		</div>
@@ -274,10 +275,9 @@
 		<div class="row title">
 			<div class="col-lg-12">
 				<h2 class="text-uppercase"><?php echo $judul; ?></h1>
-				<h4><i>Lorem ipsum dolor sit amet, consectetur.</i></h4>
+				<h4><i>This Day : <?php echo date("l M Y"); ?> <?php include 'jam.php'; ?></i></h4>
 				<h6>By <a href=""><?php echo $admin; ?></a> | <a href="">ford@345triangle</a> | <?php echo $tgl ?></h6>
-				<a href=""><i class="fa fa-facebook-f mr-lg-3"></i></a>
-				<a href=""><i class="fa fa-twitter mr-lg-3"></i></a>
+				<a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a>
 				<h7><a href=""><i class="fas fa-share mr-2"></i>share</a> </h7>
 			</div>
 		</div>
@@ -288,19 +288,35 @@
 
 				<h5 class="text-justify"><?php echo $isi; ?></h5>
 
-				<button class="mt-lg-3">NEXT ARTICLE</button>
-
+				<button class="mt-lg-3" id="next">NEXT ARTICLE</button>
+								
 
 				<h4 class="mt-lg-5 mb-lg-2">THERE ARE <span><?php echo $jmlComent ?></span> COMMENTS.</h4>
+				<!-- awal -->
 				
-				<?php for ($i = 0; $i < 3; $i++) { ?>
-				<div class="col-lg-12 p-lg-3 mt-lg-3" style="border: 1px solid #EEEEEE; border-left: 5px solid #EEEEEE;">
-					<h5>Fate</h5>
-					<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ut sed harum consequuntur dolor doloribus corrupti a debitis aliquam dolores.</h6>
-					<h6>Posted On <a href="" class="font-weight-bold">Apr 10, 2020</a> |<a> 8:25 AM</a></h6>
-				</div>
-				<?php } ?>
+			<!-- looping coment -->
+				<div class="col-md-12">
+					<?php
+						$query3 = mysqli_query($conn, "SELECT * FROM coment WHERE id_post=$id_post ORDER BY id_coment DESC");
+						if (mysqli_num_rows($query3) > 0){
+						   while ($data = mysqli_fetch_array($query3)){
+						   		?>
 
+								<div class="col-lg-12 p-lg-3 mt-lg-3" style="border: 1px solid #	EEEEEE; border-left: 5px solid #EEEEEE;">
+						   		<?php 
+						   		echo "<p><small>Dikirim oleh: $data[2]</small></p>
+						   		<p>$data[3]</p><hr>";
+									?>
+								</div>
+							<?php 						   }
+						}
+						else echo "<p>Belum ada komentar.</p>";
+					?>
+				</div>
+
+				
+		
+<!-- akhir -->
 				<div class="col-lg-12 mt-lg-4" id="commentbox">
 					<form action="komen.php" method="POST">
 					 <div class="form-group">
@@ -320,20 +336,7 @@
 					</form>
 				</div>
 
-				<!-- looping coment -->
-				<div class="col-md-12">
-					<?php
-						$query3 = mysqli_query($conn, "SELECT * FROM coment WHERE id_post=$id_post ORDER BY id_coment DESC");
-						if (mysqli_num_rows($query3) > 0){
-						   while ($data = mysqli_fetch_array($query3)){
-						   		echo "<p><small>Dikirim oleh: $data[2]</small></p>
-						   		<p>$data[3]</p><hr>";
-						   }
-						}
-						else echo "<p>Belum ada komentar.</p>";
-					?>
-				</div>
-<!-- end loping coment  -->
+				
 			</div>
 
 			<div class="col-lg-3">
@@ -346,7 +349,9 @@
 
 	<div class="col-lg-12 mt-lg-3">
 		  <?php include 'koneksi.php'; 
-		   	 $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama ORDER BY id_post DESC LIMIT 7");
+		  $adm=$_SESSION['adm'];
+	
+		   	 $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE id_admin = '$adm' ORDER BY id_post DESC LIMIT 7 ");
 		      			if ($query->num_rows > 0) {
 
 		      			while ($row = $query->fetch_array()) {
