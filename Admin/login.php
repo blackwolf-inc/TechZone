@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	if(isset($_SESSION['u'])) {
-		header('Location: user_antrian.php');
-	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -202,16 +199,16 @@
 						<h1>Zone Tech</h1>
 
 						<div class="form-group">
-						<input type="text" name="username_pasien" class="form-control" placeholder="username" id="inputusername" required>
+						<input type="text" name="username_pasien" class="form-control" placeholder="username" id="username_pasien" required>
 						</div>
 						<div class="form-group">
-						<input type="password" name="password_pasien" class="form-control" placeholder="password" id="inputpassword" required>
+						<input type="password" name="password_pasien" class="form-control" placeholder="password" id="password_pasien" required>
 						</div>
 						<div class="form-group">
 						<label class="checkbox-inline"><input type="checkbox" id="showpassword">show password</label>
 						</div>
 						<div class="form-group">
-						<button class="btn login btn-block" type="submit">Login</button>
+						<button class="btn login btn-block" type="submit" id="login">Login</button>
 						</div>
 						<div class="form-group">
 							<a href="" class="form-inline text-center center-block"><h5>forgot password?</h5></a>

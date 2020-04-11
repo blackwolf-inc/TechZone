@@ -353,7 +353,7 @@
     <div class="bg">
       <div class="row" style="display: block;">
         <div class="col"><h4 class="text-center text-white"><i>TECHZONE</i></h4></div>
-        <div class="col"><h7 class="text-center text-white" style="display: block;">Friday, March 27, 2020  <?php include 'jam.php'; ?> | THE MAC FOR MOST</h7></div>
+        <div class="col"><h7 class="text-center text-white" style="display: block;"><?php echo date("l M Y"); ?> <?php include 'jam.php'; ?> | THE MAC FOR MOST</h7></div>
       </div>
     </div>
   </div>
