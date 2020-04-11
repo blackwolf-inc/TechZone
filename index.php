@@ -55,6 +55,11 @@
         color: #f9db24;
       }
 
+      .navbar-brand {
+        display: none;
+      }
+        
+
       /* Carousel */
 
       div.row.mt-3.carouselbox > div.col-lg-8 > div.row > div.col.mt-2 > h5.text-white > a {
@@ -332,15 +337,14 @@
         border: none;
         }
 
-        /*  Navbar Brand */
+        /*  Navbar */
 
         .navbar-brand {
-          display: none;
+          display: block;
         }
-
-        .jumbotron {
-        background-color: white;
-        background-image: none;
+        
+        div.jumbotron {
+          background-image: linear-gradient(-90deg, #ff3399, #ff9900);
         }
 
         .jumbotron h1 {
@@ -420,6 +424,19 @@
       }
 
       @media (max-width: 767px) {
+
+        /* Jumbotron Top */
+
+        #navbarToggleExternalContent {
+          display: none;
+        }
+
+        /* Navbar */
+
+        .navbar-brand {
+          display: block;
+        }
+
         .jumbotron {
         background-color: white;
         background-image: none;
@@ -466,11 +483,12 @@
 
       }
 
-      @media (min-width: 992px and max-width: 1200px) {
+      @media (max-width: 1200px) {
         .jumbotron {
         background-color: white;
         background-image: none;
         }
+        
       }
 
     </style>
@@ -489,7 +507,7 @@
   </div>
   <!-- Nav -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand font-weight-bold" href="#" style="display: none;"><i>TECHZONE</i></a>
+  <a class="navbar-brand font-weight-bold" href="#"><i>TECHZONE</i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -606,7 +624,7 @@
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href="">
-           Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" >ANONIM</a></h5></h4>
+           Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY<a href="">ANONIM</a></h5></h4>
         </div>
       </div>
     </div>
@@ -621,9 +639,8 @@
             <div class="container">
               <div class="row">
                 <div class="col-6 mt-xs-5 mt-sm-5 mt-md-5 mt-lg-5 mt-4 pr-0 pr-5">
-                  <h5 class="font-weight-bold text-right"><a href=""><img src="admin/aset_gambar/zonetech2.PNG"1></a><br><h7 class="text-white"></h7></h5>
-
-
+                  <!-- <h5 class="font-weight-bold text-right"><a href=""> -->
+                    <img src="admin/aset_gambar/zonetech2.PNG" class="img-fluid"><!-- </a><br><h7 class="text-white"></h7></h5> -->
                 </div>
                 <div class="col-6 pl-1">
                   <h1 class="text-uppercase font-weight-bold font-italic"><a href="">"information is everyone's property , is no longer a secret"</a></h1>
@@ -825,39 +842,7 @@
 
 <!-- javascript menyembunyikan navbar brand -->
 <script>
-$(window).resize(function() {
 
-if ($(this).width() < 575) {
-    $(".navbar-brand").show();
-    $("#boxvideoscontent").css("border","none");
-    $("#kolomcarousel1").css("margin-bottom","0");
-    $("#kolomcarousel2").css("margin-bottom","0");
-
-    $("#titlekolfeaturedvideo").css("padding-left","0");
-    
-    
-} else if ($(this).width() < 767) {
-    $(".navbar-brand").show();
-    $("#navbarToggleExternalContent").hide();
-
-} else if ($(this).width() < 992) {
-    $(".navbar-brand").hide();
-    $("#navbarToggleExternalContent").show();
-
-    $("#kolomcarousel1").css("margin-bottom","-80px");
-    $("#kolomcarousel2").css("margin-bottom","-100px");
-
-    $("#titlemorevideous").show();
-
-
-} else if ($(this).width() < 1200) {
-    $(".navbar-brand").hide();
-    $("#navbarToggleExternalContent").show();
-
-    $("#kolomcarousel1").css("margin-bottom","-80px");
-    $("#kolomcarousel2").css("margin-bottom","-100px");
-}
-});
 </script>
 <!-- end -->
 </html>
