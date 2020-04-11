@@ -10,13 +10,67 @@
     <!--End-->
   
     <style>
+
+      /*Jumbotron Top*/
+      div#navbarToggleExternalContent > div.bg > div.row > div.col > h4 {
+        text-shadow: 3px 3px 3px black;
+      }
+
+      #navbarToggleExternalContent .bg {
+        background-image: url("assets/img/wall/1.jpg");
+        padding: 100px;
+      }
+
+      /* Navbar */
+      ul.navbar-nav > li.nav-item > a.nav-link.active {
+        color: #f9db24;
+        font-weight: bold;
+      }
+
+      ul.navbar-nav > li.nav-item > a.nav-link.active:hover {
+        color: #f9db24;
+        font-weight: normal;
+      }
+
+      ul.navbar-nav > li.nav-item > a.nav-link {
+        color: #ffa500;
+        font-weight: bold;
+      }
+
+       ul.navbar-nav > li.nav-item > a.nav-link:hover {
+        color: #b29a05;
+        font-weight: normal;
+      }
+
+      /* Carousel */
+
+      div.row.mt-3.carouselbox > div.col-lg-8 > div.row > div.col.mt-2 > h5.text-white > a {
+        color: #ffa500;
+      }
+      
+      div.row.mt-3.carouselbox > div.col-lg-8 > div.row > div.col.mt-2 > h5.text-white > a:hover {
+        color: #ff1ea7;
+      }
+
+      div.row.mt-3.carouselbox > div.col-lg-4 > div.row > div.col-lg-12 > h5.text-white > a {
+        color: #ffa500;
+        text-transform: lowercase;
+      }
+
+      div.row.mt-3.carouselbox > div.col-lg-4 > div.row > div.col-lg-12 > h5.text-white > a:hover {
+        color: #ff1ea7;
+      }
+
+      /* Post Content */
+      
+      div.row.newpostcolumn > div.col-4 > img.img-fluid {
+        display: block;
+      }
+
+
       #navbarToggleExternalContent h4 {
           font-size: 80px;
           font-weight: bolder;
-      }
-
-       #navbarToggleExternalContent .bg {
-          background-image: url("assets/img/wall/1.jpg");
       }
 
 
@@ -265,7 +319,7 @@
 <!-- JumbNavbar -->
 <div class="pos-f-t">
   <div id="navbarToggleExternalContent">
-    <div class="bg p-4 pt-5 pb-5">
+    <div class="bg">
       <div class="row" style="display: block;">
         <div class="col"><h4 class="text-center text-white"><i>TECHZONE</i></h4></div>
         <div class="col"><h7 class="text-center text-white" style="display: block;">Friday, March 27, 2020  <?php include 'jam.php'; ?> | THE MAC FOR MOST</h7></div>
@@ -316,7 +370,7 @@
           <img src="assets/img/TopPost/1.jpg" alt="" class="img-fluid h-100">
         </div>
         <div class="col mt-2 p-lg-4 pl-lg-4">
-          <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white" style="display: inline-block;">BY <a href="" style="color: #ff3399;">Lorem ipsum dolor.</a></h5></h1>
+          <h1 class="text-white font-weight-bold text-uppercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, earum!</a><br><h5 class="text-white" style="display: inline-block;">BY <a href="">Lorem ipsum dolor.</a></h5></h1>
           <hr style="border: 1px solid #ff3399; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
@@ -330,7 +384,7 @@
           <img src="assets/img/TopPost/2.jpg" alt="" class="img-fluid">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
-          <h4 class="font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="" style="color: #ff3399;">ANONIM</a></h5></h4>
+          <h4 class="font-weight-bold text-lowercase"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing.</a><br><h5 class="text-white">BY <a href="">ANONIM</a></h5></h4>
         </div>
       </div>
     </div>
