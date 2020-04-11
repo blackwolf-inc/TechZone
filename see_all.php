@@ -319,7 +319,7 @@
                             <td>".$row[3]."</td>
                             <td><div class='row'>
                               <div class='col-sm-6'>
-                                <form action='edit.php' method='post'><button class='btn btn-sm btn-warning'>Open</button>
+                                <form action='view.php?id=".$row[0]."' method='post'><button class='btn btn-sm btn-warning'>Open</button>
                                 <input type='hidden' name='btnEdit' value='".$row[0]."'>
                               </form></div>
                               </div>
