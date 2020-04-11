@@ -215,8 +215,8 @@
 </head>
 <?php
   include 'koneksi.php';
-  if (isset($_GET['id_post'])) {
-  	$id_post = $_GET['id_post']; 
+  if (isset($_GET['id'])) {
+  	$id_post = $_GET['id']; 
   	$query = mysqli_query($conn, "SELECT * FROM utama WHERE id_post=$id_post");
   	$result = mysqli_fetch_array($query);
   	$tgl = $result[1];
@@ -227,7 +227,7 @@
   	$jmlComent = $result[7];
   	$gmbr = $result[8];
   	$link = $result[9];
-  	$_SESSION["id_post"]=$id_post;
+  	$_SESSION["id"]=$id_post;
   }
 ?>
 
@@ -236,7 +236,7 @@
 
 		<nav class="navbar navbar-expand-lg navbar navbar-dark">
 		 <div class="container">
-		  <a class="navbar-brand font-weight-bold mr-5" href="#"><i>TECHZONE</i></a>
+		  <a class="navbar-brand font-weight-bold mr-5" href="index.php"><i>TECHZONE</i></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -318,6 +318,18 @@
 
 					  <button type="submit" class="btn btn-primary" name="bacot">Confirm To Bacot</button>
 					</form>
+				</div>
+				<div class="col-md-12">
+					<?php
+						$query3 = mysqli_query($conn, "SELECT * FROM coment WHERE id_post=$id_post ORDER BY id_coment DESC");
+						if (mysqli_num_rows($query3) > 0){
+						   while ($data = mysqli_fetch_array($query3)){
+						   		echo "<p><small>Dikirim oleh: $data[2]</small></p>
+						   		<p>$data[3]</p><hr>";
+						   }
+						}
+						else echo "<p>Belum ada komentar.</p>";
+					?>
 				</div>
 
 			</div>
