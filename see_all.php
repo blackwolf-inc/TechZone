@@ -251,39 +251,11 @@
 <div class="container">
   <!-- Carousel 1 -->
   <div class="row mt-3 carouselbox">
-    <!-- kolom 1 -->
-    <div class="col-lg-8 col-md-8 col-sm-12" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
-  
-    <!-- end kolom 1 -->
-
-    <!-- kolom 2 -->
-    
-    <!-- end kolom 2 -->
-
-    <!-- kolom 3 -->
-    
-    <!-- end kolom 3 -->
-
-    <!-- kolom 4 -->
-    
-    <!-- end kolom 4 -->
-  </div>
-  
     
     <!-- end kolom 5 -->
   </div>
-<!-- end Carousel 1 -->
-
-<!-- Jumbotron  -->
-
-<!-- End Jumbotron -->
-
-<!-- Content -->
-<div class="">
-  <!-- script search -->
-
-  <!-- end script -->
 <div class="carouselbox col-12">
+
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">New Post Search By ID Post</h3>
