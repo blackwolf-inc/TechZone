@@ -388,7 +388,6 @@
             padding-right: 20px;
             padding-bottom: 20px;
         }
-        /* end footer */
         
       }
 
@@ -401,6 +400,34 @@
         div.col-lg-4 > div#titlekolfeaturedvideo > h6#titlefeaturedvideo {
         border: none;
         }
+
+        /* footer */
+
+        div#footerkiri > h1 {
+            font-size: 30px;
+            text-align: center;
+            color: black;
+            text-shadow: 2px 2px #FC00FF;
+        }
+
+        div#footerkiri > h6 {
+          display: none;
+        }
+
+        div#footerkiri > h6 {
+          text-align: center;
+        }
+
+        div#footertengah > h1 {
+            display: none;
+        }
+
+        div#footerkanan > a > i {
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 30px;
+        }
+
 
       }
 
