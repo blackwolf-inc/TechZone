@@ -46,6 +46,15 @@
         font-weight: normal;
       }
 
+      ul.navbar-nav > li.nav-item > a > i {
+        font-size: 21px;
+        color: #FF00BA;
+      }
+
+      ul.navbar-nav > li.nav-item > a > i:hover {
+        color: #f9db24;
+      }
+
       /* Carousel */
 
       div.row.mt-3.carouselbox > div.col-lg-8 > div.row > div.col.mt-2 > h5.text-white > a {
@@ -118,6 +127,19 @@
       div.row.newpostcolumn > div.col-4 > img.img-fluid {
         display: block;
       }
+      
+      div.row > div.col-8 > h5 > a > button {
+        background-color: #FFF000;
+        border: solid 1px #FF00FC;
+        color: #FF00FC;
+        letter-spacing: 2px;
+        border-radius: 0;
+      }
+
+      div.row > div.col-8 > h5 > a > button:hover {
+        background-color: white;
+      }
+
 
       /* Footer */
 
@@ -310,6 +332,12 @@
         border: none;
         }
 
+        /*  Navbar Brand */
+
+        .navbar-brand {
+          display: none;
+        }
+
         .jumbotron {
         background-color: white;
         background-image: none;
@@ -480,11 +508,10 @@
       <li class="nav-item">
         <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="https://twitter.com/techzone_05">TWITTER</a>
-      </li>
-       <li class="nav-item ">
-        <a class="nav-link " href="https://www.instagram.com/techzone_05/">INSTAGRAM</a>
+       <li class="nav-item pt-2">
+        <a href=""><i class="fa fa-facebook-f mr-lg-3"></i></a>
+        <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a>
+        <a href=" https://www.instagram.com/techzone_05/"><i class="fa fa-instagram mr-lg-3"></i></a>
       </li>
     </ul>
   </div>
@@ -625,7 +652,8 @@
       <div class="col-8" style="border-top: solid 1px #e6e6e6;">
         <h5 class="font-weight-bold mt-2 "><?php echo $row[2];?><br>
         <h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
-        <h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="view.php?id=<?php echo $row[0]?>"> Lanjut baca</a></h7> 
+        <h7 style="font-size: 14px" class="d-block mt-2 mb-2 text-justify"><?php echo substr($row[5], 0, 250) ?></h7>
+        <a href="view.php?id=<?php echo $row[0]?>"><button class="btn btn-primary btn-sm"> READ MORE... </button></a>
         </h5>
         
       </div>
