@@ -79,6 +79,22 @@
         color: #ff1ea7;
       }
 
+      /* Jumbotron Mid */
+
+      div.jumbotron > div.container > div.row > div.col-6 > h1 > a:hover {
+        color: #a5126c;
+        transition: 2s;
+      }
+
+      .jumbotron {
+        background-image: linear-gradient(-90deg, #ff3399, #ff9900);
+      }
+
+      div.jumbotron:hover {
+        background-image: linear-gradient(-90deg, #ff9900, #ff3399);
+      }
+
+
       /* Post Content */
       
       div.row.newpostcolumn > div.col-4 > img.img-fluid {
@@ -141,10 +157,7 @@
         color: #ff3399;
       }
 
-      .jumbotron {
-        background-image: linear-gradient(-90deg, #ff3399, #ff9900);
-      }
-
+      
       .jumbotron a {
         color: black;
       }
