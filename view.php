@@ -307,24 +307,17 @@
 				<!-- awal -->
 				
 			<!-- looping coment -->
-				<div class="col-md-12">
-					<?php
-						$query3 = mysqli_query($conn, "SELECT * FROM coment WHERE id_post=$id_post ORDER BY id_coment DESC");
-						if (mysqli_num_rows($query3) > 0){
-						   while ($data = mysqli_fetch_array($query3)){
-						   		?>
-
-								<div class="col-lg-12 p-lg-3 mt-lg-3" style="border: 1px solid #	EEEEEE; border-left: 5px solid #EEEEEE;">
-						   		<?php 
-						   		echo "<p><small>Dikirim oleh: $data[2]</small></p>
-						   		<p>$data[3]</p><hr>";
-									?>
-								</div>
-							<?php 						   }
-						}
-						else echo "<p>Belum ada komentar.</p>";
-					?>
-				</div>
+				<?php
+					$query3 = mysqli_query($conn, "SELECT * FROM coment WHERE id_post=$id_post ORDER BY id_coment DESC");
+					if (mysqli_num_rows($query3) > 0){
+					  while ($data = mysqli_fetch_array($query3)){ ?>
+						<div class="col-lg-12 p-lg-3 mt-lg-3" style="border: 1px solid #EEEEEE; border-left: 5px solid #EEEEEE;">
+						  <h5><?php echo $data[2]; ?></h5>
+						  <h6><?php echo $data[3]; ?></h6>
+						</div>
+				<?php }
+					} else echo "<h5>Belum ada komentar.</h5>";
+				 ?>
 
 				
 		
