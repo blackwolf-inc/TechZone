@@ -48,7 +48,7 @@
 
       ul.navbar-nav > li.nav-item > a > i {
         font-size: 21px;
-        color: #FF00BA;
+        color: #FF0000;
       }
 
       ul.navbar-nav > li.nav-item > a > i:hover {
@@ -121,11 +121,11 @@
       }
 
       .jumbotron {
-        background-image: linear-gradient(-90deg, #ff3399, #ff9900);
+        background-image: linear-gradient(-90deg, #f0f3f4, #283747);
       }
 
       div.jumbotron:hover {
-        background-image: linear-gradient(-90deg, #ff9900, #ff3399);
+        background-image: linear-gradient(-90deg,  #ffc107 , #f0f3f4);
       }
 
       div.jumbotron > div.container > div.row > div.col-6 > h5 > a:hover {
@@ -150,15 +150,16 @@
       }
       
       div.row > div.col-8 > h5 > a > button {
-        background-color: #FFF000;
-        border: solid 1px #FF00FC;
-        color: #FF00FC;
+        background-color: #FFFFFF;
+        border: solid 1px #FF0000;
+        color: #FF0000;
         letter-spacing: 2px;
         border-radius: 0;
       }
 
       div.row > div.col-8 > h5 > a > button:hover {
-        background-color: white;
+        background-color: #ffc107;
+        color: #FFFFFF;
       }
 
 
@@ -289,7 +290,7 @@
       }
 
       div.row.newpostcolumn > div.col-8 > h5 > h7 > a {
-        color: #ff3399;
+        color: #FF0000;
       }
 
       div.row.newpostcolumn > div.col-8 > h5 > h7 > a:hover {
@@ -312,13 +313,13 @@
       }
       
       div.col-lg-4 > div#titlekolfeaturedvideo > h6#titlefeaturedvideo {
-        color: #ff3399; 
+        color: #dc3545;
         border-bottom: solid 2px #6600ff; 
         border-left: solid 2px #6600ff;
       }
 
       h6#titlemorevideous > a {
-        color: #ff3399;
+        color: #dc3545;
       }
 
       h6#titlemorevideous > a:hover {
@@ -340,7 +341,7 @@
         }
         
         div.jumbotron {
-          background-image: linear-gradient(-90deg, #ff3399, #ff9900);
+          background-image: linear-gradient(-90deg, #ffc107, #ffc107);
         }
 
         .jumbotron h1 {
