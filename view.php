@@ -225,6 +225,8 @@
 
 	<!-- End Style CSS -->
 </head>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5e92aadd9dee0c0012ab3bcc&product=inline-share-buttons" async="async"></script>
+
 <?php
   include 'koneksi.php';
   if (isset($_GET['id'])) {
@@ -300,10 +302,9 @@
 			<div class="col-lg-12">
 				<h2 class="text-uppercase"><?php echo $judul; ?></h1>
 				<h4><i>This Day : <?php echo date("l M Y"); ?> <?php include 'jam.php'; ?></i></h4>
-				<h6>By <a href=""><?php echo $admin; ?></a> | <a href="">ford@345triangle</a> | <?php echo $tgl ?></h6>
-				<a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a>
-				<h7><a href=""><i class="fas fa-share mr-2"></i>share</a> </h7>
+				<h6>By <a href=""><?php echo $admin; ?></a> | <a href="">ford@345triangle</a> | <?php echo $tgl ?></h6>	
 			</div>
+			<div class="sharethis-inline-share-buttons"></div><br>
 		</div>
 
 		<div class="row image">
@@ -349,7 +350,7 @@
 					    <textarea class="form-control" name="insertbacotisi" rows="3"></textarea>
 					  </div>
 
-					  <button type="submit" class="btn btn-primary" name="bacot">Confirm To Bacot</button>
+					  <button type="submit" class="btn btn-primary" name="bacot">Comment</button>
 					</form>
 				</div>
 
@@ -379,7 +380,7 @@
 		      				</div>
 		     			 <div class="col-8" style="border-top: solid 1px #e6e6e6;">
 		        				<h5 class="text-justify mt-lg-1 mb-lg-0 "><?php echo $row[2];?><br>
-		        				<h7 style="font-size: 14px" class="d-block mt-lg-2"><?php echo substr($row[5], 0, 250) ?></h7>
+		        				<h7 style="font-size: 14px" class="d-block mt-lg-2"><?php echo substr($row[5], 0, 20) ?></h7>
 		        				<h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a></h7>
 		        				</h5>
 		        
