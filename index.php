@@ -815,9 +815,9 @@
       ?>
 
       <div class="col-12 col-lg-12 col-md-6 col-sm-6 mb-2">
-      <iframe
+      <iframe 
       <?php $vidio = substr($row[3],32);?>
-      src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' style="width: 100%;">
+      src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' allowfullscreen style="width:100%; ">
       </iframe> 
 
       <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>

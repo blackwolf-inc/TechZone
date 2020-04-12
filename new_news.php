@@ -379,7 +379,7 @@
       <!-- loping vidio  -->
  <?php 
       include 'koneksi.php'; 
-      $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");
+      $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio where category = $ctrg LIMIT 10");
       if ($query3->num_rows > 0) {
 
       while ($row = $query3->fetch_array()) {
