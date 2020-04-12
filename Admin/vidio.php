@@ -153,7 +153,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <form action="savefile.php" method="post" enctype="multipart/form-data">
+            <form action="savefile.php" method="post">
             <div class="card">
               <div class="card-header">
                 <h5 class="card-title">Support Dasboard</h5>
@@ -227,7 +227,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <textarea class="textarea" name="isiText" id="isiText" placeholder="Place some text here"
                           style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </div>
-              </div><button class="btn btn-primary" name="upload" id="upload">Upload</button>
+              </div><button class="btn btn-primary" name="uploadvid" id="uploadvid">Upload</button>
             </div>
             <div class="col-md-12">
             
