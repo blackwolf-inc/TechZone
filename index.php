@@ -97,6 +97,22 @@
         color: #ff1ea7;
       }
 
+      div.row.mt-3 > div.col-lg-8 {
+        border: solid 2px;
+        border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;
+      }
+
+       div.row.mt-3 > div.col-lg-4 {
+        border: solid 2px;
+        border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;
+       }
+      
+       div.row > div#cl.col-lg-4 {
+        border: solid 2px;
+        border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;
+       }
+
+
       /* Jumbotron Mid */
 
       div.jumbotron > div.container > div.row > div.col-6 > h1 > a:hover {
@@ -212,11 +228,7 @@
         top: 30%;
       }
 
-      .carousel {
-        height: 600px;
-        width: 100%;
-        display: inline-block;
-      }
+
 
       body {
         background-color: black;
@@ -227,22 +239,6 @@
         border: none;
       }
 
-      .filter {
-        background-color: black;
-        height: 100%;
-        width: 100%;
-        opacity: 0.5;
-        position: absolute;
-        z-index: 1;
-      }
-
-      .card {
-        background-color: transparent;
-      }
-
-      .card-title, .card-text {
-        color: white;
-      }
 
       a {
         color: white;
@@ -420,6 +416,12 @@
             padding-right: 20px;
             padding-bottom: 20px;
         }
+
+        /*  Carousel */
+
+        div.row.mt-3 > div.col-lg-8 > div.row > div#kolomcarousel1 {
+            margin-bottom: 0px;
+        }
         
       }
 
@@ -473,6 +475,7 @@
             padding-bottom: 30px;
         }
 
+        /* Carousel */
 
       }
 
@@ -480,6 +483,12 @@
         div.col-lg-4 > div#titlekolfeaturedvideo > h6#titlefeaturedvideo {
         border: none;
         }
+
+        /* carousel */
+
+        div.row.mt-3 > div.col-lg-8 > div.row > div#kolomcarousel1 {
+        margin-bottom: 0px;
+      }
 
       }
 
@@ -542,18 +551,18 @@
   <!-- Carousel 1 -->
   <div class="row mt-3 carouselbox">
     <!-- kolom 1 -->
-    <div class="col-lg-8 col-md-8 col-sm-12" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+    <div class="col-lg-8 col-md-8 col-sm-12">
       <?php
         include 'koneksi.php';
         $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=1 ");
         $data = mysqli_fetch_array($sql);
       ?>
-      <div class="row">
+      <div class="row d-flex flex-wrap align-items-stretch h-100">
         <div class="col p-0" id="kolomcarousel1">
           <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid h-100">
         </div>
         <div class="col mt-2 p-lg-4 pl-lg-4">
-          <h1 class="text-white font-weight-bold text-uppercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white" style="display: inline-block;">BY <a href=""><?php echo $data[1]?></a></h5></h1>
+          <h1 class="text-white font-weight-bold text-uppercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h1>
           <hr style="border: 1px solid #ff3399; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
@@ -561,12 +570,12 @@
     <!-- end kolom 1 -->
 
     <!-- kolom 2 -->
-    <div class="col-lg-4 col-md-4 col-sm-6" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+    <div class="col-lg-4 col-md-4 col-sm-6">
       <?php
         $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=2 ");
         $data = mysqli_fetch_array($sql);
       ?>
-      <div class="row">
+      <div class="row d-flex flex-wrap align-items-stretch h-100">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
           <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid">
         </div>
@@ -578,7 +587,7 @@
     <!-- end kolom 2 -->
 
     <!-- kolom 3 -->
-    <div class="col-md-4 col-sm-6 col-lg-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+    <div class="col-md-4 col-sm-6 col-lg-4">
       <?php
         $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=3 ");
         $data = mysqli_fetch_array($sql);
@@ -595,12 +604,12 @@
     <!-- end kolom 3 -->
 
     <!-- kolom 4 -->
-    <div class="col-md-8 col-lg-8" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+    <div class="col-md-8 col-lg-8">
       <?php
         $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=4 ");
         $data = mysqli_fetch_array($sql);
       ?>
-      <div class="row">
+      <div class="row d-flex flex-wrap align-items-stretch h-100">
         <div class="col p-0" id="kolomcarousel2">
           <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid h-100">
         </div>
@@ -614,42 +623,42 @@
   </div>
   <div class="row mt-0 carouselbox">
     <!-- kolom 5 -->
-    <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+    <div class="col-lg-4 col-md-4 col-sm-4" id="cl">
       <?php
         $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=5 ");
         $data = mysqli_fetch_array($sql);
       ?>
-      <div class="row">
+      <div class="row d-flex flex-wrap align-items-stretch h-100">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
+          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid w-100 h-100">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href="" ><?php echo $data[1]?></a></h5></h4>
         </div>
       </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+    <div class="col-lg-4 col-md-4 col-sm-4" id="cl">
       <?php
         $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=6 ");
         $data = mysqli_fetch_array($sql);
       ?>
-      <div class="row">
+      <div class="row d-flex flex-wrap align-items-stretch h-100">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid" style="width: 100%; max-height: 400px;">
+          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid h-100 w-100">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href="" ><?php echo $data[1]?></a></h5></h4>
         </div>
       </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+    <div class="col-lg-4 col-md-4 col-sm-4" id="cl">
       <?php
         $sql = mysqli_query($conn, "SELECT u.titel_post, u.id_admin, u.id_gambar FROM utama AS u, carousel as c WHERE u.id_post = c.Id_post AND c.no=7 ");
         $data = mysqli_fetch_array($sql);
       ?>
-      <div class="row">
+      <div class="row d-flex flex-wrap align-items-stretch h-100">
         <div class="col-lg-12 col-md-12 col-sm-12 col p-0">
-          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid w-100" style="width: 100%; max-height: 400px;">
+          <img src="<?php echo 'tumb'.substr($data[2], 14) ;?>" alt="" class="img-fluid w-100 h-100">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col p-lg-4 pl-lg-4">
            <h4 class="text-white font-weight-bold text-lowercase"><a href="">
@@ -875,4 +884,3 @@
 </script>
 <!-- end -->
 </html>
-
