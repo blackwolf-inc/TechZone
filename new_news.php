@@ -219,14 +219,13 @@
 
 <?php
   include 'koneksi.php';
-  $ctrg=1;
 
-  if (isset($_POST['btnCtgr'])) {
-    $btnValue = $_POST['btnCtgr'];
-    if($btnValue==2){$ctrg=2;}
-    else if($btnValue==3){$ctrg=3;}
-    else if($btnValue==4){$ctrg=4;}
-    else if($btnValue==5){$ctrg=5;}
+  if (isset($_GET['id'])) {
+    $btnValue = $_GET['id'];
+    if($btnValue=='Tech'){$ctrg=1;}
+    else if($btnValue=='Esport'){$ctrg=2;}
+    else if($btnValue=='Culture'){$ctrg=3;}
+    else if($btnValue=='Netizen'){$ctrg=4;}
   }
   $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE jenis_post=$ctrg ORDER BY id_post DESC ");
 ?>

@@ -558,10 +558,10 @@
   <div style="border: solid 2px; border-image:  linear-gradient(-90deg, #39050D, #39050D) 1;">
 <div class="btn-group col-md-12 center" role="group" aria-label="Basic example">
   <button name="btnCtgr" class="btn  " style="color:white" value="1">  <a class="nav-link " href="index.php">HOME</a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="2"> <a class="nav-link" href="new_news.php">ZONA TEKNOLOGI </a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="3"><a class="nav-link" href="new_news.php">ZONA E-SPORTS </a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="4"> <a class="nav-link" href="new_news.php">ZONA CULTURE </a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="5"> <a class="nav-link" href="new_news.php">ZONA NETIZEN </a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="2"> <a class="nav-link" href="new_news.php?id=Tech">ZONA TEKNOLOGI </a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="3"><a class="nav-link" href="new_news.php?id=Esport">ZONA E-SPORTS </a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="4"> <a class="nav-link" href="new_news.php?id=Culture">ZONA CULTURE </a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="5"> <a class="nav-link" href="new_news.php?id=Netizen">ZONA NETIZEN </a></button>
   <button name="btnCtgr" class="btn " style="color:white" value="5"> <a class="nav-link" href="future.php">FREE GAME</a></button>
   <button name="btnCtgr" class="btn " style="color:white" value="5">  <a class="nav-link" href="see_all.php">SEE ALL NEWS</a></button>
    <button name="btnCtgr" class="btn " style="color:white" value="5">  <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a></button>
