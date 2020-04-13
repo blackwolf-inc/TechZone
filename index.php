@@ -14,6 +14,7 @@
     <!--End-->
   
     <style>
+    @font-face {font-family: "Veneer Clean Reg"; src: url("//db.onlinewebfonts.com/t/a344dbfc4625e1c3a7cc4bacad51f757.eot"); src: url("//db.onlinewebfonts.com/t/a344dbfc4625e1c3a7cc4bacad51f757.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a344dbfc4625e1c3a7cc4bacad51f757.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a344dbfc4625e1c3a7cc4bacad51f757.woff") format("woff"), url("//db.onlinewebfonts.com/t/a344dbfc4625e1c3a7cc4bacad51f757.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a344dbfc4625e1c3a7cc4bacad51f757.svg#Veneer Clean Reg") format("svg"); } 
 
       /*Jumbotron Top*/
       div#navbarToggleExternalContent > div.bg > div.row > div.col > h4 {
@@ -589,7 +590,7 @@
           <img src="<?php echo substr($data[2], 3) ;?>" alt="" class="img-fluid h-100">
         </div>
         <div class="col mt-2 p-lg-4 pl-lg-4">
-          <h1 class="text-white font-weight-bold text-uppercase"><a href="view.php?id=<?php echo $data[3]?>"><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h1>
+          <h1 class="text-white font-weight-bold text-uppercase" style="font-family: Veneer Clean Reg;"><a href="view.php?id=<?php echo $data[3]?>"><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h1>
           <hr style="border: 1px solid #39050D; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
@@ -733,7 +734,7 @@
       </div>
       <div class="col-8" style="border-top: solid 1px #e6e6e6;">
         <h5 class="font-weight-bold mt-2 "><?php echo $row[2];?><br>
-        <h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
+        <h7 style="font-size: 11px; color: white;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
         <h7 style="font-size: 14px" class="d-block mt-2 mb-2 text-justify"><?php echo substr($row[5], 0, 250) ?></h7>
         <a href="view.php?id=<?php echo $row[0]?>"><button class="btn btn-primary btn-sm"> READ MORE... </button></a>
         </h5>
