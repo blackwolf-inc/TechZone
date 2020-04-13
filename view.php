@@ -392,7 +392,7 @@
 		     ?>
 		    				<div class="row mt-3 mb-2 newpostcolumn d-flex align-content-stretch">
 		   					  <div class="col-6 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-		        					<a href="view.php?id=<?php echo $row[0]?>"><img src="<?php echo 'croped'.substr($row[1], 14) ;?>" alt="" class="img-fluid mt-lg-0 h-100 w-100" style="object-fit: contain;"></a>
+		        					<a href="view.php?id=<?php echo $row[0]?>"><img src="<?php echo substr($row[1], 3) ;?>" alt="" class="img-fluid mt-lg-0 h-100 w-100" style="object-fit: contain;"></a>
 		      				</div>
 		     			 <div class="col-6" style="border-top: solid 1px #e6e6e6;">
 		        				<h5 class="text-left mt-lg-1 mb-lg-0" style="font-size: 18px;"><?php echo substr($row[2],0,25);?><br>
