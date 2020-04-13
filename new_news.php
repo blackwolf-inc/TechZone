@@ -177,6 +177,10 @@
 
       @media (max-width: 575px) {
 
+        .carousel {
+          height: auto;
+        }
+
         .jumbotron {
         background-color: white;
         background-image: none;
@@ -251,6 +255,10 @@
         .jumbotron {
         background-color: white;
         background-image: none;
+        }
+
+        .carousel {
+          height: auto;
         }
 
       }
