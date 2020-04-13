@@ -10,6 +10,36 @@
     <!--End-->
   
     <style>
+      /* navbar */
+      nav {
+        background-color: black;
+      }
+
+      .navbar-brand {
+        text-shadow: 2px 2px #ff3399;
+      }
+
+      a.navbar-brand > i {
+        color: black;
+      }
+
+      ul.navbar-nav > li.nav-item > a.nav-link {
+        color: #ff3399;
+        font-size: 13px;
+      }
+
+      ul.navbar-nav > li.nav-item > a.nav-link:hover {
+        color: #00E4FF;
+      }
+      
+      ul.navbar-nav > li.nav-item.active > a.nav-link {
+        color: #f9db24;
+      }
+
+      ul.navbar-nav > li.nav-item.active > a.nav-link:active {
+        color: purple;
+      }
+
       #navbarToggleExternalContent h4 {
           font-size: 80px;
           font-weight: bolder;
@@ -234,29 +264,36 @@
 <!-- JumbNavbar -->
 <div class="pos-f-t">
   <!-- Nav -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand font-weight-bold" href="#" style="display: none;"><i>TECHZONE</i></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
- <img class="img " src="admin/aset_gambar/zonetechkecil.PNG">
-    <ul class="navbar-nav nav-justified w-50 m-auto">
-       <li class="nav-item ">
-        <a class="nav-link " href="index.php">HOME <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link active" href="new_news.php?id=<?php echo $btnValue;?>"> ZONA <?php echo $btnValue;?><span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="future.php">FREE GAME</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar navbar-dark">
+     <div class="container">
+      <a class="navbar-brand font-weight-bold mr-5" href="index.php">ZONETECH</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
+          </li>
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="new_news.php?id=E-SPORTS">E-SPORTS</a>
+          </li>
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="new_news.php?id=CULTURE">CULTURE</a>
+          </li>
+        <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="new_news.php?id=NETIZEN">NETIZEN</a>
+          </li>
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="future.php">FREE GAME</a>
+          </li>
+           <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="see_all.php">ALL NEWS</a>
+          </li>
+        </ul>
+      </div>
+     </div>
+    </nav>
   <!-- end Nav -->
 </div>
 <!-- end JumbNavbar -->

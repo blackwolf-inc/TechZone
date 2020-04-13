@@ -32,14 +32,19 @@
 
 	ul.navbar-nav > li.nav-item > a.nav-link {
 		color: #ff3399;
+		font-size: 13px;
 	}
 
 	ul.navbar-nav > li.nav-item > a.nav-link:hover {
-		color: #f9db24;
+		color: #00E4FF;
 	}
 	
 	ul.navbar-nav > li.nav-item.active > a.nav-link {
 		color: #f9db24;
+	}
+
+	ul.navbar-nav > li.nav-item.active > a.nav-link:active {
+		color: purple;
 	}
 
 
@@ -285,14 +290,23 @@
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarNav">
 		    <ul class="navbar-nav ml-auto">
-		      <li class="nav-item active pl-lg-4">
-		        <a class="nav-link" href="new_news.php">New News <span class="sr-only">(current)</span></a>
+		      <li class="nav-item pl-lg-4">
+		        <a class="nav-link" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
 		      </li>
 		      <li class="nav-item pl-lg-4">
-		        <a class="nav-link" href="future.php">Future</a>
+		        <a class="nav-link" href="new_news.php?id=E-SPORTS">E-SPORTS</a>
 		      </li>
 		      <li class="nav-item pl-lg-4">
-		        <a class="nav-link" href="see_all.php">See All News</a>
+		        <a class="nav-link" href="new_news.php?id=CULTURE">CULTURE</a>
+		      </li>
+			  <li class="nav-item pl-lg-4">
+		        <a class="nav-link" href="new_news.php?id=NETIZEN">NETIZEN</a>
+		      </li>
+		      <li class="nav-item pl-lg-4">
+		        <a class="nav-link" href="future.php">FREE GAME</a>
+		      </li>
+		       <li class="nav-item pl-lg-4">
+		        <a class="nav-link" href="see_all.php">ALL NEWS</a>
 		      </li>
 		    </ul>
 		  </div>
@@ -390,9 +404,9 @@
 
 		      			while ($row = $query->fetch_array()) {
 		     ?>
-		    				<div class="row mt-3 mb-2 newpostcolumn d-flex align-content-stretch">
+		    				<div class="row mt-3 mb-2 newpostcolumn">
 		   					  <div class="col-6 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-		        					<a href="view.php?id=<?php echo $row[0]?>"><img src="<?php echo substr($row[1], 3) ;?>" alt="" class="img-fluid mt-lg-0 h-100 w-100" style="object-fit: contain;"></a>
+		        					<a href="view.php?id=<?php echo $row[0]?>"><img src="<?php echo substr($row[1], 3) ;?>" alt="" class="img-fluid mt-lg-0 h-100 w-100" style="object-fit: cover;"></a>
 		      				</div>
 		     			 <div class="col-6" style="border-top: solid 1px #e6e6e6;">
 		        				<h5 class="text-justify mt-lg-1 mb-lg-0" style="font-size: 17px; word-break: break-all;"><?php echo substr($row[2],0,25);?><br>
