@@ -129,10 +129,6 @@
         font-weight: bolder;
         text-shadow: 2px 2px #ff3399;
       }
-      
-      ul.navbar-nav > li.nav-item > a.nav-link:hover {
-        color: #ff3399;
-      }
 
       /* end Navbar */
       
@@ -316,7 +312,7 @@
   <!-- Carousel 1 -->
   <div class="row mt-3 carouselbox">
     <!-- kolom 1 -->
-    <div class="col-lg-8 col-md-8 col-sm-12" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+    <div class="col-lg-8 col-md-8 col-sm-12">
   </div>
   
     
