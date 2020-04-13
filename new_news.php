@@ -325,7 +325,7 @@
     </div>
     <div style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
       <!-- button  -->
-<form action="new_news.php" method="post">
+<!-- <form action="new_news.php" method="post">
 <div class="btn-group col-md-12" role="group" aria-label="Basic example">
   <button name="btnCtgr" class="btn  " style="color:white" value="1">Tech</button>
   <button name="btnCtgr" class="btn " style="color:white" value="2">Science</button>
@@ -333,7 +333,7 @@
   <button name="btnCtgr" class="btn " style="color:white" value="4">Economy</button>
   <button name="btnCtgr" class="btn " style="color:white" value="5">Health</button>
 </div>
-</form>     <!-- button  -->
+</form>   -->   <!-- button  -->
 
 
 

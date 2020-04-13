@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Apr 2020 pada 15.36
+-- Waktu pembuatan: 13 Apr 2020 pada 08.19
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.3
 
@@ -54,7 +54,7 @@ CREATE TABLE `carousel` (
 --
 
 INSERT INTO `carousel` (`no`, `Id_post`) VALUES
-(1, 16),
+(1, 15),
 (2, 3),
 (3, 6),
 (4, 13),
@@ -75,6 +75,13 @@ CREATE TABLE `coment` (
   `isi_comen` varchar(10000) NOT NULL,
   `id_user` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `coment`
+--
+
+INSERT INTO `coment` (`id_coment`, `id_post`, `nama_komen`, `isi_comen`, `id_user`) VALUES
+(1, '17', 'contoh', 'contoh komentar', 'a@qa.com');
 
 -- --------------------------------------------------------
 
@@ -220,7 +227,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `coment`
 --
 ALTER TABLE `coment`
-  MODIFY `id_coment` int(30) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_coment` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`

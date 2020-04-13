@@ -280,7 +280,7 @@
 
 
 <div class="embed-responsive embed-responsive-4by3">
-<iframe src="https://www.gamearter.com/game/pizza-ninja-mania/" width="100%" height="100%" allow="fullscreen"></iframe> </div>
+<iframe src="https://www.gamearter.com/game/super-knight-adventure/" width="100%" height="100%" allow="fullscreen"></iframe> </div>
 <!-- Content -->
 <div class="row content" style="background-color: white;">
 

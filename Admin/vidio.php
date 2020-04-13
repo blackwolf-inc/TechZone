@@ -208,11 +208,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <div class="form-group">
                         <label>Select category</label>
                         <select class="form-control" name="ddCategory" id="ddCategory">
-                          <option value="1">Tech</option>
-                          <option value="2">Science</option>
-                          <option value="3">Entertaiment</option>
-                          <option value="4">Economy</option>
-                          <option value="5">Health</option>
+                          <option value="1">TEKNOLOGI</option>
+                          <option value="2">E-SPORTS</option>
+                          <option value="3">CULTURE</option>
+                          <option value="4">NETIZEN</option>
                         </select>
                       </div>
                     </div>
