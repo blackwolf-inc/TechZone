@@ -221,29 +221,37 @@
 <!-- JumbNavbar -->
 <div class="pos-f-t">
   <!-- Nav -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand font-weight-bold" href="#" style="display: none;"><i>TECHZONE</i></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
- <img src="admin/aset_gambar/zonetechkecil.PNG">
-    <ul class="navbar-nav nav-justified w-50 m-auto">
-       <li class="nav-item ">
-        <a class="nav-link " href="index.php">HOME <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link " href="new_news.php">NEW NEWS <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link active" href="future.php">FREE GAME</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar navbar-dark">
+     <div class="container">
+      <a class="navbar-brand font-weight-bold mr-5" href="index.php"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg"></a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
+          </li>
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="new_news.php?id=ESPORTS">E-SPORTS</a>
+          </li>
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="new_news.php?id=CULTURE">CULTURE</a>
+          </li>
+        <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="new_news.php?id=NETIZEN">NETIZEN</a>
+          </li>
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="future.php">FREE GAME</a>
+          </li>
+           <li class="nav-item pl-lg-4">
+            <a class="nav-link" href="see_all.php">ALL NEWS</a>
+          </li>
+        </ul>
+      </div>
+     </div>
+    </nav>
   <!-- end Nav -->
 </div>
 <!-- end JumbNavbar -->
