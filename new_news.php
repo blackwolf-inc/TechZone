@@ -17,6 +17,7 @@
 
       .navbar-brand {
         text-shadow: 2px 2px #ff3399;
+        display: none;
       }
 
       a.navbar-brand > i {
@@ -236,6 +237,13 @@
         }
 
         /* end footer */
+        .navbar-brand {
+          display: block;
+        }
+
+        #logoimg {
+          display: none;
+        }
         
       }
 
@@ -276,12 +284,12 @@
   <!-- Nav -->
   <nav class="navbar navbar-expand-lg navbar navbar-dark">
      <div class="container">
-      <a class="navbar-brand font-weight-bold mr-5" href="index.php"style="display: none;">ZONETECH</a>
+      <a class="navbar-brand font-weight-bold mr-5" href="index.php">ZONETECH</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <img src="admin/aset_gambar/zonetechkecil.PNG">
+        <img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item pl-lg-4">
             <a class="nav-link" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
@@ -357,21 +365,6 @@
       </div>
     </div>
     <div style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
-      <!-- button  -->
-<!-- <form action="new_news.php" method="post">
-<div class="btn-group col-md-12" role="group" aria-label="Basic example">
-  <button name="btnCtgr" class="btn  " style="color:white" value="1">Tech</button>
-  <button name="btnCtgr" class="btn " style="color:white" value="2">Science</button>
-  <button name="btnCtgr" class="btn " style="color:white" value="3">Entertaiment</button>
-  <button name="btnCtgr" class="btn " style="color:white" value="4">Economy</button>
-  <button name="btnCtgr" class="btn " style="color:white" value="5">Health</button>
-</div>
-</form>   -->   <!-- button  -->
-
-
-
-  
-
     </div><br><br>
 <!-- End crousel -->
 
@@ -532,40 +525,7 @@
 
 <!-- javascript menyembunyikan navbar brand -->
 <script>
-$(window).resize(function() {
 
-if ($(this).width() < 575) {
-    $(".navbar-brand").show();
-    $("#titlemorevideous").hide();
-    $("#boxvideoscontent").css("border","none");
-
-    $("#kolomcarousel1").css("margin-bottom","0");
-    $("#kolomcarousel2").css("margin-bottom","0");
-    
-} else if ($(this).width() < 767) {
-    $(".navbar-brand").show();
-    $("#navbarToggleExternalContent").hide();
-
-} else if ($(this).width() < 992) {
-    $(".navbar-brand").hide();
-    $("#navbarToggleExternalContent").show();
-
-    $("#kolomcarousel1").css("margin-bottom","-80px");
-    $("#kolomcarousel2").css("margin-bottom","-100px");
-
-    $("#titlemorevideous").show();
-    $("#boxvideoscontent").css("border-top","solid 2px #6600ff");
-    $("#boxvideoscontent").css("border-right","solid 2px #6600ff");
-
-
-} else if ($(this).width() < 1200) {
-    $(".navbar-brand").hide();
-    $("#navbarToggleExternalContent").show();
-
-    $("#kolomcarousel1").css("margin-bottom","-80px");
-    $("#kolomcarousel2").css("margin-bottom","-100px");
-}
-});
 </script>
 <!-- end -->
 </html>
