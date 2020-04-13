@@ -194,11 +194,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <div class="form-group">
                         <label>Select Admin</label>
                         <select class="form-control" name="ddAdmin" id="ddAdmin">
-                          <option value="admin1">admin 1</option>
-                          <option value="admin2">admin 2</option>
-                          <option value="admin3">admin 3</option>
-                          <option value="admin4">admin 4</option>
-                          <option value="admin5">admin 5</option>
+                          <option value="admin1">DWIKI AFFIAN</option>
+                          <option value="admin2">DIMAS WAHYU
+</option>
+                          <option value="admin3">RHEINALDY THALIA</option>
+                          <option value="admin4">HASNATUL ALFIYAH
+</option>
+                          <option value="admin5">SAGASITA RAVIL</option>
                         </select>
                       </div>
                     </div>

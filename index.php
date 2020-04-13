@@ -99,17 +99,17 @@
 
       div.row.mt-3 > div.col-lg-8 {
         border: solid 2px;
-        border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;
+        border-image:  linear-gradient(-90deg, #C20005, #C20005) 1;
       }
 
        div.row.mt-3 > div.col-lg-4 {
         border: solid 2px;
-        border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;
+        border-image:  linear-gradient(-90deg, #C20005, #860309) 1;
        }
       
        div.row > div#cl.col-lg-4 {
         border: solid 2px;
-        border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;
+        border-image:  linear-gradient(-90deg, #C20005, #860309) 1;
        }
 
 
@@ -199,7 +199,7 @@
 
       div#footerkanan > a > i {
         font-size: 25px;
-        color: #ff3399;
+        color: #C20005;
       }
 
       div#footerkanan > a > i:hover {
@@ -212,7 +212,7 @@
       }
       
       #footertengah > ul.list-inline > li.list-inline-item > a:hover {
-          color: #ff3399 ;
+          color: #C20005;
       }
 
       #navbarToggleExternalContent h4 {
@@ -247,7 +247,7 @@
 
       a:hover {
         text-decoration: none;
-        color: #ff3399;
+        color: #FF9900;
       }
 
       
@@ -256,11 +256,11 @@
       }
 
       .jumbotron a:hover {
-        color: #ff3399;
+        color: #F5F15E;
       }
 
       .content h5 {
-        color: #404040;
+        color: #282923;
       }
 
       .content h7 {
@@ -268,18 +268,18 @@
       }
 
       .content a {
-        color: color: #ff3399;
+        color: color: #F5F15E;
       }
 
       /* Navbar */
       nav.navbar > a.navbar-brand:hover {
         color: black;
         font-weight: bolder;
-        text-shadow: 2px 2px #ff3399;
+        text-shadow: 2px 2px #F5F15E;
       }
       
       ul.navbar-nav > li.nav-item > a.nav-link:hover {
-        color: #ff3399;
+        color: #F5F15E;
       }
 
       /* end Navbar */
@@ -305,11 +305,11 @@
       }
 
       div#boxvideoscontent > div.col-12 > h7 > a {
-        color: #ff3399;
+        color: #F5F15E;
       }
 
       div#boxvideoscontent > div.col-12 > h7 > a:hover {
-        color: #cc0099;
+        color: #F5F15E;
       }
       
       div.col-lg-4 > div#titlekolfeaturedvideo > h6#titlefeaturedvideo {
@@ -514,21 +514,29 @@
         <div class="col"><h7 class="text-center text-white" style="display: block;"><?php echo date("l M Y"); ?> <?php include 'jam.php'; ?> | THE MAC FOR MOST</h7></div>
       </div>
     </div>
+
   </div>
   <!-- Nav -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand font-weight-bold" href="#"><i>TECHZONE</i></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  
+
+   
+  <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav nav-justified w-50 m-auto">
 
       <li class="nav-item ">
-        <a class="nav-link active" href="index.php">HOME <span class="sr-only">(current)</span></a>
+        <a class="nav-link " href="index.php">HOME</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="new_news.php">NEW NEWS <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="new_news.php">Z-TEKNOLOGI </a>
+      </li>
+       <li class="nav-item ">
+        <a class="nav-link" href="new_news.php">Z-E-SPORTS </a>
+      </li>
+       <li class="nav-item ">
+        <a class="nav-link" href="new_news.php">Z-CULTURE </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="new_news.php">Z-NETIZEN </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="future.php">FREE GAME</a>
@@ -536,20 +544,38 @@
       <li class="nav-item">
         <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
       </li>
+      <ul>
        <li class="nav-item pt-2">
         <a href=""><i class="fa fa-facebook-f mr-lg-3"></i></a>
         <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a>
         <a href=" https://www.instagram.com/techzone_05/"><i class="fa fa-instagram mr-lg-3"></i></a>
       </li>
     </ul>
-  </div>
+  </div> -->
 </nav>
-  <!-- end Nav -->
+  <!-- end Nav --><br>
+<div class="container">
+  <div style="border: solid 2px; border-image:  linear-gradient(-90deg, #39050D, #39050D) 1;">
+<div class="btn-group col-md-12 center" role="group" aria-label="Basic example">
+  <button name="btnCtgr" class="btn  " style="color:white" value="1">  <a class="nav-link " href="index.php">HOME</a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="2"> <a class="nav-link" href="new_news.php">ZONA TEKNOLOGI </a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="3"><a class="nav-link" href="new_news.php">ZONA E-SPORTS </a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="4"> <a class="nav-link" href="new_news.php">ZONA CULTURE </a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="5"> <a class="nav-link" href="new_news.php">ZONA NETIZEN </a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="5"> <a class="nav-link" href="future.php">FREE GAME</a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="5">  <a class="nav-link" href="see_all.php">SEE ALL NEWS</a></button>
+   <button name="btnCtgr" class="btn " style="color:white" value="5">  <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a></button>
+    <button name="btnCtgr" class="btn " style="color:white" value="5">  <a href=" https://www.instagram.com/techzone_05/"><i class="fa fa-instagram mr-lg-3"></i></a></button>
+
 </div>
+</div>
+</div>
+
 <!-- end JumbNavbar -->
 <!-- Container -->
 <div class="container">
   <!-- Carousel 1 -->
+
   <div class="row mt-3 carouselbox">
     <!-- kolom 1 -->
     <div class="col-lg-8 col-md-8 col-sm-12">
@@ -564,7 +590,7 @@
         </div>
         <div class="col mt-2 p-lg-4 pl-lg-4">
           <h1 class="text-white font-weight-bold text-uppercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h1>
-          <hr style="border: 1px solid #ff3399; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
+          <hr style="border: 1px solid #39050D; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
     </div>
@@ -616,7 +642,7 @@
         </div>
         <div class="col p-lg-4 pl-lg-4">
           <h1 class="text-white font-weight-bold text-uppercase"><a href=""><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h1>
-          <hr style="border: 1px solid #ff3399; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
+          <hr style="border: 1px solid #39050D; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
     </div>
@@ -721,7 +747,7 @@
   </div>
 
     <div class="col-lg-4 col-md-12 mt-3 pl-lg-5 mb-0">
-    <div class="col pl-lg-0 pl-0 pt-0 d-flex justify-content-lg-start justify-content-center" style="color: #ff3399;" id="titlekolfeaturedvideo">
+    <div class="col pl-lg-0 pl-0 pt-0 d-flex justify-content-lg-start justify-content-center" style="color: #C20005;" id="titlekolfeaturedvideo">
     <h6 class="font-weight-bold pr-5 pl-1 pb-2 mr-3 ml-5 ml-lg-3 mt-0 pt-0 pl-3 d-inline-block mr-3 mb-0" id="titlefeaturedvideo">FEATURED VIDEO</h6>
     </div>
     <div class="row mr-3 ml-0 pt-3 mt-0" id="boxvideoscontent">
@@ -737,7 +763,7 @@
       ?>
 
       <div class="col-12 col-lg-12 col-md-6 col-sm-6 mb-2">
-      <iframe
+      <iframe allowfullscreen
       <?php $vidio = substr($row[3],32);?>
       src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' style="width: 100%;">
       </iframe> 
@@ -757,7 +783,7 @@
  ?>
 <!-- loping vidio end  -->
   </div>
-    <h6 class="pr-2 font-weight-bold pt-2 pb-2 pl-2 ml-3 mr-4 float-right" id="titlemorevideous" style="color: #ff3399; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href="">MORE VIDEO</a></h6>
+    <h6 class="pr-2 font-weight-bold pt-2 pb-2 pl-2 ml-3 mr-4 float-right" id="titlemorevideous" style="color: #C20005; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href="">MORE VIDEO</a></h6>
   </div>
 
 
@@ -799,7 +825,7 @@
 </div>
       </div>
     </div>
-    </div>
+    </div><br>
     </div>
   <!-- End -->
   
@@ -815,9 +841,9 @@
       ?>
 
       <div class="col-12 col-lg-12 col-md-6 col-sm-6 mb-2">
-      <iframe 
+      <iframe allowfullscreen
       <?php $vidio = substr($row[3],32);?>
-      src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' allowfullscreen style="width:100%; ">
+      src='https://www.youtube.com/embed/<?php echo $vidio ; ?>'  style="width:100%; ">
       </iframe> 
 
       <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
@@ -844,7 +870,7 @@
   <div class="col-lg-3 col-sm-12" id="footerkiri">
     <h1 class="text-white font-weight-bold"><i>TECHZONE</i></h1>
     <hr>
-    <h6>About the company. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+    <h6>#UP TO DATE</h6>
   </div>
   <div class="col-lg-7 col-sm-12" id="footertengah">
   <h1 class="text-white font-weight-bold text-center"><i>QUICK LINK</i></h1>     
