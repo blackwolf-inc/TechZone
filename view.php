@@ -305,7 +305,7 @@
 				<h4><i>This Day : <?php echo date("l M Y"); ?> <?php include 'jam.php'; ?></i></h4>
 				<h6>By <a href=""><?php echo $admin; ?></a> | <a href="">ford@345triangle</a> | <?php echo $tgl ?></h6>	
 			</div>
-			<div class="sharethis-inline-share-buttons"></div><br>
+			<div class="sharethis-inline-share-buttons pl-3"></div><br>
 		</div>
 
 		<div class="row image">
@@ -380,7 +380,7 @@
 		        					<a href="view.php?id=<?php echo $row[0]?>"><img src="<?php echo 'croped'.substr($row[1], 14) ;?>" alt="" class="img-fluid mt-lg-0"></a>
 		      				</div>
 		     			 <div class="col-8" style="border-top: solid 1px #e6e6e6;">
-		        				<h5 class="text-justify mt-lg-1 mb-lg-0 "><?php echo substr($row[2],0,25);?><br>
+		        				<h5 class="text-left mt-lg-1 mb-lg-0 "><?php echo substr($row[2],0,25);?><br>
 		        				<h7 style="font-size: 14px" class="d-block mt-lg-2"><?php echo substr($row[5], 0, 70) ?></h7>
 		        				<h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a></h7>
 		        				</h5>
