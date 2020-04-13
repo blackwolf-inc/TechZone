@@ -719,7 +719,7 @@
 <!-- End Jumbotron -->
 
 <!-- Content -->
-<div class="row content" style="background-color: white opacity=30%;">
+<div class="row content">
 
   <div class="col-lg-8 col-md-12 col-sm-12">
   <?php include 'koneksi.php'; 

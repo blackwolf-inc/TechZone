@@ -293,22 +293,22 @@
         <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg"></a>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item pl-lg-4">
-            <a class="nav-link" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
+            <a class="nav-link text-center" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
           </li>
           <li class="nav-item pl-lg-4">
-            <a class="nav-link" href="new_news.php?id=ESPORTS">E-SPORTS</a>
+            <a class="nav-link text-center" href="new_news.php?id=ESPORTS">E-SPORTS</a>
           </li>
           <li class="nav-item pl-lg-4">
-            <a class="nav-link" href="new_news.php?id=CULTURE">CULTURE</a>
+            <a class="nav-link text-center" href="new_news.php?id=CULTURE">CULTURE</a>
           </li>
         <li class="nav-item pl-lg-4">
-            <a class="nav-link" href="new_news.php?id=NETIZEN">NETIZEN</a>
+            <a class="nav-link text-center" href="new_news.php?id=NETIZEN">NETIZEN</a>
           </li>
           <li class="nav-item pl-lg-4">
-            <a class="nav-link" href="future.php">FREE GAME</a>
+            <a class="nav-link text-center" href="future.php">FREE GAME</a>
           </li>
            <li class="nav-item pl-lg-4">
-            <a class="nav-link" href="see_all.php">ALL NEWS</a>
+            <a class="nav-link text-center" href="see_all.php">ALL NEWS</a>
           </li>
         </ul>
       </div>
@@ -384,7 +384,7 @@
 <!-- End crousel -->
 
 <!-- Content -->
-<div class="row content" style="background-color: white;">
+<div class="row content">
 
   <div class="col-lg-8 col-md-12 col-sm-12">
   <?php include 'koneksi.php'; 
@@ -393,12 +393,12 @@
 
       while ($row = $query2->fetch_array()) {
       ?>
-    <div class="row mt-3 mb-2 newpostcolumn">
+    <div class="row mt-3 mb-2 newpostcolumn d-flex align-content-stretch">
       <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-        <img src="<?php echo 'tumb'.substr($row[1], 14) ;?>" alt="" class="img-fluid">
+        <img src="<?php echo 'tumb'.substr($row[1], 14) ;?>" alt="" class="img-fluid mt-lg-3 h-100 w-100" style="object-fit: cover;">
       </div>
       <div class="col-8" style="border-top: solid 1px #e6e6e6;">
-        <h5 class="font-weight-bold mt-2 text-justify"><?php echo $row[2];?><br>
+        <h5 class="font-weight-bold mt-2 text-justify" style="color: white;"><?php echo $row[2];?><br>
         <h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
         <h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="view.php?id=<?php echo $row[0]?>"> <br>READ MORE</a></h7> 
         </h5>
