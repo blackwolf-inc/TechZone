@@ -291,22 +291,22 @@
 		  <div class="collapse navbar-collapse" id="navbarNav">
 		    <ul class="navbar-nav ml-auto">
 		      <li class="nav-item pl-lg-4">
-		        <a class="nav-link" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
+		        <a class="nav-link text-center" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
 		      </li>
 		      <li class="nav-item pl-lg-4">
-		        <a class="nav-link" href="new_news.php?id=E-SPORTS">E-SPORTS</a>
+		        <a class="nav-link text-center" href="new_news.php?id=E-SPORTS">E-SPORTS</a>
 		      </li>
 		      <li class="nav-item pl-lg-4">
-		        <a class="nav-link" href="new_news.php?id=CULTURE">CULTURE</a>
+		        <a class="nav-link text-center" href="new_news.php?id=CULTURE">CULTURE</a>
 		      </li>
 			  <li class="nav-item pl-lg-4">
-		        <a class="nav-link" href="new_news.php?id=NETIZEN">NETIZEN</a>
+		        <a class="nav-link text-center" href="new_news.php?id=NETIZEN">NETIZEN</a>
 		      </li>
 		      <li class="nav-item pl-lg-4">
-		        <a class="nav-link" href="future.php">FREE GAME</a>
+		        <a class="nav-link text-center" href="future.php">FREE GAME</a>
 		      </li>
 		       <li class="nav-item pl-lg-4">
-		        <a class="nav-link" href="see_all.php">ALL NEWS</a>
+		        <a class="nav-link text-center" href="see_all.php">ALL NEWS</a>
 		      </li>
 		    </ul>
 		  </div>
@@ -339,7 +339,7 @@
 
 		<div class="row image">
 			<div class="col-lg-9">
-				<img src="<?php echo substr($gmbr, 3) ;?>" alt="" class="img-fluid mt-lg-3 mb-lg-3" width="100%">
+				<img src="<?php echo substr($gmbr, 3) ;?>" alt="" class="img-fluid mt-lg-3 mb-lg-3 mt-md-3 pt-2" width="100%">
 
 				<h5 class="text-justify"><?php echo $isi; ?></h5>
 
