@@ -13,6 +13,7 @@ if($idgmbr !=""){
 }
 
 $del = mysqli_query($conn, "DELETE FROM utama WHERE id_post = '$id_post'");
+$delcom = mysqli_query($conn, "DELETE FROM coment WHERE id_post = '$id_post'");
 if($del)
 	 echo "<script>
                 location='index.php';
