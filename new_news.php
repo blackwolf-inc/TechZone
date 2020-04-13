@@ -222,10 +222,10 @@
 
   if (isset($_GET['id'])) {
     $btnValue = $_GET['id'];
-    if($btnValue=='Tech'){$ctrg=1;}
-    else if($btnValue=='Esport'){$ctrg=2;}
-    else if($btnValue=='Culture'){$ctrg=3;}
-    else if($btnValue=='Netizen'){$ctrg=4;}
+    if($btnValue=='TEKNOLOGI'){$ctrg=1;}
+    else if($btnValue=='E-SPORT'){$ctrg=2;}
+    else if($btnValue=='CULTURE'){$ctrg=3;}
+    else if($btnValue=='NETIZEN'){$ctrg=4;}
   }
   $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE jenis_post=$ctrg ORDER BY id_post DESC ");
 ?>
@@ -246,7 +246,7 @@
         <a class="nav-link " href="index.php">HOME <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link active" href="new_news.php">NEW NEWS <span class="sr-only">(current)</span></a>
+        <a class="nav-link active" href="new_news.php?id=<?php echo $btnValue;?>"> ZONA <?php echo $btnValue;?><span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="future.php">FREE GAME</a>
