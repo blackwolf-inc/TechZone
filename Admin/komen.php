@@ -66,7 +66,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
      <a href="index.php" class="brand-link">
-      <img src="aset_gambar/zonetech.PNG" alt="AdminLTE Logo" class=""
+      <img src="aset_gambar/zonetechkecilbgt.PNG" alt="AdminLTE Logo" class=""
            style="opacity: .8">
           <span class="brand-text font-weight-light"></span>
     </a>

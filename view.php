@@ -225,7 +225,7 @@
 
 	<!-- End Style CSS -->
 </head>
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5e92aadd9dee0c0012ab3bcc&product=inline-share-buttons" async="async"></script>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5e93dfbef4621e00127d1902&product=inline-share-buttons" async="async"></script>
 
 <?php
   include 'koneksi.php';
