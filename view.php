@@ -185,6 +185,21 @@
 		color: purple;
 	}
 
+	div.row > div.col-6 > h5 > h7 > a {
+		color: purple;
+		text-decoration: none;
+	}
+
+	div.row > div.col-6 > h5 > h7 > a:hover {
+		color: #ff3399;
+	}
+	
+	div.row.image > div.col-lg-9 > h5 {
+		line-height: 1.8;
+
+	}
+
+
 	/* Comment Box*/
 
 	div.row.image > div.col-lg-9 > div.col-lg-12 > h5 {
@@ -376,12 +391,12 @@
 		      			while ($row = $query->fetch_array()) {
 		     ?>
 		    				<div class="row mt-3 mb-2 newpostcolumn d-flex align-content-stretch">
-		   					  <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-		        					<a href="view.php?id=<?php echo $row[0]?>"><img src="<?php echo 'croped'.substr($row[1], 14) ;?>" alt="" class="img-fluid mt-lg-0 h-100 w-100" style="object-fit: cover;"></a>
+		   					  <div class="col-6 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
+		        					<a href="view.php?id=<?php echo $row[0]?>"><img src="<?php echo 'croped'.substr($row[1], 14) ;?>" alt="" class="img-fluid mt-lg-0 h-100 w-100" style="object-fit: contain;"></a>
 		      				</div>
-		     			 <div class="col-8" style="border-top: solid 1px #e6e6e6;">
-		        				<h5 class="text-left mt-lg-1 mb-lg-0 "><?php echo substr($row[2],0,25);?><br>
-		        				<h7 style="font-size: 14px; letter-spacing: 3px;" class="d-block mt-lg-2 text-left"><?php echo substr($row[5], 0, 50) ?></h7>
+		     			 <div class="col-6" style="border-top: solid 1px #e6e6e6;">
+		        				<h5 class="text-left mt-lg-1 mb-lg-0" style="font-size: 18px;"><?php echo substr($row[2],0,25);?><br>
+		        				<h7 style="font-size: 14px; letter-spacing: 3px; text-overflow: ellipsis;" class="d-block mt-lg-2 text-left"><?php echo substr($row[5], 0, 50) ?></h7>
 		        				<h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a></h7>
 		        				</h5>
 		        
