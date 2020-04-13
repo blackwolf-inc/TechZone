@@ -255,6 +255,7 @@
   	$link = $result[9];
   	$_SESSION["id"]=$id_post;
   	$_SESSION["adm"]=$result[6];
+  	$_SESSION["jmlcmn"]=$jmlComent;
   }
 ?>
 
@@ -339,7 +340,7 @@
 					<form action="komen.php" method="POST">
 					 <div class="form-group">
 					    <label for="insertbacotusername">Username</label>
-					    <input type="text" class="form-control" name="insertbacotusername" placeholder="username">
+					    <input type="text" class="form-control" name="insertbacotusername" placeholder="username" required>
 					  </div>
 					  <div class="form-group">
 					    <label for="insertbacotemail">Email address</label>
