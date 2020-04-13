@@ -305,7 +305,7 @@
       }
 
       div#boxvideoscontent > div.col-12 > h7 > a {
-        color: #F5F15E;
+        color: #FF9900;
       }
 
       div#boxvideoscontent > div.col-12 > h7 > a:hover {
@@ -510,7 +510,7 @@
   <div id="navbarToggleExternalContent">
     <div class="bg">
       <div class="row" style="display: block;">
-        <div class="col"><h4 class="text-center text-white"><i>TECHZONE</i></h4></div>
+        <div class="col"><h4 class="text-center text-white"><img src="admin/aset_gambar/zonetech.PNG"></h4></div>
         <div class="col"><h7 class="text-center text-white" style="display: block;"><?php echo date("l M Y"); ?> <?php include 'jam.php'; ?> | THE MAC FOR MOST</h7></div>
       </div>
     </div>
@@ -756,7 +756,7 @@
       <!-- loping vidio  -->
  <?php 
       include 'koneksi.php'; 
-      $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC");
+      $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio ORDER BY id_vidio DESC LIMIT 3");
       if ($query3->num_rows > 0) {
 
       while ($row = $query3->fetch_array()) {
@@ -873,7 +873,7 @@
     <h6>#UP TO DATE</h6>
   </div>
   <div class="col-lg-7 col-sm-12" id="footertengah">
-  <h1 class="text-white font-weight-bold text-center"><i>QUICK LINK</i></h1>     
+  <h1 class="text-white font-weight-bold text-center"><img src="admin/aset_gambar/zonetechkecil.PNG"></h1>     
     <ul class="list-inline text-center">
       <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>

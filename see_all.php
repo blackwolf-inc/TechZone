@@ -227,7 +227,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
- <img src="admin/aset_gambar/zonetech.PNG">
+ <img src="admin/aset_gambar/zonetechkecil.PNG">
     <ul class="navbar-nav nav-justified w-50 m-auto">
        <li class="nav-item ">
         <a class="nav-link " href="index.php">HOME <span class="sr-only">(current)</span></a>

@@ -241,7 +241,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
- <img src="admin/aset_gambar/zonetech.PNG">
+ <img class="img " src="admin/aset_gambar/zonetechkecil.PNG">
     <ul class="navbar-nav nav-justified w-50 m-auto">
        <li class="nav-item ">
         <a class="nav-link " href="index.php">HOME <span class="sr-only">(current)</span></a>
@@ -465,7 +465,7 @@
 <!-- Footer -->
 <div class="row p-lg-5 p-md-5 p-sm-5 pt-3">
   <div class="col-lg-3 col-sm-12" id="footerkiri">
-    <h1 class="text-white text-center font-weight-bold"><i>TECHZONE</i></h1>
+    <h1 class="text-white text-center font-weight-bold"><img src=""></h1>
   </div>
   <div class="col-lg-7 col-sm-12" id="footertengah">     
     <ul class="list-inline text-center">
