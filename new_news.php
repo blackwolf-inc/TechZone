@@ -276,11 +276,12 @@
   <!-- Nav -->
   <nav class="navbar navbar-expand-lg navbar navbar-dark">
      <div class="container">
-      <a class="navbar-brand font-weight-bold mr-5" href="index.php">ZONETECH</a>
+      <a class="navbar-brand font-weight-bold mr-5" href="index.php"style="display: none;">ZONETECH</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
+        <img src="admin/aset_gambar/zonetechkecil.PNG">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item pl-lg-4">
             <a class="nav-link" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
