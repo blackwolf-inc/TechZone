@@ -47,8 +47,7 @@ if(isset($_POST["update"])) {
                 unlink($tumbLama);
 
             }
-            copy($target_file, $target_file2);
-            copy($target_file, $target_file3);
+          
             $im_src = imagecreatefromjpeg($target_file3);
             $src_width = imageSX($im_src);
             $src_height = imageSY($im_src);

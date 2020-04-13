@@ -271,11 +271,12 @@
   if (isset($_GET['id'])) {
     $btnValue = $_GET['id'];
     if($btnValue=='TEKNOLOGI'){$ctrg=1;}
-    else if($btnValue=='E-SPORT'){$ctrg=2;}
+    else if($btnValue=='ESPORTS'){$ctrg=2;}
     else if($btnValue=='CULTURE'){$ctrg=3;}
     else if($btnValue=='NETIZEN'){$ctrg=4;}
   }
   $query = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE jenis_post=$ctrg ORDER BY id_post DESC ");
+  $slide = mysqli_query($conn, "SELECT id_gambar FROM utama WHERE jenis_post=$ctrg ORDER BY id_post DESC LIMIT 3");
 ?>
 
 <body>
@@ -289,13 +290,13 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg">
+        <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg"></a>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item pl-lg-4">
             <a class="nav-link" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
           </li>
           <li class="nav-item pl-lg-4">
-            <a class="nav-link" href="new_news.php?id=E-SPORTS">E-SPORTS</a>
+            <a class="nav-link" href="new_news.php?id=ESPORTS">E-SPORTS</a>
           </li>
           <li class="nav-item pl-lg-4">
             <a class="nav-link" href="new_news.php?id=CULTURE">CULTURE</a>
@@ -340,16 +341,30 @@
   </ol>
   <!-- isi crousel  -->
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="admin/aset_gambar/zonetech1.jpg" alt="First slide">
-       </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="admin/aset_gambar/zonetech2.jpg" alt="Second slide">
-       </div>
-        <div class="carousel-item">
-             <img class="d-block w-100" src="admin/aset_gambar/zonetech3.jpg" alt="Third slide">
-       </div>
-  </div>
+      <?php
+      $i=1;
+      if($slide->num_rows>0){
+        while($img = $slide->fetch_array()){
+          if($i==1){
+          echo "
+            <div class='carousel-item active'>
+            <img class='d-block w-100' src='".substr($img[0],3)."' alt='First slide'>
+            </div>";
+          }else if($i==2){
+            echo "
+              <div class='carousel-item'>
+              <img class='d-block w-100' src='".substr($img[0],3)."' alt='Second slide'>
+              </div>";
+          }else{
+            echo "
+              <div class='carousel-item'>
+              <img class='d-block w-100' src='".substr($img[0],3)."' alt='Third slide'>
+            </div>";
+          }
+          $i++;
+        }
+      }?>
+    </div>
   <!-- item crousel end -->
   <!-- crousel button -->
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

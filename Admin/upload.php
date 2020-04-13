@@ -49,8 +49,7 @@ if(isset($_POST["upload"])) {
             window.location.replace('index.php');</script>";
         }
     }
- copy($target_file, $target_file2);
- copy($target_file, $target_file3);
+
 // auto widht
 
 $im_src = imagecreatefromjpeg($target_file3);

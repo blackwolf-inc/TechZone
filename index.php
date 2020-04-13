@@ -559,7 +559,7 @@
 <div class="btn-group col-md-12 center" role="group" aria-label="Basic example">
   <button name="btnCtgr" class="btn  " style="color:white" value="1">  <a class="nav-link " href="index.php">HOME</a></button>
   <button name="btnCtgr" class="btn " style="color:white" value="2"> <a class="nav-link" href="new_news.php?id=TEKNOLOGI">ZONA TEKNOLOGI </a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="3"><a class="nav-link" href="new_news.php?id=E-SPORTS">ZONA E-SPORTS </a></button>
+  <button name="btnCtgr" class="btn " style="color:white" value="3"><a class="nav-link" href="new_news.php?id=ESPORTS">ZONA E-SPORTS </a></button>
   <button name="btnCtgr" class="btn " style="color:white" value="4"> <a class="nav-link" href="new_news.php?id=CULTURE">ZONA CULTURE </a></button>
   <button name="btnCtgr" class="btn " style="color:white" value="5"> <a class="nav-link" href="new_news.php?id=NETIZEN">ZONA NETIZEN </a></button>
   <button name="btnCtgr" class="btn " style="color:white" value="5"> <a class="nav-link" href="future.php">FREE GAME</a></button>
@@ -718,7 +718,7 @@
 <!-- End Jumbotron -->
 
 <!-- Content -->
-<div class="row content" style="background-color: white;">
+<div class="row content" style="background-color: white opacity=30%;">
 
   <div class="col-lg-8 col-md-12 col-sm-12">
   <?php include 'koneksi.php'; 
