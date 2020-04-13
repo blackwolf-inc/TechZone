@@ -91,7 +91,7 @@
       }
 
       a {
-        color: white;
+        color: #ff3399;
       }
 
       a:hover {
@@ -136,13 +136,27 @@
 
       /* end Navbar */
       
+
+      /* Box Featured */
+      div.row > div.col-lg-4 > h6#titlemorevideous {
+        border-bottom: solid 2px #6600ff;
+        border-right: solid 2px #6600ff;
+      }  
+
       /* kolom content */
       div.row.bigpost > div.col-lg-12.bigposttitle {
         background-color: black;
       }
 
+      div.row.newpostcolumn > div.col-8 > h5 > h7 {
+        word-break: keep-all;
+        text-overflow: ellipsis;
+      }
+
       div.row.newpostcolumn > div.col-8 > h5 > h7 > a {
         color: #ff3399;
+        font-weight: bolder;
+        text-decoration: underline;
       }
 
       div.row.newpostcolumn > div.col-8 > h5 > h7 > a:hover {
@@ -303,20 +317,6 @@
   <div class="row mt-3 carouselbox">
     <!-- kolom 1 -->
     <div class="col-lg-8 col-md-8 col-sm-12" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
-  
-    <!-- end kolom 1 -->
-
-    <!-- kolom 2 -->
-    
-    <!-- end kolom 2 -->
-
-    <!-- kolom 3 -->
-    
-    <!-- end kolom 3 -->
-
-    <!-- kolom 4 -->
-    
-    <!-- end kolom 4 -->
   </div>
   
     
@@ -393,9 +393,9 @@
         <img src="<?php echo 'tumb'.substr($row[1], 14) ;?>" alt="" class="img-fluid">
       </div>
       <div class="col-8" style="border-top: solid 1px #e6e6e6;">
-        <h5 class="font-weight-bold mt-2 "><?php echo $row[2];?><br>
+        <h5 class="font-weight-bold mt-2 text-justify"><?php echo $row[2];?><br>
         <h7 style="font-size: 11px;">By <a href=""><?php echo $row[4] ; ?></a> | <?php echo $row[3] ; ?> | <?php echo $row[6] ; ?> Comments</h7><br> 
-        <h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="view.php?id=<?php echo $row[0]?>"> Lanjut baca</a></h7> 
+        <h7 style="font-size: 14px" ><?php echo substr($row[5], 0, 250) ?><a href="view.php?id=<?php echo $row[0]?>"> <br>READ MORE</a></h7> 
         </h5>
         
       </div>
@@ -444,7 +444,7 @@
 
 
   </div>
-      <h6 class="text-right pr-lg-2 font-weight-bold pt-lg-2 pb-lg-2 pl-lg-2 ml-lg-3 mr-lg-3 float-right pull-right" id="titlemorevideous" style="color: #ff3399; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href="">MORE VIDEO</a></h6>
+      <h6 class="text-right pr-lg-2 font-weight-bold pt-lg-2 pb-lg-2 pl-lg-2 ml-lg-3 mr-lg-3 float-right pull-right" id="titlemorevideous"><a href="">MORE VIDEO</a></h6>
   </div>
 
   <!-- More Stories -->
