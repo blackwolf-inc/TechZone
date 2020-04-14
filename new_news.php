@@ -7,6 +7,10 @@
     <title>Document</title>
     <!--Import CSS-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--End-->
   
     <style>
@@ -72,15 +76,6 @@
       .list-group-item {
         background-color: transparent;
         border: none;
-      }
-
-      .filter {
-        background-color: black;
-        height: 100%;
-        width: 100%;
-        opacity: 0.5;
-        position: absolute;
-        z-index: 1;
       }
 
       .card {
@@ -394,7 +389,7 @@
 <!-- Content -->
 <div class="row content">
 
-  <div class="col-lg-8 col-md-12 col-sm-12">
+  <div class="col-lg-12 col-md-12 col-sm-12">
   <?php include 'koneksi.php'; 
     $query2 = mysqli_query($conn, "SELECT id_post, id_gambar, titel_post, tgl_post, id_admin, isi_post, jmlh_comen FROM utama WHERE jenis_post=$ctrg ORDER BY id_post DESC LIMIT 14");
       if ($query2->num_rows > 0) {
@@ -417,92 +412,10 @@
 
  
 
-  </div>
-    <div class="col-lg-4 col-md-12 mt-3 pl-lg-5 mb-0">
-    <div class="col pl-lg-0 pt-0" style="color: #ff3399;">
-    <h6 class="text-left font-weight-bold pr-5 pl-1 pb-2 mr-3 ml-3 mt-0 pt-0 pl-3 d-inline-block mr-3 mb-0" style="color: #ff3399; border-bottom: solid 2px #6600ff; border-left: solid 2px #6600ff;">FEATURED VIDEO</h6>
-    </div>
-    <div class="row mr-3 ml-0 pt-3 mt-0" id="boxvideoscontent">
-
-
-      <!-- loping vidio  -->
- <?php 
-      include 'koneksi.php'; 
-      $query3 = mysqli_query($conn, "SELECT id_admin , tgl,titel_vidio, link_vidio FROM vidio where category = $ctrg LIMIT 10");
-      if ($query3->num_rows > 0) {
-
-      while ($row = $query3->fetch_array()) {
-      ?>
-
-      <div class="col-12 col-lg-12 col-md-6 col-sm-6 mb-2">
-      <iframe
-      <?php $vidio = substr($row[3],32);?>
-      src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' style="width: 100%;">
-      </iframe> 
-
-      <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
-      <h7><?php echo $row[1]; ?> BY <a href=""><?php echo $row[0] ; ?> </a></h7>
-      </div>
-        <?php } ?>
-
-
-<?php 
-  
-  // end1 if
-}
-
-// end while
- ?>
-<!-- loping vidio end  -->
-
-
-  </div>
-      <h6 class="text-right pr-lg-2 font-weight-bold pt-lg-2 pb-lg-2 pl-lg-2 ml-lg-3 mr-lg-3 float-right pull-right" id="titlemorevideous"><a href="">MORE VIDEO</a></h6>
-  </div>
 
   <!-- More Stories -->
-    <div class="col pt-sm-3 pl-sm-0 pr-sm-0 pl-lg-3 pr-lg-3">
+    <div class="col pt-sm-3">
         <button class="btn btn-block p-lg-3 p-sm-3" style="background-color: #ff3399; border-radius: 0; color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
-
-         <div class="row bigpost ml-lg-0 mr-lg-0 mb-lg-2">
-  <div class="card-body table-responsive p-0" style="height: 720px;">
-                <table class="table table-head-fixed">
-                  <thead>
-                    <tr>
-                      <th>ID Post</th>
-                      <th>Title</th>
-                      <th>Date</th>
-                      <th>Admin Name</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php
-                      
-                      if($query->num_rows > 0){
-                        while ($row = $query->fetch_array()) {
-                          echo "
-                          <tr>
-                            <td>".$row[0]."</td>
-                            <td>".$row[2]."</td>
-                            <td>".$row[3]."</td>
-                            <td>".$row[4]."</td>
-                            <td><div class='row'>
-                              <div class='col-sm-6'>
-                                <form action='view.php?id=".$row[0]."' method='post'><button class='btn btn-sm btn-warning'>Open</button>
-                                <input type='hidden' name='btnEdit' value='".$row[0]."'>
-                              </form></div>
-                              </div>
-                            </td>
-                          </tr>
-                          ";
-                        }
-                      }
-                    ?>
-                  </tbody>
-                </table>
-              </div> 
-  </div>
     </div>
   <!-- End -->
 
@@ -513,11 +426,8 @@
 
 <!-- Footer -->
 <div class="row p-lg-5 p-md-5 p-sm-5 pt-3">
-  <div class="col-lg-3 col-sm-12" id="footerkiri">
-    <h1 class="text-white text-center font-weight-bold"><img src=""></h1>
-  </div>
-  <div class="col-lg-7 col-sm-12" id="footertengah">     
-    <ul class="list-inline text-center">
+  <div class="col-lg-8 col-sm-12" id="footertengah">     
+    <ul class="list-inline text-left">
       <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
       <li class="list-inline-item"><a href="#">Cookie Policy</li>
@@ -530,8 +440,9 @@
       <li class="list-inline-item"><a href="">Tip US</a></li>
     </ul>
   </div>
-  <div class="col-lg-2 col-sm-12" id="footerkanan">
-    
+  <div class="col-lg-4 col-sm-12" id="footerkanan">
+    <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3 mr-md-3 mr-sm-3"></i></a>
+    <a href="https://www.instagram.com/techzone_05/"><i class="fa fa-instagram mr-lg-3 mr-md-3 mr-sm-3"></i></a>
   </div>
 </div>
 <!-- End Footer -->

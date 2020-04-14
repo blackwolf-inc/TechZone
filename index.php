@@ -62,6 +62,22 @@
         
 
       /* Carousel */
+      div.row.mt-3.carouselbox > div.col-lg-8 > div.row > div.col.mt-2 > h1 {
+        font-family: Veneer Clean Reg;
+      }
+
+      div.row.mt-3.carouselbox > div.col-lg-4 > div.row > div.col-lg-12 > h4 {
+        font-family: Veneer Clean Reg;
+      }
+
+      div.row.mt-3.carouselbox > div.col-md-8 > div.row > div.col > h1 {
+        font-family: Veneer Clean Reg;
+      }
+
+      div#cl > div.row > div.col-lg-12 > h4 {
+        font-family: Veneer Clean Reg;
+      }
+
 
       div.row.mt-3.carouselbox > div.col-lg-8 > div.row > div.col.mt-2 > h5.text-white > a {
         color: #ffa500;
@@ -121,6 +137,10 @@
         transition: 2s;
       }
 
+      div.jumbotron > div.container > div.row > div.col-6 > h1 {
+        font-family: Veneer Clean Reg;
+      }
+
       .jumbotron {
         background-image: linear-gradient(-90deg, #f0f3f4, #283747);
       }
@@ -137,7 +157,6 @@
       div.row.content > div.col > button.btn.btn-block {
        background-color: #ff1ea7;
       }
-
 
 
       div.row.content > div.col > button.btn.btn-block:hover {
@@ -161,6 +180,10 @@
       div.row > div.col-8 > h5 > a > button:hover {
         background-color: #ffc107;
         color: #FFFFFF;
+      }
+
+      div.row > div.col-lg-8 > div.row > div.col-4 > img {
+        object-fit: cover;
       }
 
 
@@ -286,6 +309,11 @@
       /* end Navbar */
       
       /* kolom content */
+      /*div.row > div.col-lg-8 > div.row > div.col-8 > h5 {
+        font-family: Veneer Clean Reg;
+      }*/
+      
+
       div.row.bigpost > div.col-lg-12.bigposttitle {
         background-color: black;
       }
@@ -590,7 +618,7 @@
           <img src="<?php echo substr($data[2], 3) ;?>" alt="" class="img-fluid h-100">
         </div>
         <div class="col mt-2 p-lg-4 pl-lg-4">
-          <h1 class="text-white font-weight-bold text-uppercase" style="font-family: Veneer Clean Reg;"><a href="view.php?id=<?php echo $data[3]?>"><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h1>
+          <h1 class="text-white font-weight-bold text-uppercase"><a href="view.php?id=<?php echo $data[3]?>"><?php echo $data[0]?></a><br><h5 class="text-white">BY <a href=""><?php echo $data[1]?></a></h5></h1>
           <hr style="border: 1px solid #39050D; width: 50%; position: absolute; bottom: auto; right: 0; margin-top: 0px;">
         </div>
       </div>
@@ -728,9 +756,9 @@
 
       while ($row = $query->fetch_array()) {
       ?>
-    <div class="row mt-3 mb-2 newpostcolumn">
+    <div class="row mt-3 mb-2 newpostcolumn d-flex align-content-stretch">
       <div class="col-4 pr-0 pt-2 pt-lg-0"  style="border-top: solid 1px #e6e6e6;">
-        <img src="<?php echo substr($row[1], 3) ;?>" alt="" class="img-fluid">
+        <img src="<?php echo substr($row[1], 3) ;?>" alt="" class="img-fluid h-100 w-100">
       </div>
       <div class="col-8" style="border-top: solid 1px #e6e6e6;">
         <h5 class="font-weight-bold mt-2" style="color: white;"><?php echo $row[2];?><br>
