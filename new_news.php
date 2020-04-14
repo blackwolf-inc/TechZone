@@ -167,6 +167,10 @@
           color: #ff0066 ;
       }
 
+      div#footerkanan {
+          justify-content: end;
+        }
+
       /* end footer*/
 
 
@@ -226,13 +230,20 @@
         /* end stories */
 
         /* footer */
-
-          #footerkiri > h1 {
-          font-size: 40px;
+        #footerkiri > ul.list-inline > li.list-inline-item {
+          text-align: center;
         }
 
-          #footertengah > ul.list-inline > li.list-inline-item > a {
+          #footerkiri> ul.list-inline > li.list-inline-item > a {
           font-size: 12px;
+        }
+
+        div#footerkiri {
+          text-align: center;
+        }
+
+        div#footerkanan {
+          justify-content: center;
         }
 
         /* end footer */
@@ -255,6 +266,11 @@
         .carousel {
           height: auto;
         }
+
+        div#footerkiri {
+          text-align: center;
+        }
+
 
       }
 
@@ -426,8 +442,8 @@
 
 <!-- Footer -->
 <div class="row p-lg-5 p-md-5 p-sm-5 pt-3">
-  <div class="col-lg-8 col-sm-12" id="footertengah">     
-    <ul class="list-inline text-left">
+  <div class="col-lg-8 col-sm-12" id="footerkiri">     
+    <ul class="list-inline">
       <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
       <li class="list-inline-item"><a href="#">Cookie Policy</li>
@@ -440,7 +456,7 @@
       <li class="list-inline-item"><a href="">Tip US</a></li>
     </ul>
   </div>
-  <div class="col-lg-4 col-sm-12" id="footerkanan">
+  <div class="col-lg-4 col-sm-12 d-flex" id="footerkanan">
     <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3 mr-md-3 mr-sm-3"></i></a>
     <a href="https://www.instagram.com/techzone_05/"><i class="fa fa-instagram mr-lg-3 mr-md-3 mr-sm-3"></i></a>
   </div>
