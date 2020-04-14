@@ -124,11 +124,11 @@
       /* footer */
 
       #footertengah > ul.list-inline > li.list-inline-item > a {
-          color: #ff3399;
+          color: white;
       }
       
       #footertengah > ul.list-inline > li.list-inline-item > a:hover {
-          color: #ff0066 ;
+          color: #FF9900 ;
       }
 
       /* end footer*/
@@ -334,7 +334,7 @@
   </div>
   <div class="col-lg-7 col-sm-12" id="footertengah">     
     <ul class="list-inline text-center">
-      <li class="list-inline-item"><a href="#">terms of use"</a></li>
+      <li class="list-inline-item"><a href="#">terms of use"v</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
       <li class="list-inline-item"><a href="#">Cookie Policy</li>
       <li class="list-inline-item"><a href="">Do not Sell my info</a></li>

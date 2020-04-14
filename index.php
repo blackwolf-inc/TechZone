@@ -171,15 +171,15 @@
       
       div.row > div.col-8 > h5 > a > button {
         background-color: transparent;
-        border: solid 1px #FF0000;
-        color: #FF0000;
+        border: solid 1px #FF9900;
+        color: #FF9900;
         letter-spacing: 2px;
         border-radius: 0;
       }
 
       div.row > div.col-8 > h5 > a > button:hover {
-        background-color: #ffc107;
-        color: #FFFFFF;
+        background-color: transparent;
+        color: #FF9900;
       }
 
       div.row > div.col-lg-8 > div.row > div.col-4 > img {
@@ -875,7 +875,7 @@
       src='https://www.youtube.com/embed/<?php echo $vidio ; ?>'  style="width:100%; ">
       </iframe> 
 
-      <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
+      <h6 style="color: white; opacity: 80%;" class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
       <h7><?php echo $row[1]; ?> BY <a href=""><?php echo $row[0] ; ?> </a></h7>
       </div>
         <?php } ?>

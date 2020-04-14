@@ -124,11 +124,11 @@
       /* footer */
 
       #footertengah > ul.list-inline > li.list-inline-item > a {
-          color: #ff3399;
+          color: white;
       }
       
       #footertengah > ul.list-inline > li.list-inline-item > a:hover {
-          color: #ff0066 ;
+          color: #FF9900 ;
       }
 
       /* end footer*/

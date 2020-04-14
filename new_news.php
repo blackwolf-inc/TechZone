@@ -29,12 +29,12 @@
       }
 
       ul.navbar-nav > li.nav-item > a.nav-link {
-        color: #ff3399;
+        color: white;
         font-size: 13px;
       }
 
       ul.navbar-nav > li.nav-item > a.nav-link:hover {
-        color: #00E4FF;
+        color: #FF9900;
       }
       
       ul.navbar-nav > li.nav-item.active > a.nav-link {
@@ -87,12 +87,12 @@
       }
 
       a {
-        color: #ff3399;
+        color: white;
       }
 
       a:hover {
         text-decoration: none;
-        color: #ff3399;
+        color: #FF9900;
       }
 
       .jumbotron {
@@ -146,13 +146,13 @@
       }
 
       div.row.newpostcolumn > div.col-8 > h5 > h7 > a {
-        color: #ff3399;
+        color: #FF9900;
         font-weight: bolder;
         text-decoration: underline;
       }
 
       div.row.newpostcolumn > div.col-8 > h5 > h7 > a:hover {
-        color: #cc0099;
+        color: #C20005;
       }
       /* end kolom content */
 
@@ -431,7 +431,7 @@
 
   <!-- More Stories -->
     <div class="col pt-sm-3">
-        <button class="btn btn-block p-lg-3 p-sm-3" style="background-color: #ff3399; border-radius: 0; color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
+        <button class="btn btn-block p-lg-3 p-sm-3" style="background-color: transparent; border-radius: 2; border-color: #FF9900;   color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
     </div>
   <!-- End -->
 
@@ -442,8 +442,8 @@
 
 <!-- Footer -->
 <div class="row p-lg-5 p-md-5 p-sm-5 pt-3">
-  <div class="col-lg-8 col-sm-12" id="footerkiri">     
-    <ul class="list-inline">
+  <div class="col-lg-8 col-sm-12" id="footerkiri" >     
+    <ul class="list-inline" >
       <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
       <li class="list-inline-item"><a href="#">Cookie Policy</li>
