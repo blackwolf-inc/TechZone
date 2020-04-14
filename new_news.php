@@ -444,11 +444,11 @@
 <div class="row p-lg-5 p-md-5 p-sm-5 pt-3">
   <div class="col-lg-8 col-sm-12" id="footerkiri" >     
     <ul class="list-inline" >
-      <li class="list-inline-item"><a href="#">Therm of Use</a></li>
+      <li class="list-inline-item"><a href="#">Terms of use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
       <li class="list-inline-item"><a href="#">Cookie Policy</li>
       <li class="list-inline-item"><a href="">Do not Sell my info</a></li>
-      <li class="list-inline-item"><a href="">Coomunication Preferences</a></li>
+      <li class="list-inline-item"><a href="">Communication Preference</a></li>
       <li class="list-inline-item"><a href="">Licensing FAQ</a></li>
       <li class="list-inline-item"><a href="">Accessbility</a></li>
       <li class="list-inline-item"><a href="">Platform Status</a></li>

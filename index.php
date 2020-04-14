@@ -904,11 +904,11 @@
   <div class="col-lg-7 col-sm-12" id="footertengah">
   <h1 class="text-white font-weight-bold text-center"><img src="admin/aset_gambar/zonetechkecil.PNG"></h1>     
     <ul class="list-inline text-center">
-      <li class="list-inline-item"><a href="#">Therm of Use</a></li>
+      <li class="list-inline-item"><a href="#">Terms of use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
       <li class="list-inline-item"><a href="#">Cookie Policy</li>
       <li class="list-inline-item"><a href="">Do not Sell my info</a></li>
-      <li class="list-inline-item"><a href="">Coomunication Preferences</a></li>
+      <li class="list-inline-item"><a href="">Communication Preference</a></li>
       <li class="list-inline-item"><a href="">Licensing FAQ</a></li>
       <li class="list-inline-item"><a href="">Accessbility</a></li>
       <li class="list-inline-item"><a href="">Platform Status</a></li>
