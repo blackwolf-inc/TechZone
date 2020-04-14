@@ -170,7 +170,7 @@
       }
       
       div.row > div.col-8 > h5 > a > button {
-        background-color: #FFFFFF;
+        background-color: transparent;
         border: solid 1px #FF0000;
         color: #FF0000;
         letter-spacing: 2px;
@@ -342,9 +342,9 @@
       }
       
       div.col-lg-4 > div#titlekolfeaturedvideo > h6#titlefeaturedvideo {
-        color: #dc3545;
-        border-bottom: solid 2px #6600ff; 
-        border-left: solid 2px #6600ff;
+        color: #FF9900;
+        border-bottom: solid 2px #FF9900; 
+        border-left: solid 2px #FF9900;
       }
 
       h6#titlemorevideous > a {
@@ -776,7 +776,7 @@
   </div>
 
     <div class="col-lg-4 col-md-12 mt-3 pl-lg-5 mb-0">
-    <div class="col pl-lg-0 pl-0 pt-0 d-flex justify-content-lg-start justify-content-center" style="color: #C20005;" id="titlekolfeaturedvideo">
+    <div class="col pl-lg-0 pl-0 pt-0 d-flex justify-content-lg-start justify-content-center" style="color: #FF9900;" id="titlekolfeaturedvideo">
     <h6 class="font-weight-bold pr-5 pl-1 pb-2 mr-3 ml-5 ml-lg-3 mt-0 pt-0 pl-3 d-inline-block mr-3 mb-0" id="titlefeaturedvideo">FEATURED VIDEO</h6>
     </div>
     <div class="row mr-3 ml-0 pt-3 mt-0" id="boxvideoscontent">
@@ -797,7 +797,7 @@
       src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' style="width: 100%;">
       </iframe> 
 
-      <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
+      <h6 style="color: white " style="opacity: 30%" class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
       <h7><?php echo $row[1]; ?> BY <a href=""><?php echo $row[0] ; ?> </a></h7>
       </div>
         <?php } ?>
@@ -812,7 +812,7 @@
  ?>
 <!-- loping vidio end  -->
   </div>
-    <h6 class="pr-2 font-weight-bold pt-2 pb-2 pl-2 ml-3 mr-4 float-right" id="titlemorevideous" style="color: #C20005; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href="">MORE VIDEO</a></h6>
+    <h6 class="pr-2 font-weight-bold pt-2 pb-2 pl-2 ml-3 mr-4 float-right" id="titlemorevideous" style="color: #C20005; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href=""></a></h6>
   </div>
 
 
