@@ -301,7 +301,6 @@
       <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
       <li class="list-inline-item"><a href="#">Cookie Policy</li>
-      <li class="list-inline-item"><a href="">Do not Sell my info</a></li>
       <li class="list-inline-item"><a href="">Coomunication Preferences</a></li>
       <li class="list-inline-item"><a href="">Licensing FAQ</a></li>
       <li class="list-inline-item"><a href="">Accessbility</a></li>
