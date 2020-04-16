@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php include '../koneksi.php'; ?>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
@@ -21,24 +20,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-  <!-- fitru count -->
-  <?php 
 
-$query = mysqli_query($conn, "SELECT * FROM utama");
-$query2 = mysqli_query($conn, "SELECT * FROM coment");
-$query3 = mysqli_query($conn, "SELECT * FROM vidio");
-$query4 = mysqli_query($conn, "SELECT * FROM user");
-$totalnew=$query->num_rows;
-$totalcoment=$query2->num_rows;
-$newsvidio=$query3->num_rows;
-$totaluser=$query4->num_rows;
-
-if (isset($_POST["carousel"])) {
-  
-}
-
-   ?>
-<!-- fitur count end -->
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -69,6 +51,7 @@ if (isset($_POST["carousel"])) {
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
          
+          
         </a>
        
       <li class="nav-item">
@@ -82,8 +65,8 @@ if (isset($_POST["carousel"])) {
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.php" class="brand-link">
-      <img src="aset_gambar/zonetechkecilbgt.PNG" alt="AdminLTE Logo" class=""
+     <a href="index.php" class="brand-link">
+      <img src="aset_gambar/zonetechkecilbgt.png" alt="AdminLTE Logo" class=""
            style="opacity: .8">
           <span class="brand-text font-weight-light"></span>
     </a>
@@ -99,7 +82,6 @@ if (isset($_POST["carousel"])) {
           <a href="#" class="d-block"> </a>
         </div>
       </div>
-
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -115,19 +97,19 @@ if (isset($_POST["carousel"])) {
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="content.php" class="nav-link active">
+                <a href="content.php" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Conten</p>
                 </a>
               </li>
-              <li class="nav-item">
+               <li class="nav-item">
                 <a href="vidio.php" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Conten Vidio</p>
                 </a>
               </li>
               <li class="nav-item">
-                  <a href="komen.php" class="nav-link">
+                <a href="komen.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Daftar Coment</p>
                 </a>
@@ -149,7 +131,7 @@ if (isset($_POST["carousel"])) {
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dasboard Tech Zone</h1>
+            <h1 class="m-0 text-dark">Comment User</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -158,133 +140,83 @@ if (isset($_POST["carousel"])) {
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
+          <!-- card 1 -->
+    <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h5 class="card-title">Support Dasboard</h5>
+                <h3 class="card-title">Best Post</h3>
 
                 <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                  
-                  <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button>
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- /.card-header -->
-              <div class="card-body">
-                <div class="row">
-         
-                </div>
-                <!-- /.row -->
-              </div>
-              <!-- ./card-body -->
-              <div class="card-footer">
-                <div class="row">
-                  <div class="col-sm-3 col-6">
-                    <div class="description-block border-right">
-                  
-                    </div>
-                    <!-- /.description-block -->
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-sm-3 col-6">
-                    <div class="description-block border-right">
-                     
-                    </div>
-                    <!-- /.description-block -->
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-sm-3 col-6">
-                    <div class="description-block border-right">
+              <div class="card-body table-responsive p-0" style="height: 360;">
+                <table class="table table-head-fixed">
+                  <thead>
+                    <tr>
+                      <th>ID post</th>
+                      <th>jumlah coment</th>
                       
-                    </div>
-                    <!-- /.description-block -->
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-sm-3 col-6">
-                    <div class="description-block">
                     
-                    </div>
-                    <!-- /.description-block -->
-                  </div>
-                      <!-- /.row tabel atas -->
-                </div>
-        <div class="row">
-           <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php       $count=0; ?>
+                    <?php
+                      include '../koneksi.php';
 
-                <h3><?php echo  $totalnew;; ?></h3>
+                      $query = mysqli_query($conn, "SELECT id_coment, count(*)  from coment group by id_post order by count(*) desc   ");   
+                    
+                      // if pembatsasan
+               
+                        # code...
+                     print_r($query);
+                        for ($i=5; $query->num_rows > $i  ; ) {  
+                        while ($row = $query->fetch_array()) {
+                               if ( $count < 7) {                 
 
-                <p>Total News</p>
+                     $count++;
+
+                          echo "
+                          <tr>
+                            <td>".$row[0]."</td>
+                            <td>".$row[1]."</td>
+                            
+
+                            <td><div class='row'>
+                              <div class='col-sm-12'>
+                                <form action='post_up.php' name='btnEdit21' method='post'><button class='btn btn-sm btn-warning'>Top News Update </button>
+                                <input type='hidden' name='btnEdit21' value='".$row[0]."'>
+                              </form></div>
+                            </td>
+                          </tr>
+                          ";
+                        }
+                        $i++;
+                      }
+                      // pembatas
+                       }
+                      // pembatsasan 5
+                    ?>
+                  </tbody>
+                </table>
               </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="#" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+              <!-- /.card-body -->
             </div>
+            <!-- /.card -->
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3><?php echo $totalcoment;; ?><sup style="font-size: 20px"></sup></h3>
+          <!-- card 1 end -->
 
-                <p>Total Comentar</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="komen.php" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3><?php echo $newsvidio; ?></h3>
 
-                <p>Total News Vidio</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer"> <i class=""></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3><?php echo $totaluser; ?></h3>
-
-                <p>User Regist</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer"> <i class=""></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-        </div>
-        <!-- /.row -->
-         <div class="row">
+          <!-- card 2  -->
           <div class="col-12">
             <div class="card">
               <div class="card-header">
@@ -301,60 +233,35 @@ if (isset($_POST["carousel"])) {
                 </div>
               </div>
               <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 300px;">
+              <div class="card-body table-responsive p-0" style="height: 720px;">
                 <table class="table table-head-fixed">
                   <thead>
                     <tr>
-                      <th>ID Post</th>
-                      <th>Title</th>
-                      <th>Date</th>
-                      <th>Admin Name</th>
-                      <th>Action</th>
-                      <th>Set To carousel</th>
+                      <th>ID comment</th>
+                      <th>ID post</th>
+                      <th>ID User</th>
+                      <th>user</th>
+                      <th>Comment</th>
+                    
                     </tr>
                   </thead>
                   <tbody>
                     <?php
                       include '../koneksi.php';
 
-                      $query = mysqli_query($conn, "SELECT id_post, titel_post, tgl_post, id_admin, id_gambar FROM utama");
+                      $query = mysqli_query($conn, "SELECT id_coment, id_post, nama_komen, isi_comen, id_user FROM coment");
                       if($query->num_rows > 0){
                         while ($row = $query->fetch_array()) {
                           echo "
                           <tr>
                             <td>".$row[0]."</td>
                             <td>".$row[1]."</td>
+                            <td>".$row[4]."</td>
                             <td>".$row[2]."</td>
                             <td>".$row[3]."</td>
                             <td><div class='row'>
-                              <div class='col-sm-3'>
-                                <form action='edit.php' method='post'><button class='btn btn-sm btn-warning'>Edit</button>
-                                <input type='hidden' name='btnEdit' value='".$row[0]."'>
-                              </form></div>
-                              <div class='col-sm-3'>
-                                <form action='delete.php' method='post'><button class='btn btn-sm btn-danger'>Delete</button>
-                                <input type='hidden' name='btnDelete' value='".$row[0]."'>
-                                <input type='hidden' name='idgmbr' value='".$row[4]."'>
-                              </form></div>
-                              </div>
+                            
                             </td>
-                            <td>
-                              <form class='form-inline' action='carousel.php' method='post'>
-                                  <select class='form-control' name='ddCarousel'>
-                                    <option disabled selected >-Select-</option>
-                                    <option value='1'>1</option>
-                                    <option value='2'>2</option>
-                                    <option value='3'>3</option>
-                                    <option value='4'>4</option>
-                                    <option value='5'>5</option>
-                                    <option value='6'>6</option>
-                                    <option value='7'>7</option>
-                                  </select>
-                                  <button class='btn btn-sm btn-primary' name='submit'>Submit</button>
-                                  <input type='hidden' name='forCarousel' value='".$row[0]."'>
-                              </form>
-                                </td>
-                              
                           </tr>
                           ";
                         }
@@ -362,12 +269,27 @@ if (isset($_POST["carousel"])) {
                     ?>
                   </tbody>
                 </table>
-              </div>
+                <!-- script jaadi top news  -->
+            
+
+
+
+                <!-- end script -->
+              </div>  
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
           </div>
         </div>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          
       <!-- /.row tabel -->
       </div><!-- /.container-fluid -->
     </div>

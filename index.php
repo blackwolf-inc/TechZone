@@ -554,7 +554,7 @@
 <!-- Nav -->
 
 <nav class="navbar navbar-expand-lg navbar-dark">
-  <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg" class="img-fluid"></a>
+  <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.png" id="logoimg" class="img-fluid"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -889,7 +889,7 @@
     <h6>#UP TO DATE</h6>
   </div>
   <div class="col-lg-7 col-sm-12" id="footertengah">
-  <h1 class="text-white font-weight-bold text-center"><img src="admin/aset_gambar/zonetechkecil.PNG"></h1>     
+  <h1 class="text-white font-weight-bold text-center"><img src="admin/aset_gambar/zonetechkecil.png"></h1>     
     <ul class="list-inline text-center">
       <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>

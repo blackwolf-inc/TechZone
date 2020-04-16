@@ -1,8 +1,8 @@
 <?php
 	$host = 'localhost';
 	$user = 'root';
-	$pass = '';
-	$db = 'zonetech';
+	$pass = 'root';
+	$db = 'tec';
 	
 	$conn = new mysqli($host,$user,$pass,$db);
 	if ($conn->connect_error){

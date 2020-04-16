@@ -216,7 +216,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg"></a>
+        <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.png" id="logoimg"></a>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item pl-lg-4">
             <a class="nav-link" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>

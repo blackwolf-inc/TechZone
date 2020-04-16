@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <?php session_start(); ?>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -19,7 +19,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-
 
 
 <body class="hold-transition sidebar-mini">
@@ -69,8 +68,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    < <a href="index.php" class="brand-link">
-      <img src="aset_gambar/zonetechkecilbgt.PNG" alt="AdminLTE Logo" class=""
+     <a href="index.php" class="brand-link">
+      <img src="aset_gambar/zonetechkecilbgt.png" alt="AdminLTE Logo" class=""
            style="opacity: .8">
           <span class="brand-text font-weight-light"></span>
     </a>
@@ -102,16 +101,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="content.php" class="nav-link ">
+                <a href="content.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Conten</p>
                 </a>
-                <li class="nav-item">
-                <a href="vidio.php" class="nav-link active">
+              </li>
+              <li class="nav-item">
+                <a href="vidio.php" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Conten Vidio</p>
                 </a>
-              </li>
               </li>
               <li class="nav-item">
                 <a href="komen.php" class="nav-link">
@@ -136,7 +135,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Update Content</h1>
+            <h1 class="m-0 text-dark">Upload Content</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -153,7 +152,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <form action="savefile.php" method="post">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
             <div class="card">
               <div class="card-header">
                 <h5 class="card-title">Support Dasboard</h5>
@@ -167,14 +166,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <i class="fas fa-times"></i>
                   </button>
                 </div>
-              </div><br>
-              <div class="col-sm-12">
-              <br>
-                <div class="col-md-12">
-                <label style="text-align: center;">Link Video</label>
-                  <input type="text" class="form-control" name="link_post" placeholder="Bijaklah dalam memposting sesuatu. Usahakan selalu menyertakan link" id="link_post" required>
               </div>
-              <br>
+              <div class="card-body">
+              
+                <div class="col-md-12">
+                <label style="text-align: center;">Link Sumber</label>
+                  <input type="text" class="form-control" name="link_post" placeholder="Bijaklah dalam memposting sesuatu. Usahakan selalu menyertakan link" id="link_post" >
+              </div>
+              
               </div><br>
             </div>
              <div class="col-sm-12">
@@ -184,7 +183,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                
               </div><br>
               <!-- end div titel content -->
-     
+        <div class="row col-md-12">
+                 <div class="col-md-6"> 
+                    <div class="card">
+                       <div class="custom-file">
+                      <input type="file" class="custom-file-input" accept=".png, .jpg, .gif, .bmp, .jpeg" name="fileToUpload" id="fileToUpload">
+                      <label class="custom-file-label" for="fileToUpload">Choose file</label>                     
+                    </div>
+                     </div>
+                 </div>
+                 <!-- div 1 -->
+                 <div class=" col-md-6">
+                   </div>
+                 </div>
                  <!-- div 211 -->
         
               <!-- end row -->
@@ -194,12 +205,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <div class="form-group">
                         <label>Select Admin</label>
                         <select class="form-control" name="ddAdmin" id="ddAdmin">
-                          <option value="admin1">DWIKI AFFIAN</option>
-                          <option value="admin2">DIMAS WAHYU
-</option>
-                          <option value="admin3">RHEINALDY THALIA</option>
-                          <option value="admin4">HASNATUL ALFIYAH
-</option>
+                          <option value="Dwiki Affian">DWIKI AFFIAN</option>
+                          <option value="Dimas Wahyu">DIMAS WAHYU</option>
+                          <option value="Rheinaldy Thalia">RHEINALDY THALIA</option>
+                          <option value="Hasnatul Alfiah">HASNATUL ALFIYAH</option>
                           <option value="admin5">SAGASITA RAVIL</option>
                         </select>
                       </div>
@@ -211,8 +220,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <option value="1">TEKNOLOGI</option>
                           <option value="2">E-SPORTS</option>
                           <option value="3">CULTURE</option>
-                          <option value="4">NETIZEN</option>
-                        </select>
+                          <option value="4">NETIZEN</option>                        </select>
                       </div>
                     </div>
                   </div>
@@ -228,7 +236,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <textarea class="textarea" name="isiText" id="isiText" placeholder="Place some text here"
                           style="width: 100%; height: 400px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </div>
-              </div><button class="btn btn-primary" name="uploadvid" id="uploadvid">Upload</button>
+              </div><button class="btn btn-primary" name="upload" id="upload">Upload</button>
             </div>
             <div class="col-md-12">
             
@@ -291,4 +299,4 @@ $(".custom-file-input").on("change", function() {
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 });
 </script>
-
+</html>
