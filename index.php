@@ -27,39 +27,40 @@
       }
 
       /* Navbar */
-      ul.navbar-nav > li.nav-item > a.nav-link.active {
-        color: #f9db24;
-        font-weight: bold;
-      }
-
-      ul.navbar-nav > li.nav-item > a.nav-link.active:hover {
-        color: #f9db24;
-        font-weight: normal;
-      }
-
-      ul.navbar-nav > li.nav-item > a.nav-link {
-        color: #ffa500;
-        font-weight: bold;
-      }
-
-       ul.navbar-nav > li.nav-item > a.nav-link:hover {
-        color: #b29a05;
-        font-weight: normal;
-      }
-
-      ul.navbar-nav > li.nav-item > a > i {
-        font-size: 21px;
-        color: #FF0000;
-      }
-
-      ul.navbar-nav > li.nav-item > a > i:hover {
-        color: #f9db24;
-      }
+      
 
       .navbar-brand {
         display: none;
       }
         
+      ul.navbar-nav > li.nav-item > a.nav-link {
+        color: #A71A1A;
+      }
+
+      ul.navbar-nav > li.nav-item > a.nav-link:hover {
+        color: red;
+      }
+
+      ul.navbar-nav > li.nav-item.active > a.nav-link {
+        color: red;
+      }
+
+      ul.navbar-nav > li.nav-item > a > i {
+        color: #A81313;
+      }
+
+      ul.navbar-nav > li.nav-item > a > i:hover {
+        color: red;
+      }
+
+      .fa {
+        font-size: 24px;
+        padding-left: 5px;
+      }
+
+      #logoimg {
+          display: none;
+      }
 
       /* Carousel */
       div.row.mt-3.carouselbox > div.col-lg-8 > div.row > div.col.mt-2 > h1 {
@@ -113,6 +114,7 @@
        div.row.mt-0.carouselbox > div.col-lg-4 > div.row > div.col-lg-12 > h5.text-white > a:hover {
         color: #ff1ea7;
       }
+
 
       div.row.mt-3 > div.col-lg-8 {
         border: solid 2px;
@@ -170,16 +172,16 @@
       }
       
       div.row > div.col-8 > h5 > a > button {
-        background-color: transparent;
-        border: solid 1px #FF9900;
-        color: #FF9900;
+        background-color: #FFFFFF;
+        border: solid 1px #FF0000;
+        color: #FF0000;
         letter-spacing: 2px;
         border-radius: 0;
       }
 
       div.row > div.col-8 > h5 > a > button:hover {
-        background-color: transparent;
-        color: #FF9900;
+        background-color: #ffc107;
+        color: #FFFFFF;
       }
 
       div.row > div.col-lg-8 > div.row > div.col-4 > img {
@@ -295,24 +297,6 @@
         color: color: #F5F15E;
       }
 
-      /* Navbar */
-      nav.navbar > a.navbar-brand:hover {
-        color: black;
-        font-weight: bolder;
-        text-shadow: 2px 2px #F5F15E;
-      }
-      
-      ul.navbar-nav > li.nav-item > a.nav-link:hover {
-        color: #F5F15E;
-      }
-
-      /* end Navbar */
-      
-      /* kolom content */
-      /*div.row > div.col-lg-8 > div.row > div.col-8 > h5 {
-        font-family: Veneer Clean Reg;
-      }*/
-      
 
       div.row.bigpost > div.col-lg-12.bigposttitle {
         background-color: black;
@@ -342,9 +326,9 @@
       }
       
       div.col-lg-4 > div#titlekolfeaturedvideo > h6#titlefeaturedvideo {
-        color: #FF9900;
-        border-bottom: solid 2px #FF9900; 
-        border-left: solid 2px #FF9900;
+        color: #dc3545;
+        border-bottom: solid 2px #6600ff; 
+        border-left: solid 2px #6600ff;
       }
 
       h6#titlemorevideous > a {
@@ -392,6 +376,18 @@
         #navbarToggleExternalContent {
           display: none;
         }
+        
+        nav.navbar {
+          padding-right: 0px;
+          padding-left: 0px;
+        }
+
+        #logoimg {
+          width: 75%;
+          height: 75%;
+          display: block;
+        }
+
 
         /* carousel column*/
         .carouselbox {
@@ -478,6 +474,12 @@
         border: none;
         }
 
+        #logoimg {
+          width: 75%;
+          height: 75%;
+          display: block;
+        }
+
         /* footer */
 
         div#footerkiri > h1 {
@@ -518,7 +520,9 @@
 
         div.row.mt-3 > div.col-lg-8 > div.row > div#kolomcarousel1 {
         margin-bottom: 0px;
-      }
+        }
+
+        /* Navbar */
 
       }
 
@@ -539,70 +543,53 @@
   <div id="navbarToggleExternalContent">
     <div class="bg">
       <div class="row" style="display: block;">
-        <div class="col"><h4 class="text-center text-white"><img src="admin/aset_gambar/zonetech.PNG"></h4></div>
-        <div class="col"><h7 class="text-center text-white" style="display: block;"><?php echo date("l M Y"); ?> <?php include 'jam.php'; ?> | THE MAC FOR MOST</h7></div>
+        <div class="col"><h4 class="text-center text-white"><img src="admin/aset_gambar/zonetech.PNG" class="img-fluid"></h4></div>
+        <div class="col"><h7 class="text-center text-white" style="display: block;"><?php echo date("l M Y"); ?> <?php include 'jam.php'; ?></h7></div>
       </div>
     </div>
 
   </div>
-  <!-- Nav -->
-  
 
-   
-  <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav nav-justified w-50 m-auto">
-
-      <li class="nav-item ">
-        <a class="nav-link " href="index.php">HOME</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="new_news.php">Z-TEKNOLOGI </a>
-      </li>
-       <li class="nav-item ">
-        <a class="nav-link" href="new_news.php">Z-E-SPORTS </a>
-      </li>
-       <li class="nav-item ">
-        <a class="nav-link" href="new_news.php">Z-CULTURE </a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="new_news.php">Z-NETIZEN </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="future.php">FREE GAME</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="see_all.php">SEE ALL NEWS</a>
-      </li>
-      <ul>
-       <li class="nav-item pt-2">
-        <a href=""><i class="fa fa-facebook-f mr-lg-3"></i></a>
-        <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a>
-        <a href=" https://www.instagram.com/techzone_05/"><i class="fa fa-instagram mr-lg-3"></i></a>
-      </li>
-    </ul>
-  </div> -->
-</nav>
-  <!-- end Nav --><br>
 <div class="container">
-  <div style="border: solid 2px; border-image:  linear-gradient(-90deg, #39050D, #39050D) 1;">
-<div class="btn-group col-md-12 center" role="group" aria-label="Basic example">
-  <button name="btnCtgr" class="btn  " style="color:white" value="1">  <a class="nav-link " href="index.php">HOME</a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="2"> <a class="nav-link" href="new_news.php?id=TEKNOLOGI">ZONA TEKNOLOGI </a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="3"><a class="nav-link" href="new_news.php?id=ESPORTS">ZONA E-SPORTS </a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="4"> <a class="nav-link" href="new_news.php?id=CULTURE">ZONA CULTURE </a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="5"> <a class="nav-link" href="new_news.php?id=NETIZEN">ZONA NETIZEN </a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="5"> <a class="nav-link" href="future.php">FREE GAME</a></button>
-  <button name="btnCtgr" class="btn " style="color:white" value="5">  <a class="nav-link" href="see_all.php">SEE ALL NEWS</a></button>
-   <button name="btnCtgr" class="btn " style="color:white" value="5">  <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a></button>
-    <button name="btnCtgr" class="btn " style="color:white" value="5">  <a href=" https://www.instagram.com/techzone_05/"><i class="fa fa-instagram mr-lg-3"></i></a></button>
+<!-- Nav -->
 
-</div>
-</div>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg" class="img-fluid"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+          <li class="nav-item pl-lg-4 text-center">
+            <a class="nav-link" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
+          </li>
+          <li class="nav-item pl-lg-4 text-center">
+            <a class="nav-link" href="new_news.php?id=ESPORTS">E-SPORTS</a>
+          </li>
+          <li class="nav-item pl-lg-4 text-center">
+            <a class="nav-link" href="new_news.php?id=CULTURE">CULTURE</a>
+          </li>
+        <li class="nav-item pl-lg-4 text-center">
+            <a class="nav-link" href="new_news.php?id=NETIZEN">NETIZEN</a>
+          </li>
+          <li class="nav-item pl-lg-4 text-center">
+            <a class="nav-link" href="future.php">FREE GAME</a>
+          </li>
+           <li class="nav-item pl-lg-4 text-center">
+            <a class="nav-link" href="see_all.php">ALL NEWS</a>
+          </li>
+          <li class="nav-item pl-lg-4 pt-lg-2 text-center">
+            <a href="https://twitter.com/techzone_05"><i class="fa fa-twitter mr-lg-3"></i></a></button>
+          </li>
+          <li class="nav-item pl-lg-4 pt-lg-2 text-center">
+            <a href=" https://www.instagram.com/techzone_05/"><i class="fa fa-instagram mr-lg-3"></i></a></button>
+          </li>
+        </ul>
+  </div>
+</nav>
 
 <!-- end JumbNavbar -->
-<!-- Container -->
-<div class="container">
   <!-- Carousel 1 -->
 
   <div class="row mt-3 carouselbox">
@@ -776,7 +763,7 @@
   </div>
 
     <div class="col-lg-4 col-md-12 mt-3 pl-lg-5 mb-0">
-    <div class="col pl-lg-0 pl-0 pt-0 d-flex justify-content-lg-start justify-content-center" style="color: #FF9900;" id="titlekolfeaturedvideo">
+    <div class="col pl-lg-0 pl-0 pt-0 d-flex justify-content-lg-start justify-content-center" style="color: #C20005;" id="titlekolfeaturedvideo">
     <h6 class="font-weight-bold pr-5 pl-1 pb-2 mr-3 ml-5 ml-lg-3 mt-0 pt-0 pl-3 d-inline-block mr-3 mb-0" id="titlefeaturedvideo">FEATURED VIDEO</h6>
     </div>
     <div class="row mr-3 ml-0 pt-3 mt-0" id="boxvideoscontent">
@@ -797,7 +784,7 @@
       src='https://www.youtube.com/embed/<?php echo $vidio ; ?>' style="width: 100%;">
       </iframe> 
 
-      <h6 style="color: white " style="opacity: 30%" class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
+      <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
       <h7><?php echo $row[1]; ?> BY <a href=""><?php echo $row[0] ; ?> </a></h7>
       </div>
         <?php } ?>
@@ -812,7 +799,7 @@
  ?>
 <!-- loping vidio end  -->
   </div>
-    <h6 class="pr-2 font-weight-bold pt-2 pb-2 pl-2 ml-3 mr-4 float-right" id="titlemorevideous" style="color: #C20005; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href=""></a></h6>
+    <h6 class="pr-2 font-weight-bold pt-2 pb-2 pl-2 ml-3 mr-4 float-right" id="titlemorevideous" style="color: #C20005; border-bottom: 1px solid #6600ff; border-right: 1px solid #6600ff;"><a href="">MORE VIDEO</a></h6>
   </div>
 
 
@@ -875,7 +862,7 @@
       src='https://www.youtube.com/embed/<?php echo $vidio ; ?>'  style="width:100%; ">
       </iframe> 
 
-      <h6 style="color: white; opacity: 80%;" class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
+      <h6 class="text-left font-weight-bold mb-0"> " <?php echo$row[2] ; ?> "</h6>
       <h7><?php echo $row[1]; ?> BY <a href=""><?php echo $row[0] ; ?> </a></h7>
       </div>
         <?php } ?>
@@ -904,11 +891,10 @@
   <div class="col-lg-7 col-sm-12" id="footertengah">
   <h1 class="text-white font-weight-bold text-center"><img src="admin/aset_gambar/zonetechkecil.PNG"></h1>     
     <ul class="list-inline text-center">
-      <li class="list-inline-item"><a href="#">Terms of use</a></li>
+      <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
       <li class="list-inline-item"><a href="#">Cookie Policy</li>
-      <li class="list-inline-item"><a href="">Do not Sell my info</a></li>
-      <li class="list-inline-item"><a href="">Communication Preference</a></li>
+      <li class="list-inline-item"><a href="">Coomunication Preferences</a></li>
       <li class="list-inline-item"><a href="">Licensing FAQ</a></li>
       <li class="list-inline-item"><a href="">Accessbility</a></li>
       <li class="list-inline-item"><a href="">Platform Status</a></li>

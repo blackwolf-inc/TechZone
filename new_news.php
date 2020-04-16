@@ -19,6 +19,11 @@
         background-color: black;
       }
 
+      nav.navbar {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
       .navbar-brand {
         text-shadow: 2px 2px #ff3399;
         display: none;
@@ -28,13 +33,17 @@
         color: black;
       }
 
+      #logoimg {
+        display: none;
+      }
+
       ul.navbar-nav > li.nav-item > a.nav-link {
-        color: white;
+        color: #A71A1A;
         font-size: 13px;
       }
 
       ul.navbar-nav > li.nav-item > a.nav-link:hover {
-        color: #FF9900;
+        color: red;
       }
       
       ul.navbar-nav > li.nav-item.active > a.nav-link {
@@ -87,12 +96,12 @@
       }
 
       a {
-        color: white;
+        color: #ff3399;
       }
 
       a:hover {
         text-decoration: none;
-        color: #FF9900;
+        color: #ff3399;
       }
 
       .jumbotron {
@@ -146,13 +155,13 @@
       }
 
       div.row.newpostcolumn > div.col-8 > h5 > h7 > a {
-        color: #FF9900;
+        color: red;
         font-weight: bolder;
-        text-decoration: underline;
+        text-decoration: none;
       }
 
       div.row.newpostcolumn > div.col-8 > h5 > h7 > a:hover {
-        color: #C20005;
+        color: #AE1818;
       }
       /* end kolom content */
 
@@ -252,8 +261,15 @@
         }
 
         #logoimg {
+          width: 75%;
+          height: 75%;
+          display: block;
+        }
+
+        #logoimglg {
           display: none;
         }
+
         
       }
 
@@ -271,10 +287,39 @@
           text-align: center;
         }
 
+        #logoimg {
+          width: 75%;
+          height: 75%;
+          display: block;
+        }
+
+        #logoimglg {
+          display: none;
+        }
+
+
 
       }
 
-      @media (min-width: 992px and max-width: 1200px) {
+      @media (max-width: 992px) {
+        .jumbotron {
+        background-color: white;
+        background-image: none;
+        }
+        
+        #logoimg {
+          width: 75%;
+          height: 75%;
+          display: block;
+        }
+
+        #logoimglg {
+          display: none;
+        }
+
+      }
+
+      @media (max-width: 1200px) {
         .jumbotron {
         background-color: white;
         background-image: none;
@@ -304,12 +349,12 @@
   <!-- Nav -->
   <nav class="navbar navbar-expand-lg navbar navbar-dark">
      <div class="container">
-      <a class="navbar-brand font-weight-bold mr-5" href="index.php">ZONETECH</a>
+      <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg" class="img-fluid"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg"></a>
+        <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimglg" class="img-fluid"></a>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item pl-lg-4">
             <a class="nav-link text-center" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
@@ -431,7 +476,7 @@
 
   <!-- More Stories -->
     <div class="col pt-sm-3">
-        <button class="btn btn-block p-lg-3 p-sm-3" style="background-color: transparent; border-radius: 2; border-color: #FF9900;   color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
+        <button class="btn btn-block p-lg-3 p-sm-3" style="background-color: red; border-radius: 0; color: white;"><h6 class="mb-0">MORE STORIES</h6></button>
     </div>
   <!-- End -->
 
@@ -442,13 +487,12 @@
 
 <!-- Footer -->
 <div class="row p-lg-5 p-md-5 p-sm-5 pt-3">
-  <div class="col-lg-8 col-sm-12" id="footerkiri" >     
-    <ul class="list-inline" >
-      <li class="list-inline-item"><a href="#">Terms of use</a></li>
+  <div class="col-lg-8 col-sm-12" id="footerkiri">     
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
       <li class="list-inline-item"><a href="#">Cookie Policy</li>
-      <li class="list-inline-item"><a href="">Do not Sell my info</a></li>
-      <li class="list-inline-item"><a href="">Communication Preference</a></li>
+      <li class="list-inline-item"><a href="">Coomunication Preferences</a></li>
       <li class="list-inline-item"><a href="">Licensing FAQ</a></li>
       <li class="list-inline-item"><a href="">Accessbility</a></li>
       <li class="list-inline-item"><a href="">Platform Status</a></li>

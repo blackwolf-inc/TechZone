@@ -19,6 +19,15 @@
           background-image: url("assets/img/wall/1.jpg");
       }
 
+      nav.navbar {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      #logoimg {
+          display: none;
+        }
+
 
       .dropdown-menu.show {
         left: auto;
@@ -99,9 +108,14 @@
         font-weight: bolder;
         text-shadow: 2px 2px #ff3399;
       }
+
+      ul.navbar-nav > li.nav-item > a.nav-link {
+        color:#A81E1E;
+        font-size: 15px;
+      }
       
       ul.navbar-nav > li.nav-item > a.nav-link:hover {
-        color: #FF9900;
+        color: red;
       }
 
       /* end Navbar */
@@ -124,11 +138,11 @@
       /* footer */
 
       #footertengah > ul.list-inline > li.list-inline-item > a {
-          color: white;
+          color: #ff3399;
       }
       
       #footertengah > ul.list-inline > li.list-inline-item > a:hover {
-          color: #FF9900 ;
+          color: #ff0066 ;
       }
 
       /* end footer*/
@@ -158,6 +172,16 @@
         }
 
         #navbarToggleExternalContent {
+          display: none;
+        }
+
+        #logoimg {
+          width: 75%;
+          height: 75%;
+          display: block;
+        }
+
+        #logoimglg {
           display: none;
         }
 
@@ -205,13 +229,49 @@
         background-image: none;
         }
 
+        #logoimg {
+          width: 75%;
+          height: 75%;
+          display: block;
+        }
+
+        #logoimglg {
+          display: none;
+        }
+
       }
 
-      @media (min-width: 992px and max-width: 1200px) {
+      @media (max-width: 992px) {
         .jumbotron {
         background-color: white;
         background-image: none;
         }
+
+          #logoimg {
+          width: 75%;
+          height: 75%;
+          display: block;
+        }
+
+        #logoimglg {
+          display: none;
+        }
+
+      }
+
+      @media (max-width: 1200px) {
+        .jumbotron {
+        background-color: white;
+        background-image: none;
+        }
+
+
+        #logoimglg {
+          width: 75%;
+          height: 75%;
+        }
+
+
       }
 
     </style>
@@ -221,29 +281,37 @@
 <!-- JumbNavbar -->
 <div class="pos-f-t">
   <!-- Nav -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand font-weight-bold" href="#" style="display: none;"><i>TECHZONE</i></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
- <img src="admin/aset_gambar/zonetechkecil.PNG">
-    <ul class="navbar-nav nav-justified w-50 m-auto">
-       <li class="nav-item ">
-        <a class="nav-link " href="index.php">HOME <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link " href="new_news.php">NEW NEWS <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link " href="future.php">FREE GAME</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link active" href="see_all.php">SEE ALL NEWS</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar navbar-dark">
+     <div class="container pl-md-0">
+      <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimg" class="img-fluid"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <a href="index.php"><img src="admin/aset_gambar/zonetechkecil.PNG" id="logoimglg" class="img-fluid"></a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link text-center" href="new_news.php?id=TEKNOLOGI">TEKNOLOGI</a>
+          </li>
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link text-center" href="new_news.php?id=ESPORTS">E-SPORTS</a>
+          </li>
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link text-center" href="new_news.php?id=CULTURE">CULTURE</a>
+          </li>
+        <li class="nav-item pl-lg-4">
+            <a class="nav-link text-center" href="new_news.php?id=NETIZEN">NETIZEN</a>
+          </li>
+          <li class="nav-item pl-lg-4">
+            <a class="nav-link text-center" href="future.php">FREE GAME</a>
+          </li>
+           <li class="nav-item pl-lg-4">
+            <a class="nav-link text-center" href="see_all.php">ALL NEWS</a>
+          </li>
+        </ul>
+      </div>
+     </div>
+    </nav>
   <!-- end Nav -->
 </div>
 <!-- end JumbNavbar -->
@@ -251,13 +319,10 @@
 <div class="container">
   <!-- Carousel 1 -->
   <div class="row mt-3 carouselbox">
-    
-    <!-- end kolom 5 -->
-  </div>
-<div class="carouselbox col-12">
-
+    <div class="col-12 pl-0 pr-0">
+      
             <div class="card">
-              <div class="card-header">
+              <div class="card-header pl-lg-0 pl-md-2 pl-sm-3 pl-0">
                 <h3 class="card-title">New Post Search By ID Post</h3>
 
                 <div class="card-tools">
@@ -269,6 +334,10 @@
               </div>
 
 
+    </div>
+        
+  </div>
+<div class="col-12">
 
 <div class="row content" style="background-color: white;">
    <div class="card-body table-responsive p-0" style="height: 720px;">
@@ -328,26 +397,18 @@
 
 
 <!-- Footer -->
-<div class="row p-lg-5 p-md-5 p-sm-5 pt-3">
-  <div class="col-lg-3 col-sm-12" id="footerkiri">
-    <h1 class="text-white text-center font-weight-bold"><i>TECHZONE</i></h1>
-  </div>
-  <div class="col-lg-7 col-sm-12" id="footertengah">     
+
+  <div class="col-lg-12" id="footertengah">     
     <ul class="list-inline text-center">
-      <li class="list-inline-item"><a href="#">terms of use"v</a></li>
+      <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
-      <li class="list-inline-item"><a href="#">Cookie Policy</li>
-      <li class="list-inline-item"><a href="">Do not Sell my info</a></li>
-      <li class="list-inline-item"><a href="">Communication Preference</a></li>
+      <li class="list-inline-item"><a href="">Coomunication Preferences</a></li>
       <li class="list-inline-item"><a href="">Licensing FAQ</a></li>
       <li class="list-inline-item"><a href="">Accessbility</a></li>
       <li class="list-inline-item"><a href="">Platform Status</a></li>
       <li class="list-inline-item"><a href="">Contact</a></li>
       <li class="list-inline-item"><a href="">Tip US</a></li>
     </ul>
-  </div>
-  <div class="col-lg-2 col-sm-12" id="footerkanan">
-    
   </div>
 </div>
 <!-- End Footer -->
@@ -384,41 +445,6 @@ function myFunction() {
 }
 </script>
 <script>
-
-$(window).resize(function() {
-
-if ($(this).width() < 575) {
-    $(".navbar-brand").show();
-    $("#titlemorevideous").hide();
-    $("#boxvideoscontent").css("border","none");
-
-    $("#kolomcarousel1").css("margin-bottom","0");
-    $("#kolomcarousel2").css("margin-bottom","0");
-    
-} else if ($(this).width() < 767) {
-    $(".navbar-brand").show();
-    $("#navbarToggleExternalContent").hide();
-
-} else if ($(this).width() < 992) {
-    $(".navbar-brand").hide();
-    $("#navbarToggleExternalContent").show();
-
-    $("#kolomcarousel1").css("margin-bottom","-80px");
-    $("#kolomcarousel2").css("margin-bottom","-100px");
-
-    $("#titlemorevideous").show();
-    $("#boxvideoscontent").css("border-top","solid 2px #6600ff");
-    $("#boxvideoscontent").css("border-right","solid 2px #6600ff");
-
-
-} else if ($(this).width() < 1200) {
-    $(".navbar-brand").hide();
-    $("#navbarToggleExternalContent").show();
-
-    $("#kolomcarousel1").css("margin-bottom","-80px");
-    $("#kolomcarousel2").css("margin-bottom","-100px");
-}
-});
 </script>
 <!-- end -->
 </html>

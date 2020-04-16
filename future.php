@@ -69,18 +69,6 @@
         color: #ff3399;
       }
 
-      .jumbotron {
-        background-image: linear-gradient(-90deg, #ff3399, #ff9900);
-      }
-
-      .jumbotron a {
-        color: black;
-      }
-
-      .jumbotron a:hover {
-        color: #ff3399;
-      }
-
       .content h5 {
         color: #404040;
       }
@@ -100,8 +88,8 @@
         text-shadow: 2px 2px #ff3399;
       }
       
-      ul.navbar-nav > li.nav-item > a.nav-link:hover {
-        color: #FF9900;
+      ul.navbar-nav > li.nav-item > a.nav-link {
+        color: red;
       }
 
       /* end Navbar */
@@ -124,11 +112,11 @@
       /* footer */
 
       #footertengah > ul.list-inline > li.list-inline-item > a {
-          color: white;
+          color: #ff3399;
       }
       
       #footertengah > ul.list-inline > li.list-inline-item > a:hover {
-          color: #FF9900 ;
+          color: #ff0066 ;
       }
 
       /* end footer*/
@@ -260,7 +248,7 @@
   <!-- Carousel 1 -->
   <div class="row mt-3 carouselbox ">
     <!-- kolom 1 -->
-    <div class="col-lg-8 col-md-8 col-sm-12" style="border: solid 2px; border-image:  linear-gradient(-90deg, #ff3399, #ff9900) 1;">
+    <div class="col-lg-8 col-md-8 col-sm-12">
   
     <!-- end kolom 1 -->
 
@@ -310,11 +298,11 @@
   </div>
   <div class="col-lg-7 col-sm-12" id="footertengah">     
     <ul class="list-inline text-center">
-      <li class="list-inline-item"><a href="#">Terms of use</a></li>
+      <li class="list-inline-item"><a href="#">Therm of Use</a></li>
       <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
       <li class="list-inline-item"><a href="#">Cookie Policy</li>
       <li class="list-inline-item"><a href="">Do not Sell my info</a></li>
-      <li class="list-inline-item"><a href="">Communication Preference</a></li>
+      <li class="list-inline-item"><a href="">Coomunication Preferences</a></li>
       <li class="list-inline-item"><a href="">Licensing FAQ</a></li>
       <li class="list-inline-item"><a href="">Accessbility</a></li>
       <li class="list-inline-item"><a href="">Platform Status</a></li>
@@ -340,40 +328,6 @@
 
 <!-- javascript menyembunyikan navbar brand -->
 <script>
-$(window).resize(function() {
-
-if ($(this).width() < 575) {
-    $(".navbar-brand").show();
-    $("#titlemorevideous").hide();
-    $("#boxvideoscontent").css("border","none");
-
-    $("#kolomcarousel1").css("margin-bottom","0");
-    $("#kolomcarousel2").css("margin-bottom","0");
-    
-} else if ($(this).width() < 767) {
-    $(".navbar-brand").show();
-    $("#navbarToggleExternalContent").hide();
-
-} else if ($(this).width() < 992) {
-    $(".navbar-brand").hide();
-    $("#navbarToggleExternalContent").show();
-
-    $("#kolomcarousel1").css("margin-bottom","-80px");
-    $("#kolomcarousel2").css("margin-bottom","-100px");
-
-    $("#titlemorevideous").show();
-    $("#boxvideoscontent").css("border-top","solid 2px #6600ff");
-    $("#boxvideoscontent").css("border-right","solid 2px #6600ff");
-
-
-} else if ($(this).width() < 1200) {
-    $(".navbar-brand").hide();
-    $("#navbarToggleExternalContent").show();
-
-    $("#kolomcarousel1").css("margin-bottom","-80px");
-    $("#kolomcarousel2").css("margin-bottom","-100px");
-}
-});
 </script>
 <!-- end -->
 </html>
